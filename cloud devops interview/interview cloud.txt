@@ -1,0 +1,1008 @@
+# AWS Cloud Engineer Interview Cheat Sheet
+
+## 1. Connect to an EC2 Instance
+
+### 🇬🇧 English
+
+**Q:** How do you connect to an EC2 instance?
+
+**A:**
+For Linux, I use an SSH private key (.pem).
+For Windows, I use an RDP password and key pair.
+
+### 🇩🇪 Deutsch
+
+**F:** Wie verbinden Sie sich mit einer EC2-Instanz?
+
+**A:**
+Für Linux verwende ich einen privaten SSH-Schlüssel (.pem).
+Für Windows verwende ich RDP mit Passwort und Schlüsselpaar.
+
+---
+
+# 2. Highly Available Multi-Tier Architecture
+
+### 🇬🇧 English
+
+**Q:** Describe a highly available application architecture.
+
+**A:**
+The Load Balancer is in a public subnet. It distributes traffic to EC2 instances. The application servers and database are in private subnets for better security.
+
+### 🇩🇪 Deutsch
+
+**F:** Beschreiben Sie eine hochverfügbare Architektur.
+
+**A:**
+Der Load Balancer befindet sich im öffentlichen Subnetz und verteilt den Traffic auf EC2-Instanzen. Die Anwendung und die Datenbank befinden sich in privaten Subnetzen.
+
+---
+
+# 3. NAT Gateway
+
+### 🇬🇧 English
+
+**Q:** Why do we use a NAT Gateway?
+
+**A:**
+A NAT Gateway allows resources in a private subnet to access the Internet without exposing them to incoming Internet traffic.
+
+### 🇩🇪 Deutsch
+
+**F:** Warum verwendet man ein NAT Gateway?
+
+**A:**
+Ein NAT Gateway ermöglicht Ressourcen im privaten Subnetz den Internetzugang, ohne sie direkt aus dem Internet erreichbar zu machen.
+
+---
+
+# 4. Why is it secure?
+
+### 🇬🇧 English
+
+The private EC2 keeps its private IP. The NAT Gateway uses its public IP to communicate with the Internet.
+
+### 🇩🇪 Deutsch
+
+Die private EC2 behält ihre private IP-Adresse. Das NAT Gateway kommuniziert mit seiner öffentlichen IP mit dem Internet.
+
+---
+
+# 5. Communication between Subnets
+
+### 🇬🇧 English
+
+**Q:** Can applications in different subnets communicate?
+
+**A:**
+Yes. If they are in the same VPC, AWS creates a local route by default, so they can communicate unless blocked by Security Groups or NACLs.
+
+### 🇩🇪 Deutsch
+
+**F:** Können Anwendungen in verschiedenen Subnetzen kommunizieren?
+
+**A:**
+Ja. Befinden sie sich in derselben VPC, gibt es standardmäßig eine lokale Route. Die Kommunikation ist möglich, sofern Security Groups oder NACLs sie nicht blockieren.
+
+---
+
+# 6. Security Group
+
+### 🇬🇧 English
+
+**Q:** What is a Security Group?
+
+**A:**
+A Security Group is a stateful firewall attached to a resource such as an EC2 instance. It only supports Allow rules.
+
+### 🇩🇪 Deutsch
+
+**F:** Was ist eine Security Group?
+
+**A:**
+Eine Security Group ist eine zustandsbehaftete Firewall für Ressourcen wie EC2. Sie unterstützt nur Allow-Regeln.
+
+---
+
+# 7. Network ACL
+
+### 🇬🇧 English
+
+**Q:** What is a Network ACL?
+
+**A:**
+A Network ACL is a stateless firewall at the subnet level. It supports both Allow and Deny rules.
+
+### 🇩🇪 Deutsch
+
+**F:** Was ist eine Network ACL?
+
+**A:**
+Eine Network ACL ist eine zustandslose Firewall auf Subnetzebene. Sie unterstützt Allow- und Deny-Regeln.
+
+---
+
+# 8. Security Group vs NACL
+
+### 🇬🇧 English
+
+Security Group:
+
+* Resource level
+* Stateful
+* Allow only
+
+NACL:
+
+* Subnet level
+* Stateless
+* Allow and Deny
+
+### 🇩🇪 Deutsch
+
+Security Group:
+
+* Ressourcenebene
+* Stateful
+* Nur Allow
+
+NACL:
+
+* Subnetzebene
+* Stateless
+* Allow und Deny
+
+---
+
+# 9. When do you use each?
+
+### 🇬🇧 English
+
+Use a Security Group to protect a specific resource like EC2 or RDS.
+Use a NACL to protect the entire subnet.
+
+### 🇩🇪 Deutsch
+
+Eine Security Group schützt eine bestimmte Ressource wie EC2 oder RDS.
+Eine NACL schützt das gesamte Subnetz.
+
+---
+
+# 10. Ingress vs Egress
+
+### 🇬🇧 English
+
+Ingress = Incoming traffic.
+Egress = Outgoing traffic.
+
+### 🇩🇪 Deutsch
+
+Ingress = Eingehender Datenverkehr.
+Egress = Ausgehender Datenverkehr.
+
+---
+
+# 11. EC2 Pricing Models
+
+### 🇬🇧 English
+
+**On-Demand**
+
+* Pay as you go
+* Flexible
+* Best for unpredictable workloads
+
+**Reserved**
+
+* 1 or 3-year commitment
+* Lower cost
+* Best for stable workloads
+
+**Spot**
+
+* Cheapest option
+* AWS can terminate it
+* Best for batch jobs, testing, CI/CD
+
+### 🇩🇪 Deutsch
+
+**On-Demand**
+
+* Bezahlen nach Nutzung
+* Flexibel
+* Für unvorhersehbare Workloads
+
+**Reserved**
+
+* 1 oder 3 Jahre Bindung
+* Günstiger
+* Für stabile Workloads
+
+**Spot**
+
+* Sehr günstig
+* Kann von AWS beendet werden
+* Für Batch-Jobs, Tests und CI/CD
+
+---
+
+# 12. CloudWatch
+
+### 🇬🇧 English
+
+CloudWatch answers:
+**"What is happening?"**
+
+It monitors CPU, memory, logs, alarms, and application performance.
+
+### 🇩🇪 Deutsch
+
+CloudWatch beantwortet:
+**„Was passiert gerade?"**
+
+Es überwacht CPU, Logs, Metriken und Alarme.
+
+---
+
+# 13. CloudTrail
+
+### 🇬🇧 English
+
+CloudTrail answers:
+**"Who changed something?"**
+
+It records AWS API calls and account activity. During troubleshooting, it helps identify who made a change, when it happened, and which resource was affected.
+
+### 🇩🇪 Deutsch
+
+CloudTrail beantwortet:
+**„Wer hat etwas geändert?"**
+
+CloudTrail protokolliert API-Aufrufe und Aktivitäten im AWS-Konto. Bei Problemen zeigt es, wer welche Änderung wann durchgeführt hat und welche Ressource betroffen war.
+
+
+
+
+
+
+# Additional AWS Interview Questions (English + German)
+
+---
+
+# 14. What is IAM?
+
+### 🇬🇧 English
+
+**Q:** What is IAM?
+
+**A:**
+IAM (Identity and Access Management) controls who can access AWS resources and what actions they are allowed to perform.
+
+### 🇩🇪 Deutsch
+
+**F:** Was ist IAM?
+
+**A:**
+IAM verwaltet Benutzer, Rollen und Berechtigungen für AWS-Ressourcen.
+
+---
+
+# 15. IAM User vs Role
+
+### 🇬🇧 English
+
+**IAM User**
+
+* Permanent identity
+* Used by people
+
+**IAM Role**
+
+* Temporary permissions
+* Used by AWS services (EC2, Lambda)
+
+### 🇩🇪 Deutsch
+
+**IAM User**
+
+* Dauerhafte Identität
+* Für Benutzer
+
+**IAM Role**
+
+* Temporäre Berechtigungen
+* Für AWS-Dienste wie EC2 oder Lambda
+
+---
+
+# 16. Why use IAM Roles on EC2?
+
+### 🇬🇧 English
+
+Instead of storing AWS keys on an EC2 instance, attach an IAM Role. AWS provides temporary credentials automatically.
+
+### 🇩🇪 Deutsch
+
+Anstatt AWS-Schlüssel auf einer EC2 zu speichern, weist man der Instanz eine IAM-Rolle zu. AWS stellt automatisch temporäre Zugangsdaten bereit.
+
+---
+
+# 17. What is AWS Lambda?
+
+### 🇬🇧 English
+
+Lambda is a serverless compute service. You upload code, and AWS runs it only when triggered.
+
+### 🇩🇪 Deutsch
+
+AWS Lambda ist ein Serverless-Dienst. Man lädt Code hoch und AWS führt ihn bei einem Ereignis automatisch aus.
+
+---
+
+# 18. When do you use Lambda?
+
+### 🇬🇧 English
+
+Use Lambda for:
+
+* API backends
+* File processing
+* Scheduled jobs
+* Event-driven applications
+
+### 🇩🇪 Deutsch
+
+Lambda eignet sich für:
+
+* APIs
+* Dateiverarbeitung
+* Geplante Aufgaben
+* Ereignisgesteuerte Anwendungen
+
+---
+
+# 19. EC2 vs Lambda
+
+### 🇬🇧 English
+
+EC2
+
+* You manage the server
+* Runs continuously
+
+Lambda
+
+* AWS manages the infrastructure
+* Runs only when triggered
+
+### 🇩🇪 Deutsch
+
+EC2
+
+* Server selbst verwalten
+* Läuft dauerhaft
+
+Lambda
+
+* AWS verwaltet die Infrastruktur
+* Läuft nur bei einem Ereignis
+
+---
+
+# 20. What is Amazon S3?
+
+### 🇬🇧 English
+
+Amazon S3 is an object storage service used to store files, backups, logs, images and static websites.
+
+### 🇩🇪 Deutsch
+
+Amazon S3 ist ein Objektspeicher für Dateien, Backups, Logs, Bilder und statische Webseiten.
+
+---
+
+# 21. What is Amazon EBS?
+
+### 🇬🇧 English
+
+Amazon EBS is persistent block storage attached to EC2 instances.
+
+### 🇩🇪 Deutsch
+
+Amazon EBS ist ein persistenter Blockspeicher für EC2-Instanzen.
+
+---
+
+# 22. EBS vs S3
+
+### 🇬🇧 English
+
+EBS
+
+* Block storage
+* Attached to one EC2
+
+S3
+
+* Object storage
+* Accessible through AWS APIs
+
+### 🇩🇪 Deutsch
+
+EBS
+
+* Blockspeicher
+* An EC2 gebunden
+
+S3
+
+* Objektspeicher
+* Über AWS-API erreichbar
+
+---
+
+# 23. What is Amazon EFS?
+
+### 🇬🇧 English
+
+Amazon EFS is a managed NFS file system that multiple EC2 instances can mount at the same time.
+
+### 🇩🇪 Deutsch
+
+Amazon EFS ist ein verwaltetes NFS-Dateisystem, das von mehreren EC2-Instanzen gleichzeitig genutzt werden kann.
+
+---
+
+# 24. EBS vs EFS
+
+### 🇬🇧 English
+
+EBS
+
+* One EC2
+* Block storage
+
+EFS
+
+* Many EC2s
+* Shared file storage (NFS)
+
+### 🇩🇪 Deutsch
+
+EBS
+
+* Eine EC2
+* Blockspeicher
+
+EFS
+
+* Mehrere EC2
+* Gemeinsamer Dateispeicher (NFS)
+
+---
+
+# 25. What is NFS?
+
+### 🇬🇧 English
+
+NFS (Network File System) allows multiple servers to access the same files over a network.
+
+### 🇩🇪 Deutsch
+
+NFS ermöglicht mehreren Servern den gemeinsamen Zugriff auf Dateien über das Netzwerk.
+
+---
+
+# 26. What is a VPC?
+
+### 🇬🇧 English
+
+A VPC is a private virtual network where you launch AWS resources securely.
+
+### 🇩🇪 Deutsch
+
+Eine VPC ist ein privates virtuelles Netzwerk für AWS-Ressourcen.
+
+---
+
+# 27. Public vs Private Subnet
+
+### 🇬🇧 English
+
+Public subnet
+
+* Has a route to the Internet Gateway
+
+Private subnet
+
+* No direct Internet access
+* Uses a NAT Gateway for outbound Internet access
+
+### 🇩🇪 Deutsch
+
+Öffentliches Subnetz
+
+* Route zum Internet Gateway
+
+Privates Subnetz
+
+* Kein direkter Internetzugang
+* Internetzugriff über NAT Gateway
+
+---
+
+# 28. What is an Internet Gateway?
+
+### 🇬🇧 English
+
+An Internet Gateway allows resources in a public subnet to communicate with the Internet.
+
+### 🇩🇪 Deutsch
+
+Ein Internet Gateway ermöglicht öffentlichen Subnetzen die Kommunikation mit dem Internet.
+
+---
+
+# 29. What is an Application Load Balancer (ALB)?
+
+### 🇬🇧 English
+
+An ALB distributes HTTP/HTTPS traffic across multiple EC2 instances.
+
+### 🇩🇪 Deutsch
+
+Ein Application Load Balancer verteilt HTTP/HTTPS-Anfragen auf mehrere EC2-Instanzen.
+
+---
+
+# 30. Why use Auto Scaling?
+
+### 🇬🇧 English
+
+Auto Scaling automatically adds or removes EC2 instances based on demand.
+
+### 🇩🇪 Deutsch
+
+Auto Scaling startet oder beendet EC2-Instanzen automatisch je nach Auslastung.
+
+---
+
+# 31. What is Amazon RDS?
+
+### 🇬🇧 English
+
+Amazon RDS is a managed relational database service.
+
+### 🇩🇪 Deutsch
+
+Amazon RDS ist ein verwalteter relationaler Datenbankdienst.
+
+---
+
+# 32. Route Table
+
+### 🇬🇧 English
+
+A Route Table tells AWS where network traffic should go.
+
+### 🇩🇪 Deutsch
+
+Eine Routing-Tabelle bestimmt, wohin Netzwerkverkehr weitergeleitet wird.
+
+---
+
+# 33. What is an AMI?
+
+### 🇬🇧 English
+
+An AMI (Amazon Machine Image) is a template used to launch EC2 instances.
+
+### 🇩🇪 Deutsch
+
+Eine AMI ist eine Vorlage zum Erstellen von EC2-Instanzen.
+
+---
+
+# 34. What is an Availability Zone?
+
+### 🇬🇧 English
+
+An Availability Zone is an isolated data center within an AWS Region.
+
+### 🇩🇪 Deutsch
+
+Eine Availability Zone ist ein isoliertes Rechenzentrum innerhalb einer AWS-Region.
+
+---
+
+# 35. Region vs Availability Zone
+
+### 🇬🇧 English
+
+Region
+
+* Geographic location
+
+Availability Zone
+
+* One isolated data center inside a Region
+
+### 🇩🇪 Deutsch
+
+Region
+
+* Geografische Region
+
+Availability Zone
+
+* Einzelnes Rechenzentrum innerhalb einer Region
+
+---
+
+# 36. Docker vs Kubernetes
+
+### 🇬🇧 English
+
+Docker creates containers.
+
+Kubernetes manages and scales containers.
+
+### 🇩🇪 Deutsch
+
+Docker erstellt Container.
+
+Kubernetes verwaltet und skaliert Container.
+
+---
+
+# 37. CI/CD
+
+### 🇬🇧 English
+
+CI/CD automates building, testing and deploying applications.
+
+### 🇩🇪 Deutsch
+
+CI/CD automatisiert Build-, Test- und Deployment-Prozesse.
+
+---
+
+# 38. Terraform
+
+### 🇬🇧 English
+
+Terraform is an Infrastructure as Code tool used to provision cloud resources.
+
+### 🇩🇪 Deutsch
+
+Terraform ist ein Infrastructure-as-Code-Werkzeug zur automatischen Bereitstellung von Cloud-Ressourcen.
+
+---
+
+# 39. Final Interview Question
+
+### 🇬🇧 English
+
+**Q:** Why AWS?
+
+**A:**
+AWS provides scalable, secure and highly available cloud services. It helps companies deploy applications faster while reducing infrastructure management.
+
+### 🇩🇪 Deutsch
+
+**F:** Warum AWS?
+
+**A:**
+AWS bietet skalierbare, sichere und hochverfügbare Cloud-Dienste. Unternehmen können Anwendungen schneller bereitstellen und den Infrastrukturaufwand reduzieren.
+
+
+
+
+
+----------------------------
+
+
+Quest  ;  was  soll ich machen  wenn  lambda  ausfallt ?   
+
+
+( Um ein Problem in AWS zu beheben, starte ich zuerst mit Amazon CloudWatch, um herauszufinden, woher der Fehler kommt.
+
+ Danach analysiere ich die Logs und Metrics, identifiziere die Root Cause und prüfe den betroffenen Service genauer.  )
+
+
+CloudWatch  logs  prufen   ->  Cloudwatch  Metrics  analysieren 
+
+
+
+
+latenz-zeit  :  ist  die  zeit genommen , die eine Anfrage benötigt, um von einem Client zu einem Server zu gelangen und eine Antwort zurückzubekommen.
+
+
+Service fällt aus
+        |
+        ↓
+1. CloudWatch prüfen
+        |
+        ↓
+2. Fehlerart erkennen
+        |
+        ↓
+3. Spezifischen Service prüfen
+        |
+        ↓
+4. Fix + Prevention
+
+
+wenn  ein  service  ausfallt  ,  die erste  losung :  schaue  an  CloudWatch logs  / CloudWatch  metrics  ->  ( dann ) : iam  , vpc , rds / api  abhangigkeiten 
+
+
+
+
+
+
+
+
+cloudtrail  (  wer  hat  das  gemacht   ;  exp : ein  mitarbeiter  hat  ec2  geloscht  ) 
+
+
+Amazon CloudWatch   (  CloudWatch ist für Monitoring und Observability.  ,  Warum schlägt meine Lambda fehl?  , wie  viel erros hat meine api s , wie lange dauert request ..)
+
+
+
+
+problem  (  permission  err'AccessDeniedException'  ) ->  IAM  ( role , policy  , permissions  ) 
+
+
+problem ( netzwerk  'Connection timeout'  ) ->  prufe  VPC  , sec gpr ..
+
+
+
+
+
+
+
+
+
+-----------------------------
+
+
+
+
+
+
+was  zu   tun  wenn   RDS  ist  voll  storage ? 
+
+
+->  Zuerst prüfe ich mit CloudWatch die Ursache. Danach kann ich den RDS-Speicher vergrößern oder Storage Auto Scaling aktivieren. 
+
+Zusätzlich optimiere ich Queries, entferne alte Daten oder nutze Read Replicas bei hoher Leselast
+
+
+
+- Wenn viele Benutzer gleichzeitig Daten lesen:    ->   Read Replica hinzufügen  ( horizontal  skalier ) 
+
+
+
+- Zu viele Schreiboperationen (Write Traffic)  ->  Mehr CPU, RAM und bessere Performance durch   (   vertikale Skalierung   )  .
+
+
+
+
+
+
+
+
+-------------------------------------
+
+
+
+
+
+erzahle  mir  eine  herausforderung  , hast du  gefunden  mit  Cloud  benutzen ;
+
+
+
+- In meinem Car-Rental-Projekt habe ich Keycloak für Authentifizierung und Autorisierung verwendet.
+
+Eine Herausforderung hatte ich beim Deployment meiner containerisierten Anwendung in AWS. Lokal funktionierte die Anwendung,
+
+ aber in der Cloud konnten die verschiedenen Services nicht miteinander kommunizieren. Das Spring-Boot-Backend konnte zum Beispiel Keycloak
+
+ und die MySQL-Datenbank nicht erreichen.
+
+Ich habe zuerst die Logs der Container analysiert und die Netzwerk-Konfiguration überprüft. Dabei habe ich festgestellt, dass die Security Groups
+
+ und die Service-Endpunkte noch nicht korrekt für die Cloud-Umgebung konfiguriert waren.
+
+Ich habe die Regeln angepasst, die Environment Variables aktualisiert und die Kommunikation zwischen den privaten Services eingerichtet. Danach konnten Backend,
+
+ Keycloak und Datenbank erfolgreich zusammenarbeiten
+
+
+
+
+Problem (1 line) 🇩🇪
+
+„Nach dem Cloud-Deployment funktionierte die Anmeldung nicht mehr, weil Keycloak noch auf die lokale Entwicklungsumgebung konfiguriert war.
+
+
+
+
+Lösung:
+
+„Keycloak-Konfiguration angepasst und die richtigen Redirect URIs, Origins und Environment Variables gesetzt.“
+
+
+
+
+
+
+
+
+
+how  i have  pushed  my  proj  on aws ? 
+
+
+ch habe die Anwendung als containerisierte Multi-Tier-Architektur aufgebaut. Das Angular-Frontend wurde als Container bereitgestellt und über Amazon CloudFront für die Benutzer 
+
+erreichbar gemacht. Die Backend-Services wie Spring Boot, der FastAPI-Service und Keycloak liefen als Container in einer privaten Umgebung innerhalb der VPC. Die MySQL-Datenbank
+
+ wurde über Amazon RDS in einem privaten Subnetz betrieben.
+
+
+
+
+                      Users
+                       |
+                       |
+                 CloudFront
+                       |
+                       |
+              Angular Frontend
+          (S3 static files OR container)
+                       |
+                       |
+              Application Load Balancer
+                       |
+          --------------------------------
+          |                              |
+   Private Subnet                  Private Subnet
+          |                              |
+ Spring Boot Container          FastAPI Container
+          |
+          |
+     Keycloak Container
+          |
+          |
+   Private Subnet
+          |
+          |
+     Amazon RDS MySQL
+
+
+
+- „In meiner Architektur wurde das Frontend, Backend und die Services containerisiert. Das Angular-Frontend kann über CloudFront bereitgestellt werden.
+
+ Die Backend-Services wie Spring Boot und FastAPI laufen als Container in privaten Subnetzen innerhalb einer VPC. Keycloak läuft ebenfalls als Container 
+
+und übernimmt die Authentifizierung. Die MySQL-Datenbank wird über Amazon RDS in einem privaten Subnetz betrieben.
+
+
+
+
+
+
+
+-----------------------------------------
+
+
+AUTO  SCAL GRP ? 
+
+
+
+„Eine Auto Scaling Group verwaltet automatisch die Anzahl der EC2-Instanzen und sorgt für Skalierbarkeit und hohe Verfügbarkeit. 
+
+Bei steigender Last werden neue Instanzen erstellt und bei Ausfällen werden fehlerhafte Instanzen automatisch ersetzt.
+
+
+
+
+- Ohne Auto Scaling kann die Anwendung bei hoher Last überlastet werden oder bei einem EC2-Ausfall nicht verfügbar sein
+
+
+
+
+
+-----------------------------------------------
+
+
+
+
+Was ist eine AWS Region?    (  geographic  zone )
+
+„Eine Region ist ein geografischer Standort von AWS, der mehrere Availability Zones enthält. Man wählt eine Region
+
+ meistens nach Latenz, Compliance und Verfügbarkeit aus.
+
+
+
+
+
+Was ist eine Availability Zone (AZ)?
+
+„Eine Availability Zone ist ein isoliertes Rechenzentrum  ( data center )  innerhalb einer AWS Region. Mehrere AZs ermöglichen
+
+ hohe Verfügbarkeit und Ausfallsicherheit.
+
+
+
+
+
+Was passiert, wenn eine Availability Zone ausfällt?
+
+„Bei einer Multi-AZ-Architektur übernimmt eine andere AZ den Betrieb. Dadurch bleibt die Anwendung verfügbar.“
+
+
+
+
+
+. Wie würden Sie eine hochverfügbare Webanwendung designen?
+
+„Ich würde mehrere Availability Zones verwenden, einen Load Balancer einsetzen und die Anwendung mit Auto Scaling betreiben.
+
+ Die Datenbank würde ich mit Multi-AZ konfigurieren
+
+
+
+
+
+
+
+. Warum benutzt man einen Load Balancer?
+
+„Ein Load Balancer verteilt eingehenden Traffic auf mehrere Instanzen und verbessert Skalierbarkeit und Verfügbarkeit.“
+
+
+
+
+
+. Was passiert ohne Auto Scaling?
+
+„Bei steigender Last kann die Anwendung überlastet werden.
+
+
+
+
+
+. Unterschied zwischen RDS und eigener Datenbank auf EC2?
+
+„Bei RDS verwaltet AWS Backups, Updates und Skalierung. Bei einer Datenbank auf EC2 muss man diese Aufgaben selbst übernehmen
+
+
+
+
+
+
+. Was ist IAM?
+
+„IAM verwaltet Benutzer, Rollen und Berechtigungen in AWS. Damit kontrolliert man, wer welche AWS-Ressourcen verwenden darf.
+
+
+
+
+
+. IAM User vs IAM Role?
+
+„Ein IAM User repräsentiert eine Person oder Anwendung mit festen Credentials. Eine IAM Role stellt temporäre Berechtigungen bereit,
+
+
+
+
+
+
+
+. Eine Website ist langsam. Was prüfen Sie?
+
+„Ich prüfe zuerst die Latenz, CloudWatch-Metriken, CPU-Auslastung, Datenbank-Performance und mögliche Netzwerkprobleme
+
+

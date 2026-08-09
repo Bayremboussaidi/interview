@@ -1,0 +1,558 @@
+☁️ AWS CLOUD INTERVIEW CHEAT SHEET
+🇬🇧 ENGLISH + 🇩🇪 DEUTSCH
+==================================================
+
+
+🔹 1. EC2 DOES NOT START
+--------------------------------------------------
+
+🇬🇧 Question:
+What would you check if an EC2 instance does not start?
+
+🇬🇧 Answer:
+“I would first check the specific AWS error and then verify the AMI, instance type, launch template, subnet and Availability Zone.”
+
+🇩🇪 Antwort:
+„Ich prüfe zuerst die konkrete AWS-Fehlermeldung und danach AMI, Instance Type, Launch Template, Subnet und Availability Zone.“
+
+
+--------------------------------------------------
+🔹 2. AUTO SCALING GROUP DOES NOT LAUNCH INSTANCES
+--------------------------------------------------
+
+🇬🇧 Question:
+What would you check if an Auto Scaling Group does not launch a new instance?
+
+🇬🇧 Answer:
+“I would first check the ASG Activity History, then the Launch Template, AMI, Instance Type, subnet, AZ capacity, available IP addresses and, if applicable, Spot capacity.”
+
+🇩🇪 Antwort:
+„Ich prüfe zuerst die Activity History der ASG, danach Launch Template, AMI, Instance Type, Subnet, AZ-Kapazität, verfügbare IP-Adressen und gegebenenfalls die Spot-Kapazität.“
+
+
+--------------------------------------------------
+🔹 3. CLOUDWATCH
+--------------------------------------------------
+
+🇬🇧 Question:
+When do you use CloudWatch?
+
+🇬🇧 Answer:
+“I use CloudWatch to monitor metrics, logs and application performance. During troubleshooting, I check things like CPU usage, latency, errors and logs.”
+
+🇩🇪 Antwort:
+„Ich verwende CloudWatch für Monitoring, Metriken und Logs. Bei der Fehlersuche prüfe ich zum Beispiel CPU-Auslastung, Latenz, Fehler und Logs.“
+
+
+--------------------------------------------------
+🔹 4. CLOUDTRAIL
+--------------------------------------------------
+
+🇬🇧 Question:
+When do you use CloudTrail?
+
+🇬🇧 Answer:
+“I use CloudTrail to find out who performed an AWS API action, when it happened and which resource was affected.”
+
+🇩🇪 Antwort:
+„Ich verwende CloudTrail, um herauszufinden, wer einen AWS-API-Aufruf durchgeführt hat, wann er passiert ist und welche Ressource betroffen war.“
+
+🧠 REMEMBER:
+CloudWatch → What is happening? 📊
+CloudTrail → Who changed something? 🔎
+
+
+--------------------------------------------------
+🔹 5. IAM ACCESS DENIED
+--------------------------------------------------
+
+🇬🇧 Question:
+What would you check if you get an IAM AccessDenied error?
+
+🇬🇧 Answer:
+“I would check the IAM role or user, the attached policies, the resource policy, the requested action and resource, and possible explicit denies.”
+
+🇩🇪 Antwort:
+„Ich prüfe die IAM Role oder den User, die Policies, die Resource Policy, die angeforderte Aktion und Ressource sowie mögliche explizite Denies.“
+
+
+--------------------------------------------------
+🔹 6. SECURITY GROUP WAS CHANGED
+--------------------------------------------------
+
+🇬🇧 Question:
+How would you find out who changed a Security Group?
+
+🇬🇧 Answer:
+“I would use CloudTrail to identify who made the change, when it happened and which API call was used.”
+
+🇩🇪 Antwort:
+„Ich würde CloudTrail verwenden, um herauszufinden, wer die Änderung wann durchgeführt hat und welcher API-Aufruf verwendet wurde.“
+
+
+--------------------------------------------------
+🔹 7. CONTAINER CRASHES
+--------------------------------------------------
+
+🇬🇧 Question:
+What would you do if a container crashes?
+
+🇬🇧 Answer:
+“I would first check the container logs and ECS service events. Then I would check the health check, CPU, memory, image and configuration.”
+
+🇩🇪 Antwort:
+„Ich prüfe zuerst die Container-Logs und ECS-Service-Events. Danach prüfe ich Health Checks, CPU, RAM, Image und Konfiguration.“
+
+
+--------------------------------------------------
+🔹 8. EFS
+--------------------------------------------------
+
+🇬🇧 Question:
+When would you use EFS?
+
+🇬🇧 Answer:
+“I would use EFS when multiple EC2 instances need to access the same shared file system.”
+
+🇩🇪 Antwort:
+„Ich würde EFS verwenden, wenn mehrere EC2-Instanzen gleichzeitig auf dasselbe gemeinsame Dateisystem zugreifen müssen.“
+
+🧠 REMEMBER:
+EBS → block storage / EC2 disk 💾
+EFS → shared file system 📂
+S3 → object storage 🪣
+
+
+--------------------------------------------------
+🔹 9. EFS + AVAILABILITY ZONES
+--------------------------------------------------
+
+🇬🇧 Question:
+How does EFS work with Availability Zones?
+
+🇬🇧 Answer:
+“EFS is a regional file system. I create mount targets in the Availability Zones where my EC2 instances need access.”
+
+🇩🇪 Antwort:
+„EFS ist ein regionales Dateisystem. Ich erstelle Mount Targets in den Availability Zones, in denen meine EC2-Instanzen Zugriff benötigen.“
+
+
+--------------------------------------------------
+🔹 10. EBS VS RAM
+--------------------------------------------------
+
+🇬🇧 Question:
+Is EBS like RAM?
+
+🇬🇧 Answer:
+“No. EBS is persistent block storage for EC2, while RAM is temporary memory used during execution.”
+
+🇩🇪 Antwort:
+„Nein. EBS ist ein persistenter Block-Speicher für EC2, während RAM ein temporärer Speicher ist, der während der Ausführung verwendet wird.“
+
+🧠 REMEMBER:
+
+EC2
+├── CPU → processing ⚙️
+├── RAM → temporary memory 🧠
+└── EBS → persistent storage 💾
+     ├── OS
+     ├── applications
+     └── files
+
+
+--------------------------------------------------
+🔹 11. DISADVANTAGE OF EBS
+--------------------------------------------------
+
+🇬🇧 Question:
+What is a disadvantage of EBS?
+
+🇬🇧 Answer:
+“An EBS volume is associated with a specific Availability Zone and is not designed as a shared file system for multiple EC2 instances.”
+
+🇩🇪 Antwort:
+„Ein EBS-Volume ist an eine bestimmte Availability Zone gebunden und nicht als gemeinsames Dateisystem für mehrere EC2-Instanzen gedacht.“
+
+
+--------------------------------------------------
+🔹 12. AWS LAMBDA
+--------------------------------------------------
+
+🇬🇧 Question:
+What is AWS Lambda?
+
+🇬🇧 Answer:
+“AWS Lambda is a serverless Function-as-a-Service. I provide the code without managing servers, and AWS runs the function when an event triggers it.”
+
+🇩🇪 Antwort:
+„AWS Lambda ist ein Serverless- beziehungsweise Function-as-a-Service. Ich stelle den Code bereit, ohne Server verwalten zu müssen, und AWS führt die Funktion aus, wenn ein Event sie auslöst.“
+
+
+--------------------------------------------------
+🔹 13. LAMBDA VS EC2
+--------------------------------------------------
+
+🇬🇧 Question:
+When would you use Lambda instead of EC2?
+
+🇬🇧 Answer:
+“I would use Lambda for short-lived, event-driven workloads. For example, an S3 upload can trigger Lambda to process an image.”
+
+🇩🇪 Antwort:
+„Ich würde Lambda für kurzlebige, ereignisgesteuerte Aufgaben verwenden. Zum Beispiel kann ein S3-Upload eine Lambda-Funktion zur Bildverarbeitung auslösen.“
+
+
+--------------------------------------------------
+🔹 14. WHEN WOULD YOU USE EC2?
+--------------------------------------------------
+
+🇬🇧 Question:
+When would you use EC2 instead of Lambda?
+
+🇬🇧 Answer:
+“I would use EC2 for continuously running applications or when I need more control over the operating system, network and runtime environment.”
+
+🇩🇪 Antwort:
+„Ich würde EC2 für dauerhaft laufende Anwendungen verwenden oder wenn ich mehr Kontrolle über Betriebssystem, Netzwerk und Runtime benötige.“
+
+💡 Example:
+Load Balancer → EC2 → Spring Boot
+
+
+--------------------------------------------------
+🔹 15. LAMBDA IN ACCOUNT A → S3 IN ACCOUNT B
+--------------------------------------------------
+
+🇬🇧 Question:
+Can Lambda in one AWS account access S3 in another account?
+
+🇬🇧 Answer:
+“Yes. This is a cross-account access scenario. The Lambda execution role needs the required S3 permissions, and the S3 bucket policy in the other account must allow that role.”
+
+🇩🇪 Antwort:
+„Ja. Das ist ein Cross-Account-Szenario. Die Lambda Execution Role benötigt die entsprechenden S3-Berechtigungen und die Bucket Policy im anderen Account muss dieser Role den Zugriff erlauben.“
+
+
+--------------------------------------------------
+🔹 16. TRUST POLICY
+--------------------------------------------------
+
+🇬🇧 Question:
+What is a Trust Policy?
+
+🇬🇧 Answer:
+“A Trust Policy defines who or which AWS service is allowed to assume an IAM role.”
+
+🇩🇪 Antwort:
+„Eine Trust Policy definiert, welcher Benutzer, welche Role oder welcher AWS-Service eine IAM Role übernehmen darf.“
+
+🧠 REMEMBER:
+Permission Policy → What can the role DO? 🔐
+Trust Policy → Who can ASSUME the role? 👤
+
+
+--------------------------------------------------
+🔹 17. IAM ROLE
+--------------------------------------------------
+
+🇬🇧 Question:
+Why do we use IAM Roles?
+
+🇬🇧 Answer:
+“I use IAM Roles so that AWS services can securely access other AWS services without storing long-term access keys.”
+
+🇩🇪 Antwort:
+„Ich verwende IAM Roles, damit AWS-Services sicher auf andere AWS-Services zugreifen können, ohne langfristige Access Keys speichern zu müssen.“
+
+
+--------------------------------------------------
+🔹 18. IAM USER VS IAM ROLE
+--------------------------------------------------
+
+🇬🇧 Question:
+What is the difference between an IAM User and an IAM Role?
+
+🇬🇧 Answer:
+“An IAM User normally represents a person and can have long-term credentials. An IAM Role provides temporary permissions and can be assumed by users, applications or AWS services.”
+
+🇩🇪 Antwort:
+„Ein IAM User repräsentiert normalerweise eine Person und kann langfristige Credentials besitzen. Eine IAM Role stellt temporäre Berechtigungen bereit und kann von Benutzern, Anwendungen oder AWS-Services übernommen werden.“
+
+
+--------------------------------------------------
+🔹 19. IAM ROLE VS POLICY
+--------------------------------------------------
+
+🇬🇧 Question:
+What is the difference between a Role and a Policy?
+
+🇬🇧 Answer:
+“The role is the identity that can be assumed, while the policy defines what that role is allowed to do.”
+
+🇩🇪 Antwort:
+„Die Role ist die Identität, die übernommen werden kann, während die Policy definiert, was diese Role tun darf.“
+
+
+--------------------------------------------------
+🔹 20. AWS STS
+--------------------------------------------------
+
+🇬🇧 Question:
+Why do we use AWS STS?
+
+🇬🇧 Answer:
+“AWS STS provides temporary security credentials. When an identity assumes an IAM role, STS provides temporary credentials for that role.”
+
+🇩🇪 Antwort:
+„AWS STS stellt temporäre Sicherheits-Credentials bereit. Wenn eine Identität eine IAM Role übernimmt, stellt STS temporäre Credentials für diese Role bereit.“
+
+🧠 REMEMBER:
+
+IAM → Roles + Permissions
+Trust Policy → Who can assume the Role
+STS → Temporary Credentials
+
+
+--------------------------------------------------
+🔹 21. WHY TEMPORARY CREDENTIALS?
+--------------------------------------------------
+
+🇬🇧 Question:
+Why are temporary credentials safer than access keys?
+
+🇬🇧 Answer:
+“Temporary credentials have a limited lifetime and do not need to be permanently stored in the application or configuration.”
+
+🇩🇪 Antwort:
+„Temporäre Credentials haben eine begrenzte Gültigkeit und müssen nicht dauerhaft im Code oder in Konfigurationsdateien gespeichert werden.“
+
+
+--------------------------------------------------
+🔹 22. SECRETS MANAGER
+--------------------------------------------------
+
+🇬🇧 Question:
+What is AWS Secrets Manager?
+
+🇬🇧 Answer:
+“AWS Secrets Manager securely stores and manages sensitive information such as database passwords, API keys and credentials.”
+
+🇩🇪 Antwort:
+„AWS Secrets Manager speichert und verwaltet sensible Informationen wie Datenbank-Passwörter, API-Keys und Credentials sicher.“
+
+
+--------------------------------------------------
+🔹 23. WHY NOT STORE PASSWORDS IN CODE?
+--------------------------------------------------
+
+🇬🇧 Question:
+Why shouldn't you store passwords in source code?
+
+🇬🇧 Answer:
+“Because they can be exposed through Git repositories, logs or the application. Secrets should be stored securely, for example in Secrets Manager.”
+
+🇩🇪 Antwort:
+„Weil Passwörter über Git-Repositories, Logs oder die Anwendung geleakt werden können. Secrets sollten sicher gespeichert werden, zum Beispiel in Secrets Manager.“
+
+
+--------------------------------------------------
+🔹 24. SECRETS MANAGER VS PARAMETER STORE
+--------------------------------------------------
+
+🇬🇧 Question:
+What is the difference between Secrets Manager and Parameter Store?
+
+🇬🇧 Answer:
+“Secrets Manager is designed for sensitive secrets and supports features such as automatic rotation. Parameter Store is commonly used for configuration parameters and can also store encrypted values.”
+
+🇩🇪 Antwort:
+„Secrets Manager ist für sensible Secrets gedacht und unterstützt beispielsweise automatische Rotation. Parameter Store wird häufig für Konfigurationsparameter verwendet und kann ebenfalls verschlüsselte Werte speichern.“
+
+
+--------------------------------------------------
+🔹 25. RDS STORAGE FULL
+--------------------------------------------------
+
+🇬🇧 Question:
+What would you do if RDS runs out of storage?
+
+🇬🇧 Answer:
+“I would first check the available storage in CloudWatch. Then I could increase the storage, enable Storage Auto Scaling, and archive or remove unnecessary old data.”
+
+🇩🇪 Antwort:
+„Ich würde zuerst den verfügbaren Speicher in CloudWatch prüfen. Danach kann ich den Speicher erweitern, Storage Auto Scaling aktivieren und nicht mehr benötigte Daten archivieren oder löschen.“
+
+
+--------------------------------------------------
+🔹 26. EC2 CANNOT CONNECT TO RDS
+--------------------------------------------------
+
+🇬🇧 Question:
+An EC2 instance cannot connect to RDS. What do you check?
+
+🇬🇧 Answer:
+“I would check the database endpoint and port, then the Security Groups, subnet configuration, routing and database availability.”
+
+🇩🇪 Antwort:
+„Ich prüfe zuerst den Datenbank-Endpunkt und Port und danach Security Groups, Subnet-Konfiguration, Routing und die Verfügbarkeit der Datenbank.“
+
+
+--------------------------------------------------
+🔹 27. WEBSITE NOT REACHABLE
+--------------------------------------------------
+
+🇬🇧 Question:
+An application is running on EC2 but the website is not reachable. What do you check?
+
+🇬🇧 Answer:
+“I would check the application first, then the Load Balancer, Security Group, NACL, route table, Internet Gateway and required ports.”
+
+🇩🇪 Antwort:
+„Ich prüfe zuerst die Anwendung und danach Load Balancer, Security Group, NACL, Route Table, Internet Gateway und die benötigten Ports.“
+
+
+--------------------------------------------------
+🔹 28. EC2 HAS NO INTERNET ACCESS
+--------------------------------------------------
+
+🇬🇧 Question:
+An EC2 instance cannot access the Internet. What do you check?
+
+🇬🇧 Answer:
+“I would check the route table, Internet Gateway or NAT Gateway, Security Group, NACL and whether the instance is in a public or private subnet.”
+
+🇩🇪 Antwort:
+„Ich prüfe Route Table, Internet Gateway oder NAT Gateway, Security Group, NACL und ob sich die Instanz in einem Public oder Private Subnet befindet.“
+
+
+--------------------------------------------------
+🔹 29. LOAD BALANCER RETURNS 502
+--------------------------------------------------
+
+🇬🇧 Question:
+The Load Balancer returns HTTP 502. What do you check?
+
+🇬🇧 Answer:
+“I would check the target health, health check configuration, application status, ports and Security Groups.”
+
+🇩🇪 Antwort:
+„Ich prüfe den Target-Health-Status, die Health-Check-Konfiguration, den Status der Anwendung, die Ports und die Security Groups.“
+
+
+--------------------------------------------------
+🔹 30. LAMBDA TIMES OUT
+--------------------------------------------------
+
+🇬🇧 Question:
+A Lambda function times out. What do you check?
+
+🇬🇧 Answer:
+“I would check CloudWatch Logs and metrics, then investigate the application logic, external APIs, database response time and, if Lambda is in a VPC, the network configuration.”
+
+🇩🇪 Antwort:
+„Ich prüfe CloudWatch Logs und Metriken und untersuche danach die Anwendungslogik, externe APIs, die Datenbank und bei Lambda in einer VPC auch die Netzwerkkonfiguration.“
+
+
+==================================================
+⭐ QUICK MEMORY SHEET
+==================================================
+
+📊 CloudWatch
+→ What is happening?
+→ Monitoring / Metrics / Logs
+
+🔎 CloudTrail
+→ Who changed something?
+→ API calls / Audit
+
+🔐 IAM
+→ Who can do what?
+
+👤 IAM Role
+→ Identity with permissions
+
+🤝 Trust Policy
+→ Who can assume the Role?
+
+🎟️ STS
+→ Temporary credentials
+
+🪣 S3
+→ Object storage
+
+💾 EBS
+→ Block storage for EC2
+
+📂 EFS
+→ Shared file system
+
+⚡ Lambda
+→ Serverless / event-driven functions
+
+🖥️ EC2
+→ Virtual server / full control
+
+🛡️ Security Group
+→ Resource-level firewall
+→ Stateful
+→ Allow rules
+
+🚧 NACL
+→ Subnet-level firewall
+→ Stateless
+→ Allow + Deny rules
+
+🌐 NAT Gateway
+→ Private subnet → Internet
+→ Internet cannot directly initiate connection to private instance
+
+⚖️ Load Balancer
+→ Distributes traffic across targets
+
+📈 Auto Scaling
+→ Automatically adds/removes EC2 instances
+
+🔑 Secrets Manager
+→ Secure storage for secrets
+
+🗄️ RDS
+→ Managed relational database
+
+
+==================================================
+⭐ MOST IMPORTANT TROUBLESHOOTING PATTERN
+==================================================
+
+❌ EC2 doesn't start
+→ AWS error → AMI → Instance Type → Launch Template
+→ Subnet → AZ → capacity
+
+❌ ASG doesn't launch
+→ Activity History → Launch Template → AMI
+→ Instance Type → Subnet/AZ → IP capacity → Spot
+
+❌ IAM AccessDenied
+→ IAM Role/User → Policy → Resource Policy
+→ Action → Resource → Explicit Deny
+
+❌ SG changed
+→ CloudTrail
+
+❌ Application error
+→ CloudWatch Logs + Metrics
+
+❌ Container crashes
+→ Container/ECS logs → Health Check → CPU/RAM
+
+❌ EC2 → RDS doesn't work
+→ Endpoint → Port → SG → Subnet → Routing → DB status
+
+❌ EC2 → Internet doesn't work
+→ Route Table → IGW/NAT → SG → NACL
+
+❌ Lambda timeout
+→ CloudWatch → Code → API → DB → VPC/network
+
+❌ Load Balancer 502
+→ Target Health → Health Check → Port → SG → Application

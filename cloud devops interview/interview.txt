@@ -1,0 +1,30 @@
+Guten Tag und vielen Dank für die Einladung zum Gespräch. Mein Name ist Bayrem Boussaidi.
+
+ Ich studiere aktuell Informatik mit dem Schwerpunkt Software Engineering und bin als Austauschstudent 
+
+an der Philipps-Universität Marburg eingeschrieben.
+
+Ursprünglich komme ich aus Tunesien und habe dort mein Studium im Bereich Software Engineering und 
+
+Informationssysteme begonnen. Während meines Studiums habe ich fundierte Kenntnisse in der Softwareentwicklung aufgebaut, insbesondere in Java,
+
+ Spring Boot, Angular, Datenbanken und modernen Entwicklungsprozessen.
+
+
+
+
+Eine meiner wichtigsten praktischen Erfahrungen war die Entwicklung einer kompletten Car-Rental-Plattform namens MyLoc, die ich eigenständig umgesetzt habe. Das Projekt umfasste sowohl das Backend als auch das Frontend sowie die technischen Aspekte rund um Deployment und Architektur.
+
+Meine Hauptaufgabe war die Entwicklung des Backends mit Java und Spring Boot. Ich habe die REST-APIs entworfen und implementiert, die Geschäftslogik entwickelt und die Datenbankanbindung umgesetzt. Dabei habe ich auf eine saubere Architektur mit verschiedenen Schichten wie Controller, Service und Repository geachtet.
+
+Für das Frontend habe ich Angular verwendet und die Benutzeroberfläche entwickelt. Ich habe Komponenten erstellt, Services implementiert und die Kommunikation zwischen Frontend und Backend über REST-Schnittstellen umgesetzt.
+
+Zusätzlich habe ich verschiedene technische Funktionen integriert, zum Beispiel Authentifizierung und Autorisierung mit JWT und Keycloak, sowie Echtzeit-Kommunikation mit WebSockets. Für bestimmte intelligente Funktionen habe ich außerdem einen Python-basierten KI-Microservice integriert.
+
+Im Bereich DevOps habe ich die Anwendung mit Docker containerisiert und mich mit CI/CD-Prozessen beschäftigt, um den Build- und Deployment-Prozess zu automatisieren. Außerdem habe ich Cloud-Konzepte angewendet und meine Kenntnisse im Bereich AWS vertieft.
+
+Da ich das gesamte Projekt selbst entwickelt habe, war ich für den kompletten Entwicklungszyklus verantwortlich: von der Planung der Architektur über die Implementierung bis hin zu Tests und Deployment. Dadurch konnte ich ein sehr gutes Verständnis für den gesamten Software-Lifecycle entwickeln.
+
+
+
+

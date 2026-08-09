@@ -1,0 +1,385 @@
+
+DATABASE
+
+
+
+# Databases – Interview Cheat Sheet
+
+---
+
+# 1. What is a Database?
+
+### 🇬🇧 English
+
+**Q:** What is a database?
+
+**A:**
+A database is a system used to store, organize, and retrieve data efficiently.
+
+### 🇩🇪 Deutsch
+
+**F:** Was ist eine Datenbank?
+
+**A:**
+Eine Datenbank ist ein System zum Speichern, Organisieren und Abrufen von Daten.
+
+
+
+
+
+
+
+-------
+
+# 2. What is a Relational Database?
+
+### 🇬🇧 English
+
+**Q:** What is a relational database?
+
+**A:**
+A relational database stores data in tables with rows and columns. The tables are connected using relationships through primary and foreign keys.
+
+Examples:
+
+* PostgreSQL
+* MySQL
+* Oracle
+* SQL Server
+
+### 🇩🇪 Deutsch
+
+**F:** Was ist eine relationale Datenbank?
+
+**A:**
+Eine relationale Datenbank speichert Daten in Tabellen mit Zeilen und Spalten. Die Tabellen sind über Primär- und Fremdschlüssel miteinander verbunden.
+
+Beispiele:
+
+* PostgreSQL
+* MySQL
+* Oracle
+* SQL Server
+
+
+
+
+
+
+---
+
+# 3. What is a Document Database?
+
+### 🇬🇧 English
+
+**Q:** What is a document database?
+
+**A:**
+A document database stores data as JSON-like documents instead of tables. It provides a flexible schema.
+
+Example:
+
+* MongoDB
+
+### 🇩🇪 Deutsch
+
+**F:** Was ist eine Dokumentendatenbank?
+
+**A:**
+Eine Dokumentendatenbank speichert Daten als JSON-ähnliche Dokumente statt in Tabellen. Sie besitzt ein flexibles Schema.
+
+Beispiel:
+
+* MongoDB
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# 4. SQL vs NoSQL
+
+### 🇬🇧 English
+
+**SQL**
+
+* Tables
+* Fixed schema
+* Supports joins
+* Strong consistency
+
+**NoSQL**
+
+* Documents, key-value, graph or column
+* Flexible schema
+* Easy to scale horizontally
+
+### 🇩🇪 Deutsch
+
+**SQL**
+
+* Tabellen
+* Festes Schema
+* Unterstützt Joins
+* Hohe Konsistenz
+
+**NoSQL**
+
+* Dokumente, Key-Value-, Graph- oder Spaltenmodell
+* Flexibles Schema
+* Einfach horizontal skalierbar
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# 5. When do you use SQL?
+
+### 🇬🇧 English
+
+Use SQL when:
+
+* Data has relationships
+* ACID transactions are important
+* Data consistency is required
+
+Examples:
+
+* Banking
+* ERP
+* E-commerce orders
+
+### 🇩🇪 Deutsch
+
+SQL eignet sich für:
+
+* Daten mit Beziehungen
+* ACID-Transaktionen
+* Hohe Datenkonsistenz
+
+Beispiele:
+
+* Banken
+* ERP-Systeme
+* Bestellungen im Onlinehandel
+
+---
+
+# 6. When do you use NoSQL?
+
+### 🇬🇧 English
+
+Use NoSQL when:
+
+* Data structure changes frequently
+* Large amounts of data
+* High scalability is required
+
+Examples:
+
+* Social media
+* Chat applications
+* Product catalogs
+* Logs
+
+### 🇩🇪 Deutsch
+
+NoSQL eignet sich für:
+
+* Häufig wechselnde Datenstrukturen
+* Große Datenmengen
+* Hohe Skalierbarkeit
+
+Beispiele:
+
+* Soziale Netzwerke
+* Chat-Anwendungen
+* Produktkataloge
+* Log-Daten
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 7. Primary Key
+
+### 🇬🇧 English
+
+A primary key uniquely identifies each row in a table.
+
+### 🇩🇪 Deutsch
+
+Ein Primärschlüssel identifiziert jede Zeile einer Tabelle eindeutig.
+
+---
+
+# 8. Foreign Key
+
+### 🇬🇧 English
+
+A foreign key creates a relationship between two tables.
+
+### 🇩🇪 Deutsch
+
+Ein Fremdschlüssel stellt eine Beziehung zwischen zwei Tabellen her.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+# 9. Example
+
+### 🇬🇧 English
+
+Customer Table
+
+CustomerID | Name
+
+Order Table
+
+OrderID | CustomerID
+
+CustomerID is the foreign key.
+
+### 🇩🇪 Deutsch
+
+Kundentabelle
+
+CustomerID | Name
+
+Bestellungstabelle
+
+OrderID | CustomerID
+
+CustomerID ist der Fremdschlüssel.
+
+---
+
+# 10. ACID
+
+### 🇬🇧 English
+
+ACID stands for:
+
+* Atomicity
+* Consistency
+* Isolation
+* Durability
+
+It guarantees reliable database transactions.
+
+### 🇩🇪 Deutsch
+
+ACID steht für:
+
+* Atomarität
+* Konsistenz
+* Isolation
+* Dauerhaftigkeit
+
+Es garantiert zuverlässige Datenbanktransaktionen.
+
+---
+
+# 11. Relational Database vs Document Database
+
+### 🇬🇧 English
+
+Relational Database
+
+* Tables
+* Fixed schema
+* SQL
+* Joins
+* Strong consistency
+
+Document Database
+
+* JSON documents
+* Flexible schema
+* NoSQL
+* Easy horizontal scaling
+
+### 🇩🇪 Deutsch
+
+Relationale Datenbank
+
+* Tabellen
+* Festes Schema
+* SQL
+* Joins
+* Hohe Konsistenz
+
+Dokumentendatenbank
+
+* JSON-Dokumente
+* Flexibles Schema
+* NoSQL
+* Einfache horizontale Skalierung
+
+---
+
+# 12. Interview Question
+
+### 🇬🇧 English
+
+**Q:** Why would you choose MongoDB instead of PostgreSQL?
+
+**A:**
+I would choose MongoDB when the data structure changes frequently or when flexibility and horizontal scalability are important. I would choose PostgreSQL for structured data, complex queries, and transactions.
+
+### 🇩🇪 Deutsch
+
+**F:** Warum würden Sie MongoDB statt PostgreSQL wählen?
+
+**A:**
+MongoDB eignet sich für flexible Datenstrukturen und hohe Skalierbarkeit. PostgreSQL eignet sich für strukturierte Daten, komplexe Abfragen und Transaktionen.
+
+
+
+
+
+
+
+
+
+
+Relationale Datenbanken wie PostgreSQL oder MySQL speichern Daten in Tabellen mit Beziehungen und eignen sich für strukturierte Daten und Transaktionen. 
+
+Dokumentendatenbanken wie MongoDB speichern JSON-ähnliche Dokumente mit flexiblem Schema und eignen sich für sich häufig ändernde oder unstrukturierte Daten

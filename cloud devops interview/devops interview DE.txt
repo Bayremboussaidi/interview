@@ -1,0 +1,82 @@
+
+pipeline : 
+
+
+Developer
+
+↓
+
+Git
+
+↓
+
+GitLab CI / GitHub Actions / Jenkins
+
+↓
+
+Build
+
+↓
+
+Tests
+
+↓
+
+Docker Image
+
+↓
+
+Deploy to AWS
+
+
+CI/CD automatisiert Build-, Test- und Deployment-Prozesse und sorgt für schnelle und zuverlässige Releases.
+
+
+
+
+---------------
+
+
+build  aws  architecture  highly  available web  app  ; 
+
+
+
+
+Internet
+      |
+Internet Gateway
+      |
+Public Subnet
+      |
+Application Load Balancer
+      |
+-------------------------------
+|                             |
+EC2                    EC2
+Private Subnet         Private Subnet
+      |
+RDS (Private)
+      |
+S3
+
+
+
+
+
+
+Application
+     |
+     ↓
+Prometheus (collect metrics)
+     |
+     ↓s 
+Grafana (visualization)        ->    k8s   visualisation   =>  grafana  +  prometheus
+
+
+
+
+
+
+
+
+
