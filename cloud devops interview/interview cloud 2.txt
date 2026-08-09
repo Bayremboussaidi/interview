@@ -556,3 +556,28 @@ A Lambda function times out. What do you check?
 
 ❌ Load Balancer 502
 → Target Health → Health Check → Port → SG → Application
+
+
+
+
+-----------------------------
+
+
+
+
+👤 IAM User
+→ Person
+→ langfristige Credentials möglich
+→ direkter AWS-Zugriff
+
+🎭 IAM Role
+→ AWS-Service / temporärer Zugriff
+→ temporäre Credentials
+→ keine festen Access Keys nötig
+
+
+
+
+* Ein IAM User steht normalerweise für eine Person, während eine IAM Role temporäre Berechtigungen für Benutzer, Anwendungen oder AWS-Services bereitstellt. Für AWS-Services bevorzuge ich Roles, 
+
+weil dadurch keine langfristigen Access Keys im Code gespeichert werden müssen
