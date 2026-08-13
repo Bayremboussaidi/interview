@@ -1,0 +1,2080 @@
+JAVA CODING CHALLENGE - PRACTICAL CHEAT SHEET
+================================================
+
+1. REVERSE AN ARRAY
+------------------------------------------------
+
+Scenario:
+You have [1, 2, 3, 4, 5] and want [5, 4, 3, 2, 1].
+
+Code:
+
+int[] arr = {1, 2, 3, 4, 5};
+
+int left = 0;
+int right = arr.length - 1;
+
+while (left < right) {
+
+    int temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+
+    left++;
+    right--;
+}
+
+Use this when:
+- You need to reverse an array.
+- You want to modify the original array.
+- You want O(n) time and O(1) extra space.
+
+IMPORTANT:
+left = beginning
+right = end
+
+left < right means continue until they meet.
+
+
+================================================
+2. VARIABLES + PARAMETERS + RETURN
+================================================
+
+A method:
+
+public static int sum(int x, int u) {
+    int result = x + u;
+    return result;
+}
+
+Calling it:
+
+int m = sum(5, 3);
+
+m = 8
+
+
+PARAMETERS:
+
+public static int sum(int x, int u)
+                         ↑      ↑
+                      parameters
+
+
+ARGUMENTS:
+
+sum(5, 3);
+    ↑  ↑
+ arguments
+
+
+RETURN:
+
+public static int sum(int x, int u) {
+    return x + u;
+}
+
+"return" sends the result back to whoever called the method.
+
+Example:
+
+int m = sum(5, 3);
+
+The method calculates:
+
+5 + 3 = 8
+
+Then:
+
+return 8;
+
+So:
+
+m = 8
+
+
+If the method returns nothing:
+
+public static void printName(String name) {
+    System.out.println(name);
+}
+
+No return value.
+
+
+================================================
+3. WHEN DOES A PARAMETER CHANGE?
+================================================
+
+Primitive types:
+
+public static void change(int x) {
+    x = 100;
+}
+
+int a = 10;
+
+change(a);
+
+System.out.println(a);
+
+Result:
+
+10
+
+The original 'a' does NOT change.
+
+Why?
+
+int is primitive.
+
+The method receives a copy of the value.
+
+
+IMPORTANT:
+
+Java is always PASS-BY-VALUE.
+
+
+For objects/arrays, the value passed is the reference.
+
+Example:
+
+public static void change(int[] arr) {
+    arr[0] = 100;
+}
+
+int[] numbers = {1, 2, 3};
+
+change(numbers);
+
+System.out.println(numbers[0]);
+
+Result:
+
+100
+
+The array changed.
+
+
+So remember:
+
+Primitive:
+int, double, float, boolean, char, etc.
+
+Method gets a copy of the value.
+
+Object/Array:
+The method receives a copy of the reference,
+so modifying the object/array itself is visible outside.
+
+
+Example:
+
+int x = 10;
+
+method(x);
+
+x is NOT changed.
+
+
+Example:
+
+int[] arr = {1, 2, 3};
+
+method(arr);
+
+arr[0] can be changed by the method.
+
+
+IMPORTANT:
+If you reassign the parameter itself, the original reference
+does NOT change.
+
+public static void change(int[] arr) {
+    arr = new int[]{100, 200};
+}
+
+int[] numbers = {1, 2, 3};
+
+change(numbers);
+
+numbers is still:
+
+[1, 2, 3]
+
+
+But:
+
+public static void change(int[] arr) {
+    arr[0] = 100;
+}
+
+numbers becomes:
+
+[100, 2, 3]
+
+
+================================================
+4. Math.max / Math.min
+================================================
+
+Maximum:
+
+int m = Math.max(x1, x2);
+
+Example:
+
+int x1 = 10;
+int x2 = 20;
+
+int m = Math.max(x1, x2);
+
+m = 20
+
+
+Minimum:
+
+int m = Math.min(x1, x2);
+
+
+Very useful:
+
+int max = Integer.MIN_VALUE;
+int min = Integer.MAX_VALUE;
+
+for (int x : arr) {
+
+    max = Math.max(max, x);
+    min = Math.min(min, x);
+}
+
+
+Absolute value:
+
+Math.abs(-10);
+
+Result:
+
+10
+
+
+Example:
+
+int distance = Math.abs(a - b);
+
+
+================================================
+5. == VS .equals()
+================================================
+
+THIS IS VERY IMPORTANT.
+
+
+For primitive values:
+
+int a = 5;
+int b = 5;
+
+if (a == b) {
+    ...
+}
+
+Use ==
+
+Because int is a primitive.
+
+
+Other primitives:
+
+int
+double
+float
+long
+short
+byte
+char
+boolean
+
+
+Examples:
+
+int a = 10;
+int b = 10;
+
+a == b
+
+
+double x = 2.5;
+double y = 2.5;
+
+x == y
+
+
+char a = 'A';
+char b = 'A';
+
+a == b
+
+
+For OBJECT CONTENT:
+
+Use .equals()
+
+
+String a = "hello";
+String b = "hello";
+
+if (a.equals(b)) {
+    System.out.println("same");
+}
+
+
+IMPORTANT:
+
+String is an OBJECT.
+
+So:
+
+a.equals(b)
+
+compares the String content.
+
+
+Do NOT normally do:
+
+a == b
+
+when you want to compare String content.
+
+
+MEMORIZE:
+
+primitive value
+        ↓
+      ==
+
+Object content
+        ↓
+    .equals()
+
+
+================================================
+6. .equalsIgnoreCase()
+================================================
+
+Compare Strings without caring about uppercase/lowercase.
+
+"hello".equalsIgnoreCase("HELLO");
+
+Result:
+
+true
+
+
+Scenario:
+
+String answer = "YES";
+
+if (answer.equalsIgnoreCase("yes")) {
+    System.out.println("Accepted");
+}
+
+
+================================================
+7. .contains()
+================================================
+
+STRING:
+
+String s = "hello world";
+
+if (s.contains("world")) {
+    System.out.println("found");
+}
+
+
+Result:
+
+true
+
+
+Scenario:
+
+Check if email contains @:
+
+if (email.contains("@")) {
+    ...
+}
+
+
+ARRAYLIST:
+
+ArrayList<Integer> list = new ArrayList<>();
+
+list.add(10);
+list.add(20);
+
+if (list.contains(10)) {
+    ...
+}
+
+
+HASHSET:
+
+HashSet<Integer> set = new HashSet<>();
+
+set.add(10);
+
+if (set.contains(10)) {
+    ...
+}
+
+
+MEMORIZE:
+
+String:
+.contains("text")
+
+List:
+.contains(value)
+
+Set:
+.contains(value)
+
+
+================================================
+8. startsWith() / endsWith()
+================================================
+
+Check beginning:
+
+String s = "hello world";
+
+s.startsWith("hello");
+
+true
+
+
+Check ending:
+
+s.endsWith("world");
+
+true
+
+
+Scenario:
+
+Check file extension:
+
+if (fileName.endsWith(".java")) {
+    ...
+}
+
+
+Scenario:
+
+Check URL:
+
+if (url.startsWith("https")) {
+    ...
+}
+
+
+================================================
+9. charAt()
+================================================
+
+Get one character from a String.
+
+String s = "hello";
+
+char c = s.charAt(0);
+
+c = 'h'
+
+
+Indexes:
+
+hello
+01234
+
+s.charAt(0) = h
+s.charAt(1) = e
+s.charAt(2) = l
+s.charAt(3) = l
+s.charAt(4) = o
+
+
+Very useful:
+
+for (int i = 0; i < s.length(); i++) {
+
+    char c = s.charAt(i);
+
+}
+
+
+Scenario:
+Count a specific character:
+
+int count = 0;
+
+for (int i = 0; i < s.length(); i++) {
+
+    if (s.charAt(i) == 'a') {
+        count++;
+    }
+}
+
+
+================================================
+10. substring()
+================================================
+
+Use substring() to EXTRACT PART of a String.
+
+
+String s = "Hello World";
+
+String result = s.substring(0, 5);
+
+result = "Hello"
+
+
+IMPORTANT:
+
+substring(start, end)
+
+The END index is NOT included.
+
+
+"Hello World"
+
+012345678910
+     ↑
+substring(0, 5)
+
+takes:
+
+0 1 2 3 4
+
+H e l l o
+
+
+Another example:
+
+String s = "Hello World";
+
+String result = s.substring(6);
+
+result = "World"
+
+
+Scenario:
+Get everything after a specific position.
+
+String email = "bayrem@gmail.com";
+
+String domain = email.substring(email.indexOf("@") + 1);
+
+domain = "gmail.com"
+
+
+================================================
+11. indexOf()
+================================================
+
+Find the position of something.
+
+String s = "hello";
+
+int index = s.indexOf("l");
+
+index = 2
+
+
+Character:
+
+int index = s.indexOf('o');
+
+index = 4
+
+
+If not found:
+
+-1
+
+
+Scenario:
+
+String email = "user@gmail.com";
+
+int position = email.indexOf("@");
+
+
+Then:
+
+String domain =
+    email.substring(position + 1);
+
+
+================================================
+12. toLowerCase() / toUpperCase()
+================================================
+
+String s = "HELLO";
+
+s = s.toLowerCase();
+
+Result:
+
+hello
+
+
+String s = "hello";
+
+s = s.toUpperCase();
+
+Result:
+
+HELLO
+
+
+Useful when input can have different capitalization:
+
+String input = "YES";
+
+if (input.toLowerCase().equals("yes")) {
+    ...
+}
+
+
+Better:
+
+if (input.equalsIgnoreCase("yes")) {
+    ...
+}
+
+
+================================================
+13. trim()
+================================================
+
+Removes spaces at the beginning and end.
+
+String s = "   hello   ";
+
+s = s.trim();
+
+Result:
+
+"hello"
+
+
+Scenario:
+
+User input:
+
+String name = scanner.nextLine().trim();
+
+
+================================================
+14. isEmpty() / isBlank()
+================================================
+
+isEmpty():
+
+String s = "";
+
+if (s.isEmpty()) {
+    ...
+}
+
+true
+
+
+isBlank():
+
+String s = "   ";
+
+if (s.isBlank()) {
+    ...
+}
+
+true
+
+
+Difference:
+
+isEmpty()
+Checks if length == 0.
+
+isBlank()
+Checks if empty OR only whitespace.
+
+
+================================================
+15. split()
+================================================
+
+Use split() to divide a String.
+
+String s = "Java Python C++";
+
+String[] words = s.split(" ");
+
+
+Result:
+
+["Java", "Python", "C++"]
+
+
+Scenario:
+
+String sentence = "hello world java";
+
+String[] words = sentence.split(" ");
+
+for (String word : words) {
+    System.out.println(word);
+}
+
+
+Split by comma:
+
+String data = "John,25,Germany";
+
+String[] parts = data.split(",");
+
+
+Result:
+
+["John", "25", "Germany"]
+
+
+================================================
+16. toCharArray()
+================================================
+
+Convert String to char[].
+
+String s = "hello";
+
+char[] chars = s.toCharArray();
+
+
+Useful:
+
+for (char c : s.toCharArray()) {
+
+    System.out.println(c);
+
+}
+
+
+Very useful for character problems.
+
+
+================================================
+17. StringBuilder
+================================================
+
+Use StringBuilder when you build/change a String many times.
+
+
+StringBuilder sb = new StringBuilder();
+
+sb.append("Hello");
+sb.append(" ");
+sb.append("World");
+
+String result = sb.toString();
+
+
+Result:
+
+Hello World
+
+
+Reverse:
+
+String reversed =
+    new StringBuilder(s)
+        .reverse()
+        .toString();
+
+
+Scenario:
+
+Build result inside a loop:
+
+StringBuilder result = new StringBuilder();
+
+for (char c : chars) {
+
+    if (c != ' ') {
+        result.append(c);
+    }
+}
+
+return result.toString();
+
+
+================================================
+18. ARRAY BASICS
+================================================
+
+int[] arr = {1, 2, 3, 4, 5};
+
+
+Length:
+
+arr.length
+
+
+First:
+
+arr[0]
+
+
+Last:
+
+arr[arr.length - 1]
+
+
+Loop:
+
+for (int i = 0; i < arr.length; i++) {
+
+    System.out.println(arr[i]);
+
+}
+
+
+Enhanced loop:
+
+for (int x : arr) {
+
+    System.out.println(x);
+
+}
+
+
+================================================
+19. Arrays.sort()
+================================================
+
+Sort ascending:
+
+int[] arr = {5, 2, 8, 1};
+
+Arrays.sort(arr);
+
+
+Result:
+
+[1, 2, 5, 8]
+
+
+Then:
+
+for (int x : arr) {
+    System.out.println(x);
+}
+
+
+================================================
+20. ArrayList
+================================================
+
+Create:
+
+ArrayList<Integer> list = new ArrayList<>();
+
+
+Add:
+
+list.add(10);
+
+
+Get:
+
+int x = list.get(0);
+
+
+Change:
+
+list.set(0, 100);
+
+
+Remove by index:
+
+list.remove(0);
+
+
+Size:
+
+list.size();
+
+
+Contains:
+
+list.contains(10);
+
+
+Empty:
+
+list.isEmpty();
+
+
+Loop:
+
+for (int x : list) {
+    System.out.println(x);
+}
+
+
+Sort:
+
+Collections.sort(list);
+
+
+================================================
+21. IMPORTANT ArrayList remove()
+================================================
+
+If:
+
+ArrayList<Integer> list = new ArrayList<>();
+
+list.add(10);
+list.add(20);
+list.add(30);
+
+
+This:
+
+list.remove(0);
+
+means:
+
+REMOVE INDEX 0
+
+
+But:
+
+list.remove(Integer.valueOf(20));
+
+means:
+
+REMOVE VALUE 20
+
+
+This difference can appear in coding challenges.
+
+
+================================================
+22. HashMap
+================================================
+
+Use HashMap when you need:
+
+KEY -> VALUE
+
+
+Example:
+
+HashMap<String, Integer> map = new HashMap<>();
+
+map.put("Bayrem", 26);
+map.put("John", 30);
+
+
+Get:
+
+int age = map.get("Bayrem");
+
+
+Check key:
+
+map.containsKey("Bayrem");
+
+
+Remove:
+
+map.remove("Bayrem");
+
+
+Size:
+
+map.size();
+
+
+Safe get:
+
+map.getOrDefault("Unknown", 0);
+
+
+================================================
+23. COUNT FREQUENCY - VERY IMPORTANT
+================================================
+
+Scenario:
+
+[1, 2, 2, 3, 3, 3]
+
+Count each number.
+
+HashMap<Integer, Integer> map = new HashMap<>();
+
+for (int x : arr) {
+
+    map.put(
+        x,
+        map.getOrDefault(x, 0) + 1
+    );
+}
+
+
+Result:
+
+1 -> 1
+2 -> 2
+3 -> 3
+
+
+This pattern is VERY important.
+
+
+For String:
+
+String s = "hello";
+
+HashMap<Character, Integer> map = new HashMap<>();
+
+for (char c : s.toCharArray()) {
+
+    map.put(
+        c,
+        map.getOrDefault(c, 0) + 1
+    );
+}
+
+
+================================================
+24. HashSet
+================================================
+
+Use HashSet when you need UNIQUE values
+or fast checking if something already exists.
+
+
+HashSet<Integer> set = new HashSet<>();
+
+set.add(10);
+set.add(20);
+set.add(20);
+
+
+Result:
+
+[10, 20]
+
+
+Check:
+
+if (set.contains(10)) {
+    ...
+}
+
+
+Remove:
+
+set.remove(10);
+
+
+================================================
+25. FIND DUPLICATES
+================================================
+
+Scenario:
+
+[1, 2, 3, 2]
+
+Return true because 2 appears twice.
+
+HashSet<Integer> seen = new HashSet<>();
+
+for (int x : arr) {
+
+    if (seen.contains(x)) {
+        return true;
+    }
+
+    seen.add(x);
+}
+
+return false;
+
+
+Pattern:
+
+CHECK -> ADD
+
+
+================================================
+26. TWO SUM
+================================================
+
+Scenario:
+
+[2, 7, 11, 15]
+
+target = 9
+
+2 + 7 = 9
+
+
+Solution:
+
+HashMap<Integer, Integer> map = new HashMap<>();
+
+for (int i = 0; i < nums.length; i++) {
+
+    int complement = target - nums[i];
+
+    if (map.containsKey(complement)) {
+
+        return new int[] {
+            map.get(complement),
+            i
+        };
+    }
+
+    map.put(nums[i], i);
+}
+
+return new int[0];
+
+
+Important pattern:
+
+target - current = what I need
+
+
+================================================
+27. TWO POINTERS
+================================================
+
+Useful for sorted arrays, reversing,
+palindromes, etc.
+
+
+int left = 0;
+int right = arr.length - 1;
+
+while (left < right) {
+
+    // logic
+
+    left++;
+    right--;
+}
+
+
+Palindrome:
+
+int left = 0;
+int right = s.length() - 1;
+
+while (left < right) {
+
+    if (s.charAt(left) != s.charAt(right)) {
+        return false;
+    }
+
+    left++;
+    right--;
+}
+
+return true;
+
+
+================================================
+28. SWAP
+================================================
+
+int temp = arr[i];
+
+arr[i] = arr[j];
+
+arr[j] = temp;
+
+
+Used for:
+
+- reverse
+- sorting
+- rearranging arrays
+
+
+================================================
+29. Math methods
+================================================
+
+Math.max(a, b)
+
+Math.min(a, b)
+
+Math.abs(x)
+
+Math.pow(a, b)
+
+Math.sqrt(x)
+
+
+Examples:
+
+int max = Math.max(10, 20);
+
+int min = Math.min(10, 20);
+
+int distance = Math.abs(10 - 25);
+
+
+================================================
+30. COMPARING ARRAYS
+================================================
+
+DO NOT:
+
+arr1 == arr2
+
+
+This compares references.
+
+
+Use:
+
+Arrays.equals(arr1, arr2)
+
+
+Example:
+
+int[] a = {1, 2, 3};
+int[] b = {1, 2, 3};
+
+if (Arrays.equals(a, b)) {
+    System.out.println("same");
+}
+
+
+================================================
+31. Stack
+================================================
+
+Use Deque:
+
+Deque<Character> stack = new ArrayDeque<>();
+
+
+Add to top:
+
+stack.push('(');
+
+
+Remove from top:
+
+char c = stack.pop();
+
+
+Check:
+
+stack.isEmpty();
+
+
+Scenario:
+Valid parentheses.
+
+"()[]{}" -> true
+
+"([)]" -> false
+
+
+================================================
+32. Queue
+================================================
+
+Queue<Integer> queue = new LinkedList<>();
+
+
+Add:
+
+queue.offer(10);
+
+
+Remove first:
+
+queue.poll();
+
+
+Check:
+
+queue.isEmpty();
+
+
+FIFO:
+
+First In -> First Out
+
+
+================================================
+33. PriorityQueue
+================================================
+
+Min heap:
+
+PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+pq.offer(10);
+pq.offer(3);
+pq.offer(7);
+
+int smallest = pq.poll();
+
+
+smallest = 3
+
+
+Max heap:
+
+PriorityQueue<Integer> pq =
+    new PriorityQueue<>(Collections.reverseOrder());
+
+
+Useful for:
+- smallest element
+- largest element
+- top K problems
+
+
+================================================
+34. BINARY SEARCH
+================================================
+
+ONLY use when the array is sorted.
+
+
+int left = 0;
+int right = arr.length - 1;
+
+while (left <= right) {
+
+    int mid = left + (right - left) / 2;
+
+    if (arr[mid] == target) {
+        return mid;
+    }
+
+    if (arr[mid] < target) {
+        left = mid + 1;
+    } else {
+        right = mid - 1;
+    }
+}
+
+return -1;
+
+
+Complexity:
+
+O(log n)
+
+
+================================================
+35. CONDITIONS
+================================================
+
+Equal:
+
+if (x == 10)
+
+
+Not equal:
+
+if (x != 10)
+
+
+Greater:
+
+if (x > 10)
+
+
+Less:
+
+if (x < 10)
+
+
+Greater or equal:
+
+if (x >= 10)
+
+
+Less or equal:
+
+if (x <= 10)
+
+
+AND:
+
+if (x > 0 && x < 10)
+
+
+OR:
+
+if (x == 1 || x == 2)
+
+
+NOT:
+
+if (!condition)
+
+
+================================================
+36. EVEN / ODD
+================================================
+
+Even:
+
+if (x % 2 == 0)
+
+
+Odd:
+
+if (x % 2 != 0)
+
+
+================================================
+37. NULL CHECK
+================================================
+
+For objects:
+
+if (s == null) {
+    ...
+}
+
+
+Safe String comparison:
+
+"hello".equals(s)
+
+
+This is safer than:
+
+s.equals("hello")
+
+
+because if s is null:
+
+s.equals("hello")
+
+causes NullPointerException.
+
+
+================================================
+38. USEFUL RETURN PATTERNS
+================================================
+
+Return integer:
+
+return result;
+
+
+Return boolean:
+
+return true;
+
+return false;
+
+
+Return String:
+
+return result;
+
+
+Return array:
+
+return new int[]{i, j};
+
+
+Return empty array:
+
+return new int[0];
+
+
+Return nothing:
+
+return;
+
+
+Only inside void method.
+
+
+================================================
+39. COMMON CODING SCENARIOS
+================================================
+
+SCENARIO 1:
+Find maximum.
+
+int max = Integer.MIN_VALUE;
+
+for (int x : arr) {
+    max = Math.max(max, x);
+}
+
+
+SCENARIO 2:
+Find minimum.
+
+int min = Integer.MAX_VALUE;
+
+for (int x : arr) {
+    min = Math.min(min, x);
+}
+
+
+SCENARIO 3:
+Calculate sum.
+
+int sum = 0;
+
+for (int x : arr) {
+    sum += x;
+}
+
+
+SCENARIO 4:
+Count even numbers.
+
+int count = 0;
+
+for (int x : arr) {
+
+    if (x % 2 == 0) {
+        count++;
+    }
+}
+
+
+SCENARIO 5:
+Find an element.
+
+for (int x : arr) {
+
+    if (x == target) {
+        return true;
+    }
+}
+
+return false;
+
+
+SCENARIO 6:
+Reverse String.
+
+return new StringBuilder(s)
+        .reverse()
+        .toString();
+
+
+SCENARIO 7:
+Palindrome.
+
+int left = 0;
+int right = s.length() - 1;
+
+while (left < right) {
+
+    if (s.charAt(left) != s.charAt(right)) {
+        return false;
+    }
+
+    left++;
+    right--;
+}
+
+return true;
+
+
+SCENARIO 8:
+Duplicates.
+
+HashSet<Integer> set = new HashSet<>();
+
+for (int x : arr) {
+
+    if (!set.add(x)) {
+        return true;
+    }
+}
+
+return false;
+
+
+SCENARIO 9:
+Frequency.
+
+HashMap<Integer, Integer> map = new HashMap<>();
+
+for (int x : arr) {
+    map.put(x, map.getOrDefault(x, 0) + 1);
+}
+
+
+SCENARIO 10:
+Sort.
+
+Arrays.sort(arr);
+
+
+================================================
+40. MOST IMPORTANT DIFFERENCES
+================================================
+
+Primitive comparison:
+
+a == b
+
+
+String/Object content:
+
+a.equals(b)
+
+
+String ignoring case:
+
+a.equalsIgnoreCase(b)
+
+
+String contains:
+
+s.contains("abc")
+
+
+List/Set contains:
+
+list.contains(x)
+set.contains(x)
+
+
+HashMap key:
+
+map.containsKey(key)
+
+
+HashMap value:
+
+map.containsValue(value)
+
+
+String length:
+
+s.length()
+
+
+Array length:
+
+arr.length
+
+
+List/Map/Set size:
+
+list.size()
+map.size()
+set.size()
+
+
+Get String character:
+
+s.charAt(i)
+
+
+Get part of String:
+
+s.substring(start, end)
+
+
+Find position:
+
+s.indexOf(value)
+
+
+String -> char[]:
+
+s.toCharArray()
+
+
+String lowercase:
+
+s.toLowerCase()
+
+
+String uppercase:
+
+s.toUpperCase()
+
+
+Split:
+
+s.split(" ")
+
+
+Array sort:
+
+Arrays.sort(arr)
+
+
+Array comparison:
+
+Arrays.equals(a, b)
+
+
+Maximum:
+
+Math.max(a, b)
+
+
+Minimum:
+
+Math.min(a, b)
+
+
+Absolute:
+
+Math.abs(x)
+
+
+================================================
+41. BIG-O TO REMEMBER
+================================================
+
+One loop:
+
+for (...) {
+}
+
+O(n)
+
+
+Nested loops:
+
+for (...) {
+    for (...) {
+    }
+}
+
+O(n²)
+
+
+Binary search:
+
+O(log n)
+
+
+HashMap lookup:
+
+O(1) average
+
+
+HashSet lookup:
+
+O(1) average
+
+
+Sorting:
+
+O(n log n)
+
+
+================================================
+42. IMPORTS
+================================================
+
+Usually put these at the top:
+
+import java.util.*;
+
+Then you can use:
+
+ArrayList
+HashMap
+HashSet
+LinkedList
+Queue
+Deque
+ArrayDeque
+PriorityQueue
+Arrays
+Collections
+Scanner
+
+
+================================================
+43. THE MOST IMPORTANT PATTERNS TO MEMORIZE
+================================================
+
+FREQUENCY:
+
+HashMap<Integer, Integer> map = new HashMap<>();
+
+for (int x : arr) {
+    map.put(x, map.getOrDefault(x, 0) + 1);
+}
+
+
+DUPLICATES:
+
+HashSet<Integer> set = new HashSet<>();
+
+for (int x : arr) {
+
+    if (set.contains(x)) {
+        return true;
+    }
+
+    set.add(x);
+}
+
+
+TWO POINTERS:
+
+int left = 0;
+int right = arr.length - 1;
+
+while (left < right) {
+
+    // logic
+
+    left++;
+    right--;
+}
+
+
+SWAP:
+
+int temp = arr[left];
+arr[left] = arr[right];
+arr[right] = temp;
+
+
+TWO SUM:
+
+int complement = target - nums[i];
+
+if (map.containsKey(complement)) {
+    return new int[]{map.get(complement), i};
+}
+
+map.put(nums[i], i);
+
+
+PALINDROME:
+
+int left = 0;
+int right = s.length() - 1;
+
+while (left < right) {
+
+    if (s.charAt(left) != s.charAt(right)) {
+        return false;
+    }
+
+    left++;
+    right--;
+}
+
+return true;
+
+
+BUILD STRING:
+
+StringBuilder sb = new StringBuilder();
+
+for (...) {
+    sb.append(...);
+}
+
+return sb.toString();
+
+
+================================================
+44. QUICK DECISION GUIDE
+================================================
+
+I need to compare two ints:
+    ==
+
+I need to compare two Strings:
+    .equals()
+
+I don't care about uppercase/lowercase:
+    .equalsIgnoreCase()
+
+I need to know if text exists:
+    .contains()
+
+I need to know if an element exists in a List/Set:
+    .contains()
+
+I need to know if a HashMap has a key:
+    .containsKey()
+
+I need the value from a HashMap:
+    .get()
+
+I need a default if the key doesn't exist:
+    .getOrDefault()
+
+I need to count occurrences:
+    HashMap + getOrDefault()
+
+I need unique values:
+    HashSet
+
+I need to check duplicates:
+    HashSet
+
+I need to reverse:
+    Two pointers / StringBuilder
+
+I need to compare from both ends:
+    Two pointers
+
+I need to find something in sorted data:
+    Binary Search
+
+I need to sort:
+    Arrays.sort()
+
+I need maximum:
+    Math.max()
+
+I need minimum:
+    Math.min()
+
+I need absolute difference:
+    Math.abs()
+
+I need one character:
+    charAt()
+
+I need part of a String:
+    substring()
+
+I need position:
+    indexOf()
+
+I need String -> characters:
+    toCharArray()
+
+I need String -> lowercase:
+    toLowerCase()
+
+I need String -> uppercase:
+    toUpperCase()
+
+I need to split text:
+    split()
+
+I need to build a String:
+    StringBuilder
+
+I need LIFO:
+    Stack / Deque
+
+I need FIFO:
+    Queue
+
+I need smallest/largest dynamically:
+    PriorityQueue
+
+
+================================================
+45. GOLDEN RULES FOR THE CODING TEST
+================================================
+
+1. String content:
+   USE .equals()
+   NOT ==
+
+
+2. Primitive values:
+   USE ==
+
+
+3. Array content:
+   USE Arrays.equals()
+
+
+4. Array length:
+   arr.length
+
+
+5. String length:
+   s.length()
+
+
+6. List length:
+   list.size()
+
+
+7. HashMap:
+   containsKey() -> check key
+   get()         -> get value
+   put()         -> add/update
+   getOrDefault()-> get safely
+
+
+8. HashSet:
+   contains() -> check
+   add()      -> add unique value
+
+
+9. If you see "frequency/count":
+   Think HashMap.
+
+
+10. If you see "duplicate/unique":
+    Think HashSet.
+
+
+11. If you see "two numbers sum to target":
+    Think HashMap / Two Sum.
+
+
+12. If you see "sorted":
+    Think Binary Search.
+
+
+13. If you see "from both ends":
+    Think Two Pointers.
+
+
+14. If you see "reverse":
+    Think Two Pointers or StringBuilder.
+
+
+15. If you see "parentheses/brackets":
+    Think Stack / Deque.
+
+
+16. Always check edge cases:
+    empty array
+    one element
+    duplicate values
+    negative numbers
+    null String
+    target not found
