@@ -1,0 +1,15 @@
+
+
+| AWS                     | Azure                    |
+| ----------------------- | ------------------------ |
+| IAM user                | Microsoft/Azure account  |
+| Access Key ID           | Azure CLI authentication |
+| Secret Access Key       | Azure CLI authentication |
+| `AWS_ACCESS_KEY_ID`     | `az login`               |
+| `AWS_SECRET_ACCESS_KEY` | `az login`               |
+| AWS Provider            | AzureRM Provider         |
+| AWS account/region      | Azure subscription       |
+
+
+
+

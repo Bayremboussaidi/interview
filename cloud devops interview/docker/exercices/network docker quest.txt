@@ -1,0 +1,72 @@
+
+
+Create a new network named wp-mysql-network using the bridge driver.
+ Allocate subnet as 182.18.0.0/24 and configure gateway as 182.18.0.1.
+
+
+( bridge  driver  ist  immer per default  , also  selbst  wenn ich nicht erwahnen wurde , immer typ bridge  verwendet  wurde ) 
+
+- driver  is  type that follows the  networks
+
+
+
+
+
+
+
+RESPONSE : 
+
+
+Network: 182.18.0.0/24
+Gateway: 182.18.0.1
+
+
+
+                 Docker Host
+                     │
+              182.18.0.1
+                 Gateway
+                     │
+        ┌────────────┴────────────┐
+        │   wp-mysql-network     │
+        │   182.18.0.0/24        │
+        │                         │
+        │  mysql     wordpress    │
+        │  .2           .3        │
+        └─────────────────────────┘
+
+
+
+so  here  mysql  and  wordpress  communicate  , no problm 
+
+when 1 want  to  communicate  out , muss use  the Gateway
+
+
+
+
+-> docker network create --driver bridge --subnet 182.18.0.1/24 --gateway 182.18.0.1 web-network
+
+
+
+
+
+---------------------------------------------
+
+
+
+
+
+question :  Deploy a web application named webapp using the 'kodekloud/latest-webapp-mysql' image.
+
+Expose the container’s port 8080 to port 38080 on the host.
+
+The application makes use of two environment variable:
+
+DB_Host with the value mysql-db
+DB_Password with the value db_pass123
+
+
+
+
+
+ docker run -d -p 38080:8080 --env DB_Host=mysql-db --env DB_Password=db_pass123 kodekloud/latest-webapp-mysql

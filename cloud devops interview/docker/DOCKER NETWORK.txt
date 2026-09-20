@@ -1,0 +1,59 @@
+
+create network 'clicknet'  / 
+
+create the container  named  ' redis '  , image : ' redis:alpine ' , attach it  to network  ' clicknet ' ? 
+
+
+- docker network create clicknet   ( create network )                           / docker network create ..
+
+- docker run -d --name redis --network clicknet redis:alpine    
+
+
+
+-------------------------------------
+
+
+
+docker rm       → remove container
+docker rm -f    → force remove container
+docker rmi      → remove image
+
+
+
+docker network rm -f network   ( remove network )
+
+
+docker network connect NETWORK CONTAINER
+
+
+docker network disconnect NETWORK CONTAINER
+
+
+docker inspect clicknet   ( see  all the details , what  s container attached ... )
+
+
+
+
+
+------------------
+
+
+docker network inspect bridge   ( see  all  details  related  to  bridge )
+
+
+
+
+-----------------------
+
+want  to discover  the networks   attached to container  alpine-1 ? 
+
+
+- docker container inspect alpine-1  
+
+(  then  see section  networks  ) 
+
+
+
+
+
+

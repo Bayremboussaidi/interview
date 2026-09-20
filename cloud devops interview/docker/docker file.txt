@@ -1,0 +1,101 @@
+
+
+docker build
+     │
+     ├── FROM
+     ├── RUN
+     ├── COPY
+     └── WORKDIR
+     │
+     ↓
+   IMAGE
+     │
+     │ docker run
+     ↓
+  CONTAINER
+     │
+     └── CMD
+
+
+
+
+exemple 
+
+FROM ubuntu:24.04
+
+RUN apt-get update
+RUN apt-get install -y curl
+
+
+
+
+RUN  ( happens  during  docker build)   
+
+
+CMD ["node", "app.js"]  (  default  commands  , when  container  start )
+
+
+EXPOSE 8080    (  This tells Docker:  The application in this image is expected to listen on port 8080.  )
+
+
+
+ENV APP_ENV=production    ( environment  variables  ) 
+
+
+
+
+
+YOUR COMPUTER                    CONTAINER IMAGE
+
+myapp/                           /app/
+   │                               │
+   └── app.js  ───── COPY ──────→  app.js
+
+
+
+COPY app.js . = Copy app.js     from   my computer   into the current directory of the image.   (  COPY SOURCE DESTINATION  )
+
+
+(  for exemple : 
+
+COPY app.js /app/ 
+
+Computer                      Image
+
+app.js  ───────────────────→  /app/app.js
+ 
+
+
+
+
+
+
+
+COPY app.js /opt/app.js
+     │       │
+     │       └── destination inside the image
+     └── source file on your computer
+
+
+
+
+
+----------------------------------
+
+
+cat Dockerfile   (  show  the  code  of the  dockerfile  )
+
+
+
+ena  f west  repo  li fih  Dockerfile 
+
+
+1 -> docker build -t webapp-color .   (  create  image  here  from  the dockerfile  ) 
+
+
+2 -> docker run -p 8080:8282 webapp-color app  ( app  lena  ye7sebha  command  mouch  2esm ) 
+
+
+
+docker run -p 8081:8282 --name app webapp-color   ( tsami  l container  'app'  , aus  image  ' webapp-color'  )
+

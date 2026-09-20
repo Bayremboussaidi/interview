@@ -1,0 +1,87 @@
+
+
+NORMAL SERVER:
+docker run -d IMAGE
+
+
+
+LEARNING / TESTING:
+docker run -it IMAGE bash
+
+
+
+ENTER RUNNING CONTAINER:
+docker exec -it CONTAINER bash
+
+
+
+
+
+->  docker run -d -p HOST_PORT:CONTAINER_PORT --name CONTAINER_NAME IMAGE                 ( exp :  docker run -d -p 8080:80 --name mynginx nginx  ) 
+
+
+
+
+->  docker build -t IMAGE-name .      ( exp  :   docker build -t webapp-color:lite .   ) 
+
+
+
+
+to  enter inside  container ? 
+
+
+-> docker exec -it CONTAINER_NAME bash
+
+
+
+
+-----------------------------------------------------
+
+
+
+command  to  see all the variables  inside  bash  file ?    env         / .env  :  file of variables 
+
+
+run container  + see his  variables  ->  docker exec name-container env   ( run the container  and  execute  env inside  it )
+
+
+
+
+---------------------------------------------
+
+
+Run a container named blue-app using image kodekloud/simple-webapp and set the environment variable APP_COLOR to blue. Make the application available on port 38282 on the host. The application listens on port 8080.
+
+
+
+-> docker run -p 8383:8080 --name blue-app -e APP_COLOR = green -d kodekloud/img
+
+
+
+
+
+
+-----------------------------------------------
+
+
+
+
+
+
+-> docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=123 mysql 
+
+
+( docker run -d -p 8080:8080 --name myapp -e APP_COLOR=blue kodekloud/simple-webapp  )  , always like that
+
+
+docker run -d -p ..:.. --name .. -e ..=.. image
+
+
+
+
+
+
+
+-------------------------------------
+
+

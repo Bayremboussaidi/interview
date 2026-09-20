@@ -1,0 +1,63 @@
+
+docker build -t my-demo:v1 .      (  only   this  command   ,  docker  will use  dockerkit )
+
+
+
+
+
+
+
+
+                    Docker
+                      │
+          ┌───────────┴───────────┐
+          │                       │
+   Docker Engine              BuildKit
+          │                       │
+   runs containers          builds images
+          │                       │
+          ↓                       ↓
+      Container                Image
+
+
+
+BuildKit ist die moderne Build-Engine von Docker. Sie liest das Dockerfile und erstellt daraus ein Docker-Image
+
+
+BuildKit = Motor zum Bauen von Docker-Images.
+
+
+
+
+
+
+Dockerfile
+    ↓
+BuildKit
+    ↓
+Docker Image
+
+
+
+
+
+
+→ schneller
+→ besseres Caching
+→ parallele Builds
+→ Multi-Stage Builds
+→ verschiedene CPU-Architekturen
+→ moderne Build-Funktionen
+
+
+
+
+exemple  ;  (  when  dev change  something  during , builds  , with  buildKit  , the  build  wont   repeat  von  anfang )
+
+
+
+
+
+
+
+

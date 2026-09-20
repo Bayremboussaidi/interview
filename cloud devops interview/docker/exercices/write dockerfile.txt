@@ -1,0 +1,205 @@
+
+
+exercice : 
+
+
+
+.
+├── Dockerfile
+└── index.html
+
+
+
+Create a Dockerfile using the nginx:alpine image.
+Copy index.html into the Nginx web directory.
+Expose port 80 ( container )    , run it on 8282 : host
+
+
+
+
+USE nginx:alpine
+
+COPY index.html /usr/share/nginx/html/index.html
+
+EXPOSE 80 
+
+
+
+responses :
+
+
+docker build -t img-ex1 .
+
+
+
+
+
+
+-----------------------------------------------
+
+
+
+Exercise: Node.js API
+📝 Exercise says
+
+my-api/
+├── Dockerfile
+├── package.json
+└── server.js
+
+
+
+Create a Dockerfile using Node.js 20.
+Copy the application files.
+Install dependencies.
+The application listens on port 3000.
+Start the application with npm start.
+
+
+
+
+FROM node:20-alpine
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . . 
+
+EXPOSE 3000
+
+CMD ["npm" , "start"]
+
+
+
+
+
+docker build -t img-ex2 .
+
+
+
+
+---------------------------------------
+
+
+
+Create a Dockerfile using Python 3.12.
+Copy requirements.txt.
+Install dependencies.
+Copy the application.
+The application listens on port 5000.
+Set APP_ENV=production.
+Start the application.
+
+
+
+
+
+FROM python:3.12
+
+WORKDIR /app  ( related to the container dir , always add it  ) 
+
+COPY *.txt .
+
+RUN pip install
+
+COPY . .  ( copy all the files  from .. inside  the container )
+
+EXPOSE 5000
+
+ENV APP_ENV=production     ( ENV ..      ta3 l environnement )
+
+CMD["python","app.py]
+
+
+
+
+
+
+
+
+
+| Exercise requirement | Dockerfile              |
+| -------------------- | ----------------------- |
+| Use nginx            | `FROM nginx:alpine`     |
+| Use Node 20          | `FROM node:20-alpine`   |
+| Use Python 3.12      | `FROM python:3.12-slim` |
+| Copy file            | `COPY ...`              |
+| Install dependencies | `RUN ...`               |
+| Working directory    | `WORKDIR /app`          |
+| Application port     | `EXPOSE 3000`           |
+| Start application    | `CMD [...]`             |
+| Environment variable | `ENV KEY=value`         |
+
+
+
+
+
+root@docker-host lib/docker/containers ✖ docker run -d --name mysql-db --env MYSQL_ROOT_PASSWORD=db_pass123 mysql
+
+( when  = , dont make space  in between )
+
+
+
+
+root@docker-host ~ ➜  docker run -d -v /opt/data:/var/lib/mysql --env MYSQL_PASSWORD=db_pass123 mysql    
+
+( --env ...  : environnement     ;   -v /opt/data:/var/lib/mysql     :  volume  )
+
+
+
+
+
+-----------------------------
+
+
+
+add  tag to image ? 
+
+
+docker image tag nginx:latest localhost/nginx:latest
+
+
+
+
+-----------------------------
+
+
+Exercise
+
+Create a MySQL database and a WordPress application.
+MySQL should use password db_pass123.
+WordPress should connect to MySQL.
+
+
+
+docker-compose.yml
+
+
+services:
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: db_pass123
+      MYSQL_DATABASE: wordpress
+
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_PASSWORD: db_pass123
+      WORDPRESS_DB_NAME: wordpress
+    depends_on:
+      - mysql
+
+
+
+cmd :  docker compose up -d
+
+
+
+
+

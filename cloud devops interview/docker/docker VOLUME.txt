@@ -1,0 +1,10 @@
+
+quest :  create  volumle  + attach  it  with container 'con' + attach to network net
+
+
+
+- docker volume create volum
+
+- docker volume ls  ( show all the volumes )
+
+- docker run -d --name con --network net -v volum:/var/lib/mysql mysql

@@ -1,0 +1,13 @@
+
+
+Microsoft Account
+   ↓
+az login
+   ↓
+Azure CLI
+   ↓
+Terraform
+
+
+
+

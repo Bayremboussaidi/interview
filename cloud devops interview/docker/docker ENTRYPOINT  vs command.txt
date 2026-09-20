@@ -1,0 +1,22 @@
+
+
+what  s the CMD  config in the dockerfile ..
+
+
+->  root@docker-host ~ ➜  cat Dockerfile-wordpress | grep CMD
+
+
+
+
+CMD ..   ->   the  command  that  runs  per default  , when  the instance  launches
+
+
+
+-----------------------
+
+
+
+Run an instance of the ubuntu image that executes the sleep 1000 command at startup.
+
+
+->  docker run -d  ubuntu sleep 1000

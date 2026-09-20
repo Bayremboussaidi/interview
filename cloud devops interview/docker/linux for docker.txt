@@ -1,0 +1,44 @@
+
+nano file 
+
+( nano compose.yaml  )  ->  open the file  and write in it   /  then  cnt+x  - cnt+o
+
+
+cat file  ( zeige es )
+
+
+
+
+
+
+docker ps
+docker ps -a
+docker images
+docker run -d ...
+docker stop container
+docker start container
+docker rm container
+docker rm -f container
+docker rmi image
+docker logs container
+docker exec container command
+docker inspect container
+
+
+
+
+docker network ...   
+
+docker network create xx 
+
+docker network rm xx
+
+docker network connect network container   !=   docker network disconnect network container
+
+
+
+
+docker run ...... image   ( dima l image  fle5er ba3d arguments lkol )
+
+
+

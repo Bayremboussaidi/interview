@@ -1,0 +1,30 @@
+
+
+u dont need to give  all the attributes , and their  keys  , just give what u want exactly ( conditions ) 
+
+and let  the others to terr , generate  auto 
+
+
+
+
+
+
+You specify → what you want / need to configure
+        ↓
+Provider/AWS → supplies defaults or generates values
+        ↓
+Terraform → tracks the resulting resource and attributes
+
+
+
+
+exp :
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
+// so the  others  generate it  terr  auto
+
+
+

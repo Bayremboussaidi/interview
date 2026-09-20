@@ -1,0 +1,73 @@
+
+my-terraform/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+└── providers.tf
+
+
+Important: main.tf, variables.tf, outputs.tf, etc. are all automatically read by Terraform when they are in the same project directory. You don't run Terraform separately for each file.
+- terraform fmt 
+
+-> make terr code  easier to read , clean , follow  the terr  rules + gain time not to think about spaces..
+
+
+
+
+terraform init
+terraform fmt
+terraform validate
+terraform plan
+terraform apply
+
+
+
+
+
+terraform init
+→ first command after creating/cloning the project
+→ downloads the AWS provider
+
+terraform fmt
+→ after writing/changing .tf code
+→ formats your code
+
+terraform validate
+→ after writing/changing code
+→ checks whether Terraform configuration is valid
+
+terraform plan
+→ before creating/changing AWS infrastructure
+→ shows you what Terraform WOULD do
+
+terraform apply
+→ actually creates/changes AWS infrastructure
+
+
+
+*****************************************************************
+
+
+terraform  plan ?     // twarik  exemple  virtuell  ala resultat  ,  bch ken thb  tbadel haja 
+
+
+Terraform will perform the following actions:
+
+  # aws_vpc.main will be created
+  + resource "aws_vpc" "main" {
+      + cidr_block = "10.0.0.0/16"
+      + id         = (known after apply)
+      ...
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+What does + mean?
++ = CREATE
+~ = CHANGE / UPDATE
+- = DESTROY
+
+
+
+
+
+

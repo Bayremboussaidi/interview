@@ -1,0 +1,168 @@
+
+
+docker build -t myapp:1.0 .    (  .  means  here    /    myapp:1.0  is  the image  + tag )
+
+
+
+
+-------------------------------
+
+
+create a Docker image from a Dockerfile   ? 
+
+
+cd myapp
+
+docker build -t myapp:1.0 .
+
+
+
+-----------------------------------
+
+
+
+Then create a container from your image:
+
+
+
+- docker run myapp:1.0         (  exp :  docker run -it python:3.14 bash  )   , bash : terminal  after  running    /   python:3.14   is  the img  
+
+
+
+-----------------------------------
+
+
+
+
+Dockerfile
+
+    ↓ docker build
+
+Docker IMAGE
+
+    ↓ docker run
+
+Docker CONTAINER
+
+
+
+
+--------------------------------------------
+
+
+
+grep -i FROM /root/webapp-color/Dockerfile   
+
+
+  (  returns   FROM  python ...   -> the image  source   /   -i   ignore upper  or minuscule  /  from  fich  Dockerfile  search ) ->  return line
+
+
+
+
+
+
+
+--------------------------------------------
+
+
+
+
+build  the image  defined  in  the dockerfile ? 
+
+
+
+root@docker-host ~ ➜ cd /root/webapp-color/
+root@docker-host ~ ➜ pwd
+/root/webapp-color
+
+
+
+
+root@docker-host ~ ➜ cd /root
+root@docker-host ~ ➜ docker build -t webapp-color .
+
+
+
+
+
+----------------------------------------
+
+
+
+
+question :  Build a docker image using the Dockerfile and name it "webapp-color". Do not specify a tag.
+
+
+root@docker-host ~ ➜ docker build -t webapp-color .    (  add  always  .   ,  when  you re in  the dir  of the dockerfile  )
+
+
+
+
+------------------------------------------
+
+
+
+question :  Run an instance of the image webapp-color and publish port 8080 on the container to 8282 on the host.
+
+
+
+- docker run -p 8282:8080 webapp-color
+
+
+
+
+----------------------------------------
+
+
+
+quest :  What is the base Operating System used by the python:3.14 image?                ->   cat /etc/os-release  ( u musst  run it  inside the container )
+
+
+
+
+- docker run python:3.14 cat /etc/*release*
+
+
+
+
+---------------------------------------
+
+
+
+question :  modify  the  Dockerfile   and  run  it  again ? 
+
+
+In the webapp-color directory, run the ls -l command to list the Dockerfile and other files.
+
+2 - modify  the  Dockerfile
+
+
+3-  build -t name-img .    (  build  the img  from  the  what s described  in the dockerfile  ) 
+
+
+
+
+
+
+Docker container
+       │
+       └── Bash
+            │
+            ├── ls
+            ├── cat
+            ├── pwd
+            ├── python
+            └── etc...
+
+
+
+
+
+
+
+Check the size  ? 
+
+- docker images
+
+
+

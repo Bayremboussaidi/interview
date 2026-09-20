@@ -1,0 +1,100 @@
+template
+
+services:
+
+  service-name:
+    image: image-name
+    ports:
+      - "HOST:CONTAINER"
+    environment:
+      VARIABLE: value
+    depends_on:
+      - another-service                (  depends on , tell docker  start this service  before ich  ) 
+
+
+
+
+
+
+
+*******************************
+
+
+
+exer : 
+
+Run a backend on port 3000 and Nginx as a reverse proxy on port 80.
+
+
+sol : 
+
+services:
+
+  backend:
+    image: my-backend
+    expose:
+      - "3000"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend  ( lbackend 9bal )
+
+
+
+
+
+docker compose up  :
+
+Browser
+   ↓
+localhost:8080
+   ↓
+ Nginx
+   ↓
+ Backend
+
+---------------------------
+
+
+
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-db    ( container  name here )
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress-app
+    depends_on:
+      - mysql
+
+
+
+
+--------------------------
+
+
+
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: db_pass123
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin123
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+
+
+diff  docker  VS  virtual machine ? 
+
+
+virt Mach  can carry  o.system     /   docker  is meant  only  for  process , for service  ( like host  web server ..)
+
+
+->  if  the web  server  inside  is  stopped  ->   container  stopped
+
+
+
+
+
+---------------------------------
+
+
+
+when  use  ENTRYPOINT   vs  normal  command  DOCKER ? 
+
+
+
+So I use ENTRYPOINT when I want to fix the main application, and CMD for default arguments that I may want to override. ( twali  lcommand  hya li temchi  statt  ENTRYPOINT  )
+
+
+like here ? 
+
+FROM python:3.14
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]
+
+
+
+
+docker run myapp
+
+-> python app.py  
+
+
+
+
+
+
+
+
+cas 2  :  docker run myapp test.py      ->  python  test.py

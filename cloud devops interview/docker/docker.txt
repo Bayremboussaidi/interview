@@ -1,0 +1,88 @@
+
+registry  ?  is  like github of images 
+
+
+Docker Hub = a public registry
+
+
+
+Docker Hub = a public registry
+
+The most famous registry is Docker Hub.
+
+
+----------------
+
+Developer
+   │
+   │ docker push
+   ↓
+Private Docker Registry
+   │
+   │ docker pull
+   ↓
+Kubernetes / Production Server
+
+
+---------------------------
+
+- In Docker, a registry is a place where Docker images are stored and shared.   ( docker  hub  * docker registry )
+
+- docker  registry  , ist  ein speichort , an dem  docker images  gespeichert  und geteilt  werden
+
+
+
+---------------------------------------
+
+
+container  ist not to  host operating  system  ,  it  s meant to host  app server , web server .. database
+
+- container  is  alive only  when  the web server  inside it is  alive  ( if crush , then  the container  exit  immediately )
+
+
+
+
+
+-- What does docker exec do?
+
+docker exec allows you to run a command inside an already-running container.
+
+
+
+
+
+-------------------------------
+
+
+ * docker  images   /  docker ps-a    /   docker image ls
+
+
+
+what s  nginx:alpine  ( image )  ?       
+
+
+nginx  : the image 
+
+alpine  : tag
+
+
+- diff  between  * docker run nginx   /    * docker  run nginx:tag   
+
+
+here ,* docker run nginx  ,  it  uses  the latest  version 
+
+
+
+
+----------------------------
+
+
+
+docker  used  always  to store  his containers  & images  ,  unter  this root  ' /var/lib/docker/containers/ '
+
+or '/var/lib/docker/image/ '
+
+
+
+
+

@@ -1,0 +1,50 @@
+
+AWS                                      AZURE
+────────────────────────────────────────────────────────────
+
+1. AWS Console                           1. Azure Portal
+   → IAM                                    → Microsoft Entra ID
+   → Users                                  → App registrations
+   → Create user                            → New registration
+        ↓                                        ↓
+
+2. Create IAM user                        2. Create App Registration
+   Name: terraform                           Name: terraform
+        ↓                                        ↓
+
+3. Security credentials                   3. Certificates & secrets
+   → Create access key                        → New client secret
+        ↓                                        ↓
+
+4. Copy:                                  4. Copy:
+   Access Key ID                              Client ID
+   Secret Access Key                          Client Secret
+                                             Tenant ID
+                                             Subscription ID
+        ↓                                        ↓
+
+5. PowerShell                             5. PowerShell
+   $env:AWS_ACCESS_KEY_ID="..."               $env:ARM_CLIENT_ID="..."
+   $env:AWS_SECRET_ACCESS_KEY="..."            $env:ARM_CLIENT_SECRET="..."
+   $env:AWS_DEFAULT_REGION="..."              $env:ARM_TENANT_ID="..."
+                                             $env:ARM_SUBSCRIPTION_ID="..."
+        ↓                                        ↓
+
+6. main.tf                                6. main.tf
+   provider "aws" {                           provider "azurerm" {
+     region = "eu-north-1"                      features {}
+   }                                          }
+        ↓                                        ↓
+
+7. terraform init                         7. terraform init
+        ↓                                        ↓
+
+8. terraform plan                         8. terraform plan
+        ↓                                        ↓
+
+9. terraform apply                        9. terraform apply
+        ↓                                        ↓
+
+AWS Cloud                                Azure Cloud
+
+

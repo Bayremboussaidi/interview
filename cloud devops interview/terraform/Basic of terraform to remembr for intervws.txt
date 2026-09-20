@@ -1,0 +1,343 @@
+
+
+
+
+Terraform is declarative:
+We describe WHAT infrastructure we want, not HOW to create it.  (  != imperativ   , describe step by step  what to do ) 
+
+
+
+
+
+
+
+What enables Terraform to work with different cloud platforms and services?
+
+- provider , in terr , that have concentions with  pratically  all the cloud  providers
+
+
+
+
+
+What is the primary purpose of Terraform's state file?
+
+- describe  the  actual  zustand  of the infra 
+
+
+
+
+
+What are the key advantages of using Terraform to manage infrastructure compared to manually managing it ?
+
+- terraform  help u , manage , change  infra in a safe , consistent  and repeatable  way ( u can use the code with other app )
+
+
+
+
+
+
+
+
+TERRAFORM HCL – GRUNDLAGEN
+
+HCL = HashiCorp Configuration Language
+
+HCL is the language used by Terraform to define infrastructure.
+
+Terraform = Infrastructure as Code (IaC)
+
+Terraform configuration files use the .tf extension.
+
+Examples:
+main.tf
+variables.tf
+outputs.tf
+providers.tf
+
+
+HCL BLOCKS
+
+Basic structure:
+
+block_type "type" "name" {
+  argument = value
+}
+
+
+RESOURCE BLOCK
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
+resource = block type
+aws_vpc = resource type
+main = resource name
+cidr_block = argument
+10.0.0.0/16 = value
+
+
+RESOURCE
+
+resource = infrastructure that Terraform creates or manages.
+
+Example:
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
+
+DATA BLOCK
+
+data = reads information about existing infrastructure/resources.
+
+Example:
+
+data "aws_availability_zones" "available" {}
+
+
+RESOURCE vs DATA
+
+resource = create/manage infrastructure
+
+data = read/query existing information
+
+
+RESOURCE REFERENCE
+
+Resource type + resource name = resource reference
+
+Example:
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
+Reference:
+
+aws_vpc.main
+
+Access an attribute:
+
+aws_vpc.main.id
+
+
+RESOURCE DEPENDENCY
+
+Example:
+
+resource "aws_subnet" "public" {
+  vpc_id = aws_vpc.main.id
+}
+
+The subnet uses the ID of the VPC.
+
+
+RESOURCE NAMES
+
+Resource names must be unique for the same resource type.
+
+Good:
+
+resource "aws_vpc" "production" {
+  ...
+}
+
+resource "aws_vpc" "development" {
+  ...
+}
+
+
+NAMING CONVENTION
+
+Use snake_case.
+
+Good:
+production_vpc
+web_server
+database_subnet
+
+Avoid:
+productionVPC
+ProductionVPC
+
+
+ARGUMENTS / ATTRIBUTES
+
+Arguments define the configuration of a block.
+
+Example:
+
+cidr_block = "10.0.0.0/16"
+
+tags = {
+  Name = "production-vpc"
+}
+
+
+COMMENTS
+
+Single-line comment:
+
+# This is a comment
+
+Also possible:
+
+// This is a comment
+
+Multi-line comment:
+
+/*
+  This is a
+  multi-line comment.
+*/
+
+
+INDENTATION
+
+Terraform uses 2 spaces for indentation.
+
+Example:
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "main"
+  }
+}
+
+
+TERRAFORM FMT
+
+terraform fmt
+
+Automatically formats Terraform code according to the standard style.
+
+
+IMPORTANT HCL STRUCTURE
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
+
+resource
+= block type
+
+aws_vpc
+= resource type
+
+main
+= resource name
+
+cidr_block
+= argument
+
+10.0.0.0/16
+= value
+
+
+IMPORTANT TO REMEMBER
+
+HCL = HashiCorp Configuration Language
+
+Terraform = Infrastructure as Code
+
+Terraform = declarative
+
+.tf = Terraform configuration file
+
+resource = create/manage infrastructure
+
+data = read existing information
+
+argument = configuration value
+
+resource "type" "name" { }
+
+resource reference = type.name
+
+Example:
+aws_vpc.main
+
+Naming convention = snake_case
+
+Indentation = 2 spaces
+
+terraform fmt = format Terraform code
+
+
+MENTAL MODEL
+
+Terraform
+|
+|-- HCL
+|   |
+|   |-- Blocks
+|   |   |-- resource
+|   |   |-- data
+|   |   |-- variable
+|   |   |-- output
+|   |   |-- provider
+|   |
+|   |-- Arguments
+|       |-- key = value
+|
+|-- Declarative
+    |
+    |-- Describe WHAT you want
+    |-- Terraform decides HOW to create it
+
+
+
+--------------------------------------------------------
+
+
+
+
+resource → CREATE / MANAGE
+data     → READ / USE
+
+
+
+
+
+data ? 
+
+Suppose an AWS VPC already exists:
+
+data "aws_vpc" "existing" {
+  id = "vpc-123456"
+}
+
+Terraform does not create this VPC.  It simply reads its information.
+
+
+
+
+
+
+
+
+read  ->  create  phase
+
+For example, getting the latest Amazon Linux AMI:
+
+data "aws_ami" "amazon_linux" {
+  most_recent = true
+
+  owners = ["amazon"]
+}
+
+Then:
+
+resource "aws_instance" "server" {
+  ami = data.aws_ami.amazon_linux.id
+}
+
+
+
+
+
+

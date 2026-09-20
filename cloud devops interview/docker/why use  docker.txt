@@ -1,0 +1,33 @@
+
+
+Mit Docker muss man eine Anwendung nicht unbedingt direkt auf dem eigenen Computer installieren. Stattdessen kann man die Anwendung in einem Docker-Container ausführen.
+
+Wenn man die Anwendung nicht mehr benötigt, kann man den Container löschen:
+
+```bash
+docker rm CONTAINER
+```
+
+Danach ist der Container entfernt.
+
+**Beispiel:**
+
+```bash
+docker run redis
+```
+
+→ Redis wird in einem Container gestartet.
+
+Wenn man Redis nicht mehr braucht:
+
+```bash
+docker rm CONTAINER_ID
+```
+
+→ Der Container wird gelöscht.
+
+**Wichtig:** Das Docker-Image bleibt normalerweise auf dem Computer gespeichert. Nur der Container wird gelöscht. Das Image kann man später wieder verwenden, ohne es erneut herunterzuladen.
+
+
+
+

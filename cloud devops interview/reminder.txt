@@ -1,0 +1,318 @@
+
+
+🇬🇧 Answer:
+“An artifact is a build output that can be stored and deployed, for example a JAR file or Docker image.”
+
+🇩🇪 Antwort:
+„Ein Artefakt ist das Ergebnis eines Builds, das gespeichert und deployed werden kann, zum Beispiel eine JAR-Datei oder ein Docker Image.
+
+
+
+
+
+„Ein Docker Image ist ein paketiertes, unveränderliches Template, das die Anwendung und ihre benötigten Dependencies enthält.“
+
+
+
+
+
+„Ein Container ist eine laufende Instanz eines Docker Images.“
+
+
+
+
+
+Git
+↓
+Build
+↓
+Test
+↓
+Docker Build
+↓
+Security Scan
+↓
+Container Registry
+↓
+Deploy 🚀
+
+
+
+
+
+
+
+🔹 37. What is rollback?
+
+🇬🇧 Answer:
+“Rollback means returning the application to a previous known-good version when the new deployment causes problems.”
+
+🇩🇪 Antwort:
+„Rollback bedeutet, die Anwendung auf eine vorherige funktionierende Version zurückzusetzen, wenn das neue Deployment Probleme verursacht.“
+
+
+
+
+
+
+
+
+
+🔹 39. Which AWS services can be used for CI/CD?
+
+🇬🇧 Answer:
+“AWS provides services such as CodePipeline, CodeBuild, CodeDeploy and CodeArtifact. Other tools like GitLab CI, Jenkins or GitHub Actions can also be integrated with AWS.”
+
+🇩🇪 Antwort:
+„AWS bietet Services wie CodePipeline, CodeBuild, CodeDeploy und CodeArtifact. Auch Tools wie GitLab CI, Jenkins oder GitHub Actions können mit AWS integriert werden.“
+
+
+
+
+
+
+
+🔹 40. What is AWS CodeBuild?
+
+🇬🇧 Answer:
+“CodeBuild is a managed build service that compiles source code, runs tests and produces build artifacts.”
+
+🇩🇪 Antwort:
+„CodeBuild ist ein Managed Build Service, der Source Code kompiliert, Tests ausführt und Build-Artefakte erstellt.“
+
+
+
+
+
+
+
+
+
+
+🔹 29. Why use Docker in CI/CD?
+
+🇬🇧 Answer:
+“Docker provides a consistent environment for building and running the application across development, CI and production.”
+
+🇩🇪 Antwort:
+„Docker sorgt für eine konsistente Umgebung beim Build und Betrieb der Anwendung in Development, CI und Production.“
+
+
+
+
+
+
+AWS STS - Creates temporary credentials
+
+
+AWS Secrets Manager  -  stores  passworts ( like  DB username/password .. )
+
+
+
+
+
+
+
+🔹 47. What is Infrastructure as Code?
+
+🇬🇧 Answer:
+“Infrastructure as Code means defining and managing infrastructure through configuration files instead of creating resources manually.”
+
+🇩🇪 Antwort:
+„Infrastructure as Code bedeutet, Infrastruktur über Konfigurationsdateien zu definieren und zu verwalten, anstatt Ressourcen manuell zu erstellen.“
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. What is Linux?
+
+🇩🇪 Deutsch:
+
+„Linux ist ein Open-Source-Betriebssystem beziehungsweise ein Betriebssystem-Kernel. Es wird sehr häufig auf Servern, in der Cloud und in Containern verwendet,
+
+
+
+
+
+
+3. What is a Shell?
+
+🇩🇪
+
+„Eine Shell ist eine Benutzeroberfläche ( command line  interface  ) , über die man mit dem Betriebssystem über Befehle interagieren kann. Ein Beispiel ist Bash. 
+
+Man kann damit Dateien verwalten, Prozesse starten und Systemaufgaben automatisieren.“
+
+
+
+
+
+
+ein  absoluter  pfad  : „Ein absoluter Pfad beginnt beim Root-Verzeichnis / direktorium  und beschreibt den vollständigen Pfad  (  absolute  path )
+
+
+Ein relativer Pfad wird vom aktuellen direktorium aus angegeben
+
+
+
+
+
+
+
+
+What are Linux file permissions?    /   Was sind Linux-Dateiberechtigungen?
+
+
+
+„Linux unterscheidet grundsätzlich zwischen Leserechten, Schreibrechten und Ausführungsrechten. Diese Rechte werden für den Besitzer, 
+
+die Gruppe und andere Benutzer definiert.“
+
+
+- „Bei 755 hat der Besitzer Lese-, Schreib- und Ausführungsrechte
+
+
+
+
+
+
+
+. What is sudo?
+
+
+„sudo ermöglicht es einem Benutzer,  einen  befehl  mit den  berechtigunggen  als  root 
+
+
+
+
+
+„Ein Prozess ist eine laufende Instanz eines Programms.
+
+
+"ps aux" verwenden, um laufende Prozesse anzuzeigen. Für eine dynamische Übersicht kann ich top oder htop verwenden
+
+
+
+
+
+
+
+
+. How do you check disk space?
+
+🇩🇪
+
+„Mit df -h kann ich den verfügbaren Speicherplatz der Dateisysteme überprüfen
+
+
+
+
+
+
+
+
+-  SSH steht für Secure Shell und ermöglicht eine verschlüsselte Verbindung zu einem entfernten Server.
+
+ Es wird häufig verwendet, um Linux-Server remote zu administrieren.
+
+
+
+
+TCP  vs  UDP  :  TCP ist verbindungsorientiert und stellt eine zuverlässige Übertragung sicher.
+
+UDP ist verbindungslos und bietet weniger Overhead, garantiert aber keine Zustellung   ( verwendet  in streaming  ) 
+
+
+
+
+
+
+docker  container  :  isoliert  laufzeitumgebung  fur  eine  anwendung  , isoliert  von anderen  containern , es  teilt  sich den kernel des betriebssystem
+
+
+
+image docker  : ist vorlage , verwendet um container zu erstellen  , container  ist  laufendinstaz von image
+
+
+
+docker file : enthalt  anweisungen  , mit denen  ein  docker image erstellt wird , ( abhangigkeiten , ..)
+
+
+
+
+
+
+
+
+
+. What is a Docker Registry?
+
+
+„Eine Container Registry ist ein Repository zum Speichern und Verteilen von Docker Images. Beispiele sind Docker Hub,
+
+ Amazon ECR oder GitLab Container Registry.
+
+
+
+
+
+docker logs  (  uberprufe woher das problem kommt )  - welcher Prozess  ( ob  konfig oder  environnm )
+
+
+
+Kubernetes = Container verwalten + automatisieren + skalieren + Self-Healing
+
+
+
+
+
+
+Die Control Plane ist die Verwaltungsebene ( management layer )  eines Kubernetes Clusters. Sie entscheidet unter anderem, 
+
+wo Pods ausgeführt werden, überwacht den Zustand des Clusters
+
+
+
+
+
+
+
+
+
+. Was ist ein ReplicaSet?
+
+
+„Ein ReplicaSet stellt sicher, dass eine bestimmte Anzahl von Pod-Replikas läuft. Wenn beispielsweise drei Replicas definiert sind und ein Pod ausfällt, 
+
+erstellt Kubernetes automatisch einen neuen Pod.“
+
+
+
+
+
+
+Was ist eine Readiness Probe?
+🇩🇪
+
+„Eine Readiness Probe prüft, ob eine Anwendung bereit ist, Traffic zu empfangen. Wenn ein Pod nicht bereit ist, wird er normalerweise nicht für den Service-Traffic verwendet.
+
+
+
+
+
+
+Was ist Self-Healing in Kubernetes?
+🇩🇪
+
+„Self-Healing bedeutet, dass Kubernetes automatisch versucht, den gewünschten Zustand wiederherzustellen. 
+
+Wenn beispielsweise ein Pod ausfällt und drei Replicas konfiguriert sind, erstellt Kubernetes einen neuen Pod

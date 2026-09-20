@@ -1,0 +1,57 @@
+
+
+docker run --name db -p 8080:80 redis
+
+
+
+twali ? 
+
+
+db :
+
+ image: redis
+
+ ports:
+ -8080:80
+
+
+
+
+-------------
+
+
+les containers  li f docker-compose  connected  with each others lkol par  default   , you can check  ' docker network ls ' ,
+ tchouf network binethom ( drive , bridge l par def )
+
+
+
+
+Example: Backend + MySQL + Redis
+
+
+
+
+services:
+
+  backend:
+    image: my-backend
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: mysql
+      REDIS_HOST: redis
+    depends_on:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: myapp
+
+  redis:
+    image: redis:alpine
+
+
+

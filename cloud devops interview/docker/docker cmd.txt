@@ -1,0 +1,702 @@
+
+
+befehl  = command
+
+
+
+
+docker rm       → remove container
+docker rm -f    → force remove container
+docker rmi      → remove image
+
+
+
+
+
+
+1 -   docker init
+
+→ Erstellt automatisch grundlegende Docker-Dateien für ein bestehendes Projekt.
+
+docker init
+     ↓
+Creates Docker configuration/files
+     ↓
+Dockerfile + compose.yaml + .dockerignore
+
+
+
+
+
+
+
+we  use always  ' docker run -it .. '   :   -it   , gives  you  terminal command to attract with after  starting  the  container
+
+
+
+
+
+
+
+# 🐳 DOCKER – WICHTIGE BEFEHLE
+
+# Deutsch – kurz erklärt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 1. 🐳 DOCKER INFORMATIONEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker --version**
+
+→ Zeigt die Docker-Version.
+
+**docker info**
+
+→ Zeigt Docker-Systeminformationen.
+
+**docker help**
+
+→ Zeigt die Docker-Hilfe.
+
+**docker COMMAND --help**
+
+→ Zeigt Hilfe für einen bestimmten Befehl.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 2. 📦 CONTAINER ANZEIGEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker ps**
+
+→ Zeigt laufende Container.
+
+**docker ps -a**
+
+→ Zeigt alle Container.
+
+**docker ps -q**
+
+→ Zeigt nur Container-IDs.
+
+**docker inspect CONTAINER**
+
+→ Zeigt detaillierte Informationen über einen Container.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 3. ▶️ CONTAINER STARTEN / STOPPEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker run IMAGE**
+
+→ Erstellt und startet einen neuen Container.
+
+**docker start CONTAINER**
+
+→ Startet einen vorhandenen Container.
+
+**docker stop CONTAINER**
+
+→ Stoppt einen Container.
+
+**docker restart CONTAINER**
+
+→ Startet einen Container neu.
+
+**docker pause CONTAINER**
+
+→ Pausiert einen Container.
+
+**docker unpause CONTAINER**
+
+→ Setzt einen pausierten Container fort.
+
+**docker kill CONTAINER**
+
+→ Beendet einen Container sofort.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 4. 🗑️ CONTAINER LÖSCHEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker rm CONTAINER**
+
+→ Löscht einen gestoppten Container.
+
+**docker rm -f CONTAINER**
+
+→ Löscht einen laufenden Container.
+
+**docker container prune**
+
+→ Löscht alle gestoppten Container.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 5. 🖼️ IMAGES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker images**
+
+→ Zeigt lokale Images.
+
+**docker image ls**
+
+→ Zeigt lokale Images.
+
+**docker pull IMAGE**
+
+→ Lädt ein Image herunter.
+
+**docker push IMAGE**
+
+→ Lädt ein Image in eine Registry hoch.
+
+**docker inspect IMAGE**
+
+→ Zeigt Image-Details.
+
+**docker rmi IMAGE**
+
+→ Löscht ein Image.
+
+**docker image prune**
+
+→ Löscht unbenutzte Images.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 6. 🏃 DOCKER RUN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker run IMAGE**
+
+→ Erstellt und startet einen Container.
+
+**docker run -d IMAGE**
+
+→ Startet den Container im Hintergrund.
+
+**docker run -it IMAGE**
+
+→ Startet den Container mit interaktivem Terminal.
+
+**docker run --name NAME IMAGE**
+
+→ Gibt dem Container einen Namen.
+
+**docker run -d --name NAME IMAGE**
+
+→ Startet einen benannten Container im Hintergrund.
+
+**docker run --rm IMAGE**
+
+→ Löscht den Container automatisch nach dem Beenden.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 7. 💻 EXEC – BEFEHLE IM CONTAINER
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker exec CONTAINER COMMAND**
+
+→ Führt einen Befehl im Container aus.
+
+**docker exec nginx ls**
+
+→ Zeigt Dateien im Container.
+
+**docker exec nginx pwd**
+
+→ Zeigt das aktuelle Verzeichnis.
+
+**docker exec nginx ps**
+
+→ Zeigt laufende Prozesse.
+
+**docker exec nginx env**
+
+→ Zeigt Umgebungsvariablen.
+
+**docker exec nginx cat /etc/os-release**
+
+→ Zeigt Informationen über das Betriebssystem.
+
+**docker exec -it CONTAINER bash**
+
+→ Öffnet eine interaktive Bash-Shell.
+
+**docker exec -it CONTAINER sh**
+
+→ Öffnet eine interaktive Shell.
+
+**-i**
+
+→ Ermöglicht interaktive Eingabe.
+
+**-t**
+
+→ Stellt ein Terminal bereit.
+
+**-it**
+
+→ Interaktives Terminal.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 8. 📋 LOGS
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker logs CONTAINER**
+
+→ Zeigt die Container-Logs.
+
+**docker logs -f CONTAINER**
+
+→ Zeigt Logs fortlaufend.
+
+**docker logs --tail 100 CONTAINER**
+
+→ Zeigt die letzten 100 Log-Zeilen.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 9. 🌐 PORTS
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker run -p HOST:CONTAINER IMAGE**
+
+→ Verbindet einen Host-Port mit einem Container-Port.
+
+**docker run -p 5000:3000 myapp**
+
+→ Host-Port `5000` → Container-Port `3000`.
+
+**docker port CONTAINER**
+
+→ Zeigt die Port-Zuordnung.
+
+**38282:8080**
+
+→ `38282` = Host-Port.
+
+→ `8080` = Container-Port.
+
+**Merke:**
+
+→ `HOST_PORT:CONTAINER_PORT`
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 10. 💾 VOLUMES / SPEICHER
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker volume ls**
+
+→ Zeigt Docker-Volumes.
+
+**docker volume create NAME**
+
+→ Erstellt ein Volume.
+
+**docker volume inspect NAME**
+
+→ Zeigt Volume-Informationen.
+
+**docker volume rm NAME**
+
+→ Löscht ein Volume.
+
+**docker volume prune**
+
+→ Löscht unbenutzte Volumes.
+
+## Bind Mount
+
+**docker run -v HOST_PATH:CONTAINER_PATH IMAGE**
+
+→ Verbindet einen Host-Ordner mit dem Container.
+
+**docker run -v /opt/datadir:/var/lib/mysql mysql**
+
+→ Host `/opt/datadir` → Container `/var/lib/mysql`.
+
+**Merke:**
+
+→ Container löschen ≠ Daten auf dem Host löschen.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 11. 🔧 ENVIRONMENT VARIABLES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker run -e KEY=value IMAGE**
+
+→ Setzt eine Umgebungsvariable.
+
+**docker run -e MYSQL_ROOT_PASSWORD=123 mysql**
+
+→ Setzt eine MySQL-Umgebungsvariable.
+
+**docker exec CONTAINER env**
+
+→ Zeigt die Umgebungsvariablen.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 12. 📂 DATEIEN KOPIEREN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker cp FILE CONTAINER:/PATH**
+
+→ Kopiert eine Datei in den Container.
+
+**docker cp CONTAINER:/PATH FILE**
+
+→ Kopiert eine Datei aus dem Container.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 13. 🏷️ CONTAINER BENENNEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker rename OLD_NAME NEW_NAME**
+
+→ Benennt einen Container um.
+
+**docker run --name blue-app IMAGE**
+
+→ Erstellt einen Container mit dem Namen `blue-app`.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 14. 🔍 CONTAINER INFORMATIONEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker inspect CONTAINER**
+
+→ Zeigt detaillierte Informationen.
+
+**docker stats**
+
+→ Zeigt CPU-, RAM- und Netzwerkverbrauch.
+
+**docker top CONTAINER**
+
+→ Zeigt Prozesse im Container.
+
+**docker diff CONTAINER**
+
+→ Zeigt Änderungen im Container-Dateisystem.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 15. 🌐 NETWORK
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker network ls**
+
+→ Zeigt Docker-Netzwerke.
+
+**docker network create NETWORK**
+
+→ Erstellt ein Netzwerk.
+
+**docker network inspect NETWORK**
+
+→ Zeigt Netzwerkdetails.
+
+**docker network rm NETWORK**
+
+→ Löscht ein Netzwerk.
+
+**docker network connect NETWORK CONTAINER**
+
+→ Verbindet einen Container mit einem Netzwerk.
+
+**docker network disconnect NETWORK CONTAINER**
+
+→ Trennt einen Container von einem Netzwerk.
+
+**docker run --network NETWORK IMAGE**
+
+→ Startet einen Container in einem bestimmten Netzwerk.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 16. 🏗️ IMAGE BUILD
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker build -t NAME .**
+
+→ Erstellt ein Image aus einem Dockerfile.
+
+**docker build -t myapp:v1 .**
+
+→ Erstellt ein Image mit Name und Tag.
+
+**docker tag IMAGE NAME:TAG**
+
+→ Gibt einem Image einen neuen Tag.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 17. 📄 DOCKERFILE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**FROM**
+
+→ Gibt das Basis-Image an.
+
+**RUN**
+
+→ Führt einen Befehl beim Image-Build aus.
+
+**COPY**
+
+→ Kopiert Dateien in das Image.
+
+**WORKDIR**
+
+→ Setzt das Arbeitsverzeichnis.
+
+**ENV**
+
+→ Setzt eine Umgebungsvariable.
+
+**EXPOSE**
+
+→ Dokumentiert den Container-Port.
+
+**CMD**
+
+→ Standardbefehl beim Containerstart.
+
+**ENTRYPOINT**
+
+→ Definiert den Hauptprozess des Containers.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 18. 🏷️ IMAGE NAME / TAG
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker pull nginx**
+
+→ Verwendet standardmäßig `nginx:latest`.
+
+**docker pull nginx:alpine**
+
+→ Lädt das Image mit dem Tag `alpine`.
+
+**docker images**
+
+→ Zeigt Repository und Tag.
+
+**kodekloud/simple-webapp:blue**
+
+→ `kodekloud` = Namespace.
+
+→ `simple-webapp` = Repository.
+
+→ `blue` = Tag.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 19. 🔄 IMAGE → CONTAINER
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker run nginx**
+
+→ Erstellt einen Container aus dem nginx-Image.
+
+**docker run -d nginx**
+
+→ Startet nginx im Hintergrund.
+
+**docker run -d --name web nginx**
+
+→ Erstellt einen nginx-Container namens `web`.
+
+
+
+
+
+
+
+docker run -p 38282:8080 --name blue-app kodekloud/simple-webapp
+
+
+38282 : port pc / aws ec2 ..  ( docker host )
+
+8080  : port  container  
+
+
+kodekloud/simple-webapp   : instance  img   (  kodekloud  : user    /   simple-webapp : img )
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 20. 🔵 KOMPLETTES BEISPIEL
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker run -d -p 38282:8080 --name blue-app kodekloud/simple-webapp:blue**
+
+→ `-d` = Hintergrundmodus.
+
+→ `-p` = Port-Mapping.
+
+→ `38282` = Host-Port.
+
+→ `8080` = Container-Port.
+
+→ `--name blue-app` = Container-Name.
+
+→ `kodekloud` = Namespace.
+
+→ `simple-webapp` = Repository.
+
+→ `blue` = Tag.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 🧠 DIE WICHTIGSTEN BEFEHLE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**docker ps**
+
+→ Laufende Container anzeigen.
+
+**docker ps -a**
+
+→ Alle Container anzeigen.
+
+**docker images**
+
+→ Lokale Images anzeigen.
+
+**docker pull IMAGE**
+
+→ Image herunterladen.
+
+**docker run IMAGE**
+
+→ Container erstellen + starten.
+
+**docker start CONTAINER**
+
+→ Container starten.
+
+**docker stop CONTAINER**
+
+→ Container stoppen.
+
+**docker rm CONTAINER**
+
+→ Container löschen.
+
+**docker rmi IMAGE**
+
+→ Image löschen.
+
+**docker exec CONTAINER COMMAND**
+
+→ Befehl im Container ausführen.
+
+**docker exec -it CONTAINER bash**
+
+→ Interaktive Shell öffnen.
+
+**docker logs CONTAINER**
+
+→ Logs anzeigen.
+
+**docker inspect CONTAINER**
+
+→ Details anzeigen.
+
+**docker stats**
+
+→ Ressourcenverbrauch anzeigen.
+
+**docker cp**
+
+→ Dateien kopieren.
+
+**docker run -p HOST:CONTAINER IMAGE**
+
+→ Ports verbinden.
+
+**docker run -v HOST:CONTAINER IMAGE**
+
+→ Speicher verbinden.
+
+**docker run -e KEY=value IMAGE**
+
+→ Umgebungsvariable setzen.
+
+**docker network ls**
+
+→ Netzwerke anzeigen.
+
+**docker network create NAME**
+
+→ Netzwerk erstellen.
+
+**docker build -t NAME .**
+
+→ Image bauen.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# ⭐ MERKSÄTZE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**IMAGE → docker run → CONTAINER**
+
+**HOST_PORT:CONTAINER_PORT**
+
+**HOST_PATH:CONTAINER_PATH**
+
+**docker exec → Befehl im Container**
+
+**docker logs → Container-Logs**
+
+**docker rm → Container löschen**
+
+**docker rmi → Image löschen**
+
+**docker ps → laufende Container**
+
+**docker ps -a → alle Container**
+
+**docker images → lokale Images**
+
+**docker pull → Image herunterladen**
+
+**docker push → Image hochladen**

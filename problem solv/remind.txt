@@ -1,0 +1,159 @@
+
+String reversed =
+    new StringBuilder(s)
+        .reverse()
+        .toString();
+
+
+
+
+
+
+This:
+
+list.remove(0);
+
+means:
+
+REMOVE INDEX 0
+
+
+
+
+
+
+
+
+HashMap<String, Integer> map = new HashMap<>();
+
+map.put("Bayrem", 26);
+map.put("John", 30);
+
+
+Get:
+
+int age = map.get("Bayrem");
+
+
+Check key:
+
+map.containsKey("Bayrem");
+
+
+Remove:
+
+map.remove("Bayrem");
+
+
+Size:
+
+map.size();
+
+
+
+
+-------------------------
+
+
+
+Math.max(a, b)
+
+Math.min(a, b)
+
+Math.abs(x)
+
+Math.pow(a, b)
+
+Math.sqrt(x)
+
+
+Examples:
+
+int max = Math.max(10, 20);
+
+int min = Math.min(10, 20);
+
+int distance = Math.abs(10 - 25);
+
+
+----------------------------------------
+
+
+Arrays.equals(): 
+
+
+System.out.println(Arrays.equals(arr1, arr2)); // true    
+
+
+
+
+
+if (x > 0 && x < 10)
+
+
+OR:
+
+if (x == 1 || x == 2)
+
+
+
+
+
+
+if (x % 2 == 0)  
+
+
+
+
+max = arr[0]
+
+for (int x : arr) {
+    max = Math.max(max, x);
+}
+
+
+
+
+
+
+Reverse String.
+
+return new StringBuilder(s)
+        .reverse()
+        .toString();
+
+
+
+
+import java.util.*;   ( for  hashmap , arraylist , arrays ...)
+
+
+
+
+
+
+I don't care about uppercase/lowercase:
+    .equalsIgnoreCase()
+
+
+
+
+----------------------------------
+
+
+
+4. Array length:
+   arr.length
+
+
+5. String length:
+   s.length()
+
+
+6. List length:
+   list.size()
+
+
+
+
+
