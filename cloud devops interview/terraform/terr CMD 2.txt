@@ -1,0 +1,83 @@
+
+terraform init  
+
+-> dowland  the terr  plugin   , that  know  how to communicate  with  the provider ( exp  : aws  , azure ..)
+
+
+
+*********************************************
+
+
+terraform  validate 
+
+
+
+
+-> validate checks whether your Terraform configuration is valid, 
+
+( Missing required arguments , errors syntax , 
+
+
+
+
+***********************************************
+
+
+
+
+
+terraform plan 
+
+-> creates an execution plan before changing infrastructure.
+It compares the desired configuration with the current state and real infrastructure.
+Symbols: + = create, ~ = update, - = destroy, +/- = replace (destroy + recreate).
+
+
+
+
+
+
+*****************************************
+
+
+terraform apply 
+
+-> executes the changes and creates, updates, or destroys infrastructure.
+It normally shows the plan and asks for confirmation before making changes.
+If one resource fails, Terraform can continue with other independent resources.
+However, resources that depend on the failed resource cannot be created.
+Terraform does not automatically roll back resources that were already created.
+
+
+terraform apply -auto-approve  ( auto  approve , no  need  to  yes  cmd )
+
+
+Resource A → ✅
+Resource B → ❌ FAILED    (  if  it  s dependant  von  A , it will fail )
+Resource C → ✅  (if independent)
+Resource D → ⏸️/not created (if it depends on B)
+
+
+
+exp  dependance 
+
+resource "aws_instance" "b" {
+  # fails
+}
+
+resource "aws_instance" "c" {
+  depends_on = [aws_instance.b]
+}
+
+
+
+
+
+***********************************************
+
+
+
+
+
+
+

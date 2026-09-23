@@ -1,0 +1,57 @@
+
+
+resource → Terraform creates/manages it.
+
+
+data ->  find find an existing xx  from  that  provider
+
+
+
+
+exemple  use  data ? 
+
+
+data "aws_ami" "ubuntu" {
+  most_recent = true
+}
+
+// search  about  ' aws_ami' in the  aws  provider ,  ( condition = most recent  published )
+
+
+// if  u dont write it , terraform  will sowieso  upload  this ressouce aber  mit weniger  restrictions 
+
+
+
+
+*****************************
+
+
+exempl  use  DATA  + RESSOURCE ? 
+
+
+
+
+1 - retrieve 
+
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  owners      = ["099720109477"]    // specify  the owner here
+}
+
+
+
+
+
+
+
+
+2 - use the  retirieved 
+
+
+resource "aws_instance" "server" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.micro"
+}
+
+
+
