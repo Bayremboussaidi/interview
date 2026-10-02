@@ -1,0 +1,75 @@
+
+Question 2:
+You need to deploy resources to both us-east-1 and eu-west-1 using the same 
+AWS provider in a single configuration. How do you configure Terraform to support this?
+
+
+
+
+->  use alias 
+
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+provider "aws" {
+  alias  = "eu"
+  region = "eu-west-1"
+}
+
+
+
+then
+
+provider = aws.eu
+
+
+
+***********************************************
+
+
+You have declared a variable named instance_type in your configuration with no default value.
+ Which of the following methods will Terraform automatically recognize to set this variable's value
+
+
+- TF_VAR_instance_type
+
+
+
+************************************************
+
+
+What is the primary difference between a variable block that uses type = string and one that uses type = map(string)?
+
+
+
+
+type  = string ? 
+
+variable "region" {
+  type = string
+  default = "eu-north-1"
+}
+
+
+
+
+
+
+
+type = map(string)        -> { key = val , ... }
+
+variable "regions" {
+  type = map(string)
+
+  default = {
+    dev  = "eu-north-1"
+    prod = "us-east-1"
+  }
+}
+
+
+hier , use :    var.regions["dev"]    ->  "eu-north-1"
+
+

@@ -1,0 +1,41 @@
+
+
+.tf files
+→ Terraform configuration
+
+main.tf
+→ main resources
+
+variables.tf
+→ input variables
+
+outputs.tf
+→ output values
+
+providers.tf
+→ providers
+
+terraform.tfvars
+→ variable values
+
+terraform.tfstate
+→ Terraform's record/state of infrastructure
+
+.terraform.lock.hcl
+→ locks provider versions/checksums
+
+.gitignore
+→ prevents unwanted files from being committed
+
+dev / test / prod
+→ separate Terraform working directories
+
+
+
+
+
+*******************************************
+
+
+
+

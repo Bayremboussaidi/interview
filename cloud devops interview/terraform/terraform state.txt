@@ -1,0 +1,23 @@
+
+
+terraform  state :   created  aftr  running  terr  apply 
+
+
+
+terraform apply
+
+Terraform creates or updates the state after managing the infrastructure.
+
+Example:
+
+terraform apply
+      ↓
+Creates EC2 in AWS
+      ↓
+Terraform records it in terraform.tfstate
+      ↓
+aws_instance.web → i-0123456789
+
+
+
+

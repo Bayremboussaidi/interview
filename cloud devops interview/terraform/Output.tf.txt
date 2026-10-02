@@ -1,0 +1,49 @@
+
+
+OUTPUT
+
+Ein Output gibt wichtige Werte aus,
+die Terraform bereits kennt.
+
+Output erstellt NICHT selbst die Infrastruktur.
+
+Beispiel:
+
+resource "aws_instance" "web" {
+  ami           = "ami-123456"
+  instance_type = "t3.micro"
+}
+
+Output:
+
+output "server_ip" {
+  value = aws_instance.web.public_ip
+}
+
+Nach:
+
+terraform apply
+
+kann Terraform anzeigen:
+
+Outputs:
+
+server_ip = "54.123.45.67"
+
+
+
+Merksatz:
+
+output = RESULT / wichtige Information anzeigen
+
+
+
+
+
+
+
+
+// when  apply  , terr apply  , it  will show that (  'output' = value  )
+
+
+

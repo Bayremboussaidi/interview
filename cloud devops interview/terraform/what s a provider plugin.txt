@@ -1,0 +1,108 @@
+
+A Provider is basically a plugin that teaches Terraform how to communicate with a specific platform/API
+
+
+For example:
+
+provider "aws" {
+  region = "eu-north-1"
+}
+
+
+
+---------------------------------------
+
+exemple 2 ? 
+
+
+resource "aws_instance" "web" {
+  ami           = "ami-123456"
+  instance_type = "t3.micro"
+}
+
+Terraform can understand:
+
+aws_instance is an AWS resource because the AWS Provider provides this resource type.
+
+
+
+
+**********************************
+
+
+
+Provider = translator/connector between Terraform and the platform API.
+
+
+
+**************************
+
+
+so after  setting  the provider  , as :
+
+provider "aws" {
+  region = "eu-north-1"
+}
+
+
+
+, u  can after that use all the aws ressources
+
+
+like : resource "aws_instance" "web" {
+  ...
+}
+
+resource "aws_s3_bucket" "data" {
+  ...
+}
+
+
+
+*******************************
+
+
+
+rq  , u can make  requirement  for  a provider 
+
+like :
+
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"        //  this  only  gonna accept  aws version > 6.0
+    }
+  }
+}
+
+
+
+
+*********************************
+
+
+Where do you find Provider documentation?
+
+->  Terraform Registry   ( Provider documentation  , Resource documentation .. )
+
+
+
+when u dont know  something u , can check it
+
+
+-------------------------
+
+
+
+
+Terraform Core = THINK / PLAN / CONTROL
+
+
+Provider       = COMMUNICATE WITH PLATFORM
+
+
+-> Terraform Core is the central Terraform engine that reads configuration and state, builds the dependency graph, creates the plan,
+ and coordinates providers to manage infrastructure.
+

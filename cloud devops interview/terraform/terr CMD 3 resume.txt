@@ -1,0 +1,59 @@
+
+validate  -> pruf  ob , es gibt fehler , syntax , credentials , ( aws statt asw  , credentials not correct ...)
+
+
+fmt -> nur  fur terraform structure 
+
+
+
+
+terraform fmt
+      ↓
+Code schön / einheitlich formatieren
+      ↓
+terraform validate
+      ↓
+Code auf Fehler prüfen
+      ↓
+terraform plan
+      ↓
+Änderungen anzeigen
+
+
+
+rq :  when u refer  another ressource in the tf  files  , this make ordenance , 
+
+that ressource must be created before
+
+like ? 
+
+ressource "aws_subnet" "public" {
+vpc_id      = aws_vpc_main.id             // here means  that vpc  must  exist  first 
+cider_block = var.public_subnet_cidr...  
+availibilty = var...   }
+
+
+
+***********************************
+
+
+terraform state list   ( what  resoources  actually  terraform  manages ? )
+
+
+exp :  in ressource  :  
+
+ressource "aws_vpc" "main" {
+
+cidr_block = "10..." }
+
+
+
+
+terraform  state list  ( out  : aws_vpc.main   )
+
+
+
+terraform state show aws_vpc.main   (  show  details  about  that one  ressource    , exp : id , cider_block  , region ..)
+
+
+

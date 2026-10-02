@@ -1,0 +1,53 @@
+
+
+variables.tf definiert die Variable und kann mit default einen Standardwert festlegen,
+ z. B. "us-east-1".
+terraform.tfvars gibt einen konkreten Wert vor und überschreibt den default-Wert, z. B. "eu-north-1".
+Wenn kein Wert in terraform.tfvars angegeben wird, verwendet Terraform automatisch den default-Wert.
+
+
+
+exemple :
+
+variable.tf :   // definition
+
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "environment" {
+  description = "Environment name"
+  type        = string
+}
+
+
+
+
+
+
+terraform.tfvars  //  provide the values  ,  hedhi  tecrasi  default  values 
+
+aws_region    = "eu-north-1"
+environment   = "dev"
+
+
+
+
+
+
+in main.tf :
+
+
+resource "aws_instance" "example" {
+  ami           = "ami-xxxxxxxx"
+  instance_type = var.instance_type  ...  // 
+
+
+
+
+so : 1 - variable.tf  ->  terraform.tfvars   ->  main.tf  ( apply )
+
+
+

@@ -1,5 +1,11 @@
 
 
+- 2  data / ressource   sont  en main.tf   ecrit 
+
+
+
+
+
 resource → Terraform creates/manages it.
 
 
@@ -52,6 +58,43 @@ resource "aws_instance" "server" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
 }
+
+
+
+
+
+
+*******************************************
+
+
+
+
+Your Terraform files
+        │
+        │
+        ├── resource "aws_vpc" ...
+        │       ↓
+        │    CREATE/MANAGE
+        │
+        └── data "aws_vpc" ...
+                ↓
+             READ/QUERY
+                ↓
+             AWS
+
+
+
+
+data "aws_vpc" "existing" {
+  id = "vpc-999999"
+}
+
+If vpc-999999 doesn't exist, you'll get an error during:
+
+terraform plan
+
+
+
 
 
 

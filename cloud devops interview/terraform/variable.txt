@@ -1,0 +1,94 @@
+
+
+TF_LOG → controls Terraform logging level, mainly for debugging errors.
+
+
+Example: Terraform gives an error
+
+You run:
+
+terraform plan
+
+and get:
+
+Error: Failed to load provider
+
+
+
+You can enable detailed logs:
+
+export TF_LOG=DEBUG
+terraform plan
+
+Now Terraform prints extra technical information about what it is doing.
+
+
+
+
+
+
+Problem
+   ↓
+TF_LOG=DEBUG
+   ↓
+terraform plan
+   ↓
+More information
+   ↓
+Find the problem
+
+
+
+**************************************
+
+
+
+
+You need to pass a variable value to Terraform for a variable named instance_type without 
+modifying your .tf files. Which environment variable should you set?
+
+
+to pass var in terraform  , need  to add  TF_  
+
+-> TF_instance_type = "value"
+
+
+
+
+******************************************
+
+
+
+
+You want to see all available options and flags for the terraform plan command. 
+Which command should you run?
+
+
+terraform plan --help
+
+
+
+*****************************************
+
+
+
+When you run terraform fmt, which files does it format by default?
+
+
+-> all  files in the current  Directory
+
+
+
+
+
+
+terraform fmt -recursive
+
+-> all files in the curr  directory  and the  sub directories  also 
+
+
+
+
+*******************************************
+
+
