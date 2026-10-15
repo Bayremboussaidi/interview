@@ -1,0 +1,70 @@
+
+locals can choose a different value depending on the environment.
+
+to avoid  duplicate of the whole code , and make it flexible  , works with different cases
+
+
+
+
+exp :
+
+variable "environment" { default = "dev" } 
+
+
+
+locals {  instance_type = var.environment == "prod" ? "t3.medium" : "t3.micro" }
+
+
+
+( terraform will antwort auto , je nach die envirom  , 
+
+exp here  :  var.environment == "prod" ? ↓ TRUE → "t3.medium" FALSE → "t3.micro"   )
+
+
+
+
+*****************************************************
+
+
+
+so use ? 
+
+
+
+variables.tf  :
+
+variable "environment" {
+  default = "dev"
+}
+
+
+
+
+
+
+main.tf  : 
+
+
+locals {
+  instance_type = var.environment == "prod"
+    ? "t3.medium"
+    : "t3.micro"
+}
+
+resource "aws_instance" "app" {
+  ami           = "ami-xxxxxxxx"
+  instance_type = local.instance_type
+}
+
+
+
+
+
+
+for  small proj keep it in main  , but for big proj  , make it seperated  file   'variables.tf'
+
+main.tf       → resources
+variables.tf  → variables
+locals.tf     → locals
+outputs.tf    → outputs
+

@@ -1,0 +1,118 @@
+
+
+Memory tip: Terraform variable → add TF_VAR_ in front → environment variable.
+
+
+exp : 
+db_password	TF_VAR_db_password
+aws_region	TF_VAR_aws_region
+
+
+
+
+
+
+1. Define the variable in variables.tf:
+variable "db_password" {
+  type      = string
+  sensitive = true              // so terr dont show it in the  output now
+}
+
+
+2. Set the environment variable in Windows PowerShell:
+$env:TF_VAR_db_password = "MySecret123!"
+
+
+
+---------------------------
+
+
+sensitive output    ( hidded from  terraform apply   / not appeard  in logs  or in errors )
+
+
+in ur output :
+
+output "db_password" {
+  value     = "MySecret123"
+  sensitive = true
+}
+
+
+
+so here , when  Run terraform output
+
+terraform output ( it doesnt display )
+
+
+but , when run  terraform output db_pasword  ( display the password like "dfrscc" )
+
+
+
+
+
+
+--------------------------
+
+
+Where is the state file physically stored?    ( Terraform state file (terraform.tfstate)  )
+It depends on your backend.
+
+- Local backend: Usually in your project directory as terraform.tfstate.
+- AWS S3 backend: In an S3 bucket at the configured state key.
+- Other remote backends: In the storage system configured for that backend.
+Terraform can also keep copies of prior local state files, such as terraform.tfstate.backup.
+
+
+
+
+
+
+
+
+exp  of the config  here
+
+{
+  "outputs": {
+    "db_password": {
+      "value": "MySecret123",
+      "type": "string",
+      "sensitive": true
+    }
+  }
+}
+
+
+
+//////////////////////////////////
+
+
+
+so  the solution now to use sensitive  var , add them values , and avoid being capted in the git commits ...
+
+
+
+variable "db_password" {
+  description = "Database password"
+  type        = string
+  sensitive   = true
+}
+
+
+Then provide the value through an environment variable. 
+like
+On your Windows computer (PowerShell)
+$env:TF_VAR_db_password = "MySecret123!"
+
+terraform plan
+
+
+
+- Terraform automatically maps the environment variable TF_VAR_db_password to the Terraform variable var.db_password.
+Use it in your resource as usual:
+password = var.db_password
+
+
+
+
+
+

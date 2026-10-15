@@ -1,0 +1,57 @@
+
+
+Q : What is the primary benefit of using remote state storage over local state storage?
+
+enables collab  and state locking ( allow many users  work on the same infra  safely )
+
+
+
+
+
+* You run terraform state list and see several resources listed. What does this command show you?
+
+- ressources terraform  is managing  according  to state  file
+
+
+
+
+* forget  terraform init  , und direct terraform apply ? 
+
+- error require  reinitialization
+
+
+
+
+* State drift occurs when your actual infrastructure differs from what's recorded in the Terraform state file. What is a common cause of state drift?
+
+- manual  change
+
+
+
+
+
+* What is the default filename and location where Terraform stores state when using local state storage?
+
+- terraform.tfstate
+
+
+
+
+
+* When you initialize a new Terraform project with terraform init, what workspace are you automatically working in?
+
+- "default" 
+
+
+
+
+
+
+* True or False: When you create a new workspace and switch to it,
+Terraform copies the state from your previous workspace into the new workspace so you can continue managing the same infrastructure.
+
+- false , create seperated , not copy 
+
+
+
+

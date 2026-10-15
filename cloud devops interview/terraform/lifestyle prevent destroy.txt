@@ -1,0 +1,29 @@
+
+- use it when par  exp , u have really data , u dont wanna lose , even when running  terraform destroy 
+
+
+
+exemple :
+
+
+resource "aws_db_instance" "production" {
+  identifier        = "production-db"
+  engine            = "postgres"
+  instance_class    = "db.t3.micro"
+  allocated_storage = 20
+
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
+
+
+
+
+// suppose in the db rds , u have data of customers ...  , so  even when  running terraform  destroy 
+
+wont be deleted
+
+
+

@@ -1,0 +1,29 @@
+
+You have a web server that requires a database to be fully configured before it can start. The web server configuration doesn't reference the database resource in its configuration. How should you ensure proper ordering?
+
+dependson 
+
+
+
+
+
+
+
+What is the key difference between precondition and postcondition blocks in Terraform?
+
+precondition  ( run before  ressource  creation )
+
+postcondition ( aftr  ressource condition )
+
+
+
+
+
+Where are check blocks defined in Terraform configuration files?
+
+
+- at the top level of a .tf configuration file, just like resource, variable, and output blocks.
+
+they re used to verify , wether condition is true or not  ( like site web running , or ec2 .. )
+
+

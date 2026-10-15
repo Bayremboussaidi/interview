@@ -1,0 +1,40 @@
+
+* Which Terraform feature provides ready-made operations for transforming strings and performing
+ calculations?
+
+
+it s like ax(), min(), ceil(), floor() ..
+
+locals {
+  name = upper("hello")   # HELLO }
+
+
+- built in functions
+
+
+
+
+* A resource block uses count = 3 and builds each instance name with "worker-${count.index}". Which names does Terraform generate?
+
+
+-worker 0 .. 1 .. 2
+
+
+
+
+
+* A resource block uses for_each with the map { east = "us-east-1", west = "us-west-2" }. For the instance identified by the key east,
+ which two statements are correct?
+
+- each.key  evaluates  to "east"
+
+
+
+
+* Which Terraform feature gives an expression a name so it can be reused within the same module instead of repeated?
+
+- local  values
+
+
+
+

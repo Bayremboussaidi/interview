@@ -1,0 +1,44 @@
+
+supp u  have terr file , and aws  correspondante , 
+
+
+- someone change  something in the aws , without  the infra , so  infra != aws 
+
+-> terraform apply  ( changes  lab == like  written  in the terraform.tf  )
+
+
+
+
+
+- if u want  the terraform  to be like what s changed in the aws 
+
+-> terraform apply -refresh-only   ( code  terraform   ->  match  the infrastructure  ) 
+
+
+
+
+***************************
+
+cas 1 :
+
+what  if terraform.tfstate   got  deleted , so terraform has no idea  on the existed  ressources in the infra
+
+
+-> reccomends always  to activate  S3 Bucket Versioning  ,  so u can return  to them  afterwards
+
+
+
+
+
+
+
+cas 2 :  its  remote 
+
+->  empfehlung  :  ( terraform state pull  )   , dowlands the state from the configured backend and outputs it.
+
+
+so  even  if s3  dleted  , u  have it locally 
+
+
+
+

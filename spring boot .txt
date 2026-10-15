@@ -1,0 +1,197 @@
+
+
+warum  verwenden wir spring boot ? 
+
+-s.b verkurzet die entwicklungszeit , stellt eingebettete  server ( embedded server ) wie tomcat jetty bereit 
+biete starter abhangigkeiten  fur eine schnellere  einrichtung 
+
+-enthalt  produktionsreife Funktionen wie Health Checks und Metriken.
+
+
+
+
+
+
+ Was sind Spring Boot Starter?
+
+- Starter sind Gruppen von Abhängigkeiten für bestimmte Funktionen. Zum Beispiel enthält spring-boot-starter-web
+ wichtige Abhängigkeiten für Webanwendungen
+
+( Starters group dependencies for specific features, such as web applications. )
+
+
+
+
+
+Was ist Auto-Konfiguration?
+
+-DE: Spring Boot konfiguriert viele Komponenten automatisch, abhängig von den vorhandenen
+ Abhängigkeiten und Einstellungen.
+
+
+
+
+. Was ist Spring Initializr?
+DE: Spring Initializr ist ein Online-Tool, mit dem wir ein Spring-Boot-Projekt mit den gewünschten Abhängigkeiten erstellen können.
+EN: It generates a Spring Boot project with selected dependencies.
+
+
+
+
+
+. Was ist Dependency Injection (DI)?
+Dependency Injection bedeutet, dass Spring die benötigten Objekte bereitstellt, anstatt dass eine Klasse sie selbst erstellt.
+ Dadurch wird der Code flexibler und leichter testbar.
+
+
+
+
+
+
+. Was ist IoC?  ( inversion of control )
+DE: IoC bedeutet Inversion of Control. Spring übernimmt die Verwaltung und Erstellung der Objekte.
+
+
+
+
+
+
+. Was macht @Autowired?
+
+@Autowired ermöglicht es Spring, eine benötigte Abhängigkeit automatisch einzufügen.
+ Häufig verwendet man heute die Constructor Injection.
+
+
+
+
+
+
+
+
+
+. Was ist @SpringBootApplication?
+DE: Diese Annotation startet die Spring-Boot-Konfiguration. Sie kombiniert unter anderem 
+(  @Configuration, @EnableAutoConfiguration und @ComponentScan )
+
+
+
+
+
+Was ist der Unterschied zwischen @Component, @Service und @Repository?
+DE:
+- @Component: Allgemeine Spring-Komponente.
+- @Service: Klasse für die Geschäftslogik.
+- @Repository: Klasse für den Datenbankzugriff.
+
+
+
+
+
+
+
+3. REST API und Webentwicklung
+
+Was ist der Unterschied zwischen @Controller und @RestController?
+DE: @Controller wird oft für Webseiten verwendet. @RestController gibt normalerweise direkt Daten wie JSON zurück.
+
+
+
+
+
+
+
+. Was ist @RequestMapping?
+DE: Mit @RequestMapping legen wir fest, welche URL und welche HTTP-Anfragen
+ eine Methode oder Klasse verarbeitet.
+
+
+
+
+
+
+
+
+HTTP-Methode	Verwendung
+GET	Daten lesen
+POST	Neue Daten erstellen
+PUT	Eine Ressource vollständig aktualisieren
+PATCH	Teile einer Ressource aktualisieren
+DELETE	Daten löschen
+
+
+
+
+
+
+
+. Was ist Spring Data JPA?
+DE: Spring Data JPA vereinfacht den Datenbankzugriff.
+ Wir können Daten speichern und lesen, ohne alle SQL-Abfragen selbst schreiben zu müssen.
+EN: It simplifies database operations through repository interfaces.
+
+
+
+
+
+
+
+. Was ist ein Repository?
+
+ist eine interface , bietet  methoden wie save , findbyid , ...
+
+
+
+
+
+
+Was bedeutet @Entity?
+
+ @Entity markiert eine Java-Klasse, die als Entität in der Datenbank gespeichert
+
+
+
+
+
+
+. Was macht @Transactional?
+
+@Transactional führt Datenbankoperationen innerhalb einer Transaktion aus. 
+Wenn ein Fehler auftritt, können Änderungen zurückgerollt werden.
+
+
+
+
+
+5. Konfiguration und Produktion
+
+22. Was ist application.properties?
+In dieser Datei konfigurieren wir zum Beispiel den Serverport, die Datenbankverbindung und die Log-Einstellungen.
+
+
+
+
+
+
+
+Was sind Spring Profiles?
+
+- Profiles ermöglichen unterschiedliche Konfigurationen für verschiedene Umgebungen,
+ zum Beispiel Entwicklung, Test und Produktion.
+
+
+
+
+
+Was ist Spring Boot Actuator?
+
+DE: Actuator bietet Informationen über den Zustand und die Leistung der Anwendung,
+ zum Beispiel über Health Checks und Metriken.
+
+
+
+
+
+
+Wie funktioniert Sicherheit in Spring Boot?
+DE: Wir verwenden Spring Security, um Benutzer zu authentifizieren und Zugriffe zu kontrollieren.
+ Für REST APIs können wir beispielsweise JWT verwenden.

@@ -1,0 +1,153 @@
+
+why modules ? 
+
+- think  that  main.tf  is gross , have  so many ressources , das wird so durcheinander , deswegen bevorzugen 
+
+wir module  architecture  anzuwanden 
+
+
+
+-----------------
+
+exemple : 
+
+project/
+│
+├── main.tf                  ← calls the modules
+├── variables.tf             ← root variables
+│
+└── modules/
+    │
+    ├── ec2/                 ← EC2 reusable module
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── outputs.tf
+    │
+    ├── vpc/                 ← VPC reusable module
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── outputs.tf
+    │
+    └── rds/                 ← RDS reusable module
+        ├── main.tf
+        ├── variables.tf
+        └── outputs.tf
+
+
+
+
+exmpl :
+
+in   modules/vpc/main.tf
+
+This module creates the network.
+
+resource "aws_vpc" "main" {
+  cidr_block = var.vpc_cidr
+
+  tags = {
+    Name = var.name
+  }
+}
+modules/vpc/variables.tf
+variable "vpc_cidr" {
+  type = string
+}
+
+variable "name" {
+  ty
+
+
+
+----------------------
+
+
+so  heere in the root   main.tf :
+
+
+
+provider "aws" {
+  region = var.aws_region
+}
+
+
+
+module "vpc" {
+  source = "./modules/vpc"
+
+  vpc_id = aws_vpc.main.id
+
+  name     = "my-network"
+  vpc_cidr = "10.0.0.0/16"
+}
+
+
+
+module "ec2" {
+  source = "./modules/ec2"
+
+  name          = "web-server"
+  ami           = var.ami
+  instance_type = "t3.micro"
+}
+....
+
+
+
+
+
+
+
+terraform state list  ( show  all the  ressources , terra  knows )
+
+-> module.vpc.aws_vpc.main
+module.ec2.aws_instance.server
+module.rds.aws_db_instance.database
+
+
+
+
+
+
+
+
+module in tera , is something reusable  , like here
+
+resource "aws_instance" "server" {
+  ami           = var.ami
+  instance_type = var.instance_type
+}
+
+In the root main.tf, you call the module:
+
+module "dev_server" { 					// root module 
+  source        = "./modules/ec2"  //  Child module
+  ami           = "ami-123456"
+  instance_type = "t3.micro"
+}
+
+
+
+
+
+
+
+
+terraform import module.vpc.aws_vpc.main vpc-0123456789abcdef0
+
+( The module instance named vpc ,  The existing AWS VPC ID :vpc-0123456789abcdef0 )
+
+
+
+after  import , tap  , terraform state show aws_vpc.main  ( see all the related  details  here  )
+
+
+
+cas : if terra import , doesnt  find that ress -> error  ( vpc  .. or whatever  not gefunden  )
+
+
+
+
+
+
+

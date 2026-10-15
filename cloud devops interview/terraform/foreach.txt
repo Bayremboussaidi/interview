@@ -1,0 +1,45 @@
+
+* for_each — Create multiple module instances
+
+Imagine you want to create two IAM policies: one for S3 and one for CloudWatch.
+
+Without for_each, you would repeat the module block:
+
+module "s3_policy" {
+  source = "./modules/iam_policy"
+  name   = "s3-policy"
+}
+
+module "cloudwatch_policy" {
+  source = "./modules/iam_policy"
+  name   = "cloudwatch-policy"
+}
+
+
+
+
+
+
+
+
+With for_each, you can do the same thing more efficiently:
+
+
+variable "policies" {
+  default = {
+    s3        = "s3-policy"
+    cloudwatch = "cloudwatch-policy"
+  }
+}
+
+module "policies" {
+  source   = "./modules/iam_policy"
+  for_each = var.policies
+
+  name = each.value
+
+}
+
+
+
+// each.key is the key (s3 or cloudwatch), and each.value is the value (s3-policy or cloudwatch-policy).

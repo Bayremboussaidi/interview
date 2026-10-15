@@ -1,0 +1,25 @@
+
+
+
+
+Situation | Terraform's default reaction during plan
+--- | ---
+Valid configuration    | Continues and displays the proposed changes.
+
+Syntax error            | Stops with an error.
+
+Invalid resource argument | Stops planning with an error.
+
+Failed check block assertion | Displays a warning and continues.  ( exp here  , istance is not running offline )
+
+Failed precondition            |  Stops planning if the precondition fails.
+
+
+
+
+
+* when u run terr apply  without running  plan 
+
+-> it make plan auto  first
+
+

@@ -1,0 +1,62 @@
+
+cas , suppose u change  aws ec2 name  from 'xx' to 'yy' , terraform will understand it
+
+as new created  and other deleted , deshalb , nzidou move { .. }, fi  ay  file  teba3 repo li ena fih
+
+
+exemple :
+
+
+Suppose main.tf contains:
+
+resource "aws_instance" "web" {
+  ami           = "ami-123456"
+  instance_type = "t2.micro"
+}
+
+You rename it to:
+
+resource "aws_instance" "webserver" {
+  ami           = "ami-123456"
+  instance_type = "t2.micro"
+}
+
+
+
+
+
+
+
+
+
+
+
+Then add this in any .tf file in the same Terraform module:
+
+my-terraform-project/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+└── terraform.tfstate
+
+
+
+
+moved {
+  from = aws_instance.web
+
+ lifestyle { destroy = false }  // optionnel
+
+  to   = aws_instance.webserver
+}
+
+
+
+
+ terraform plan
+             ↓
+to Check:
+   0 to add
+   0 to change
+   0 to destroy
+   + state move

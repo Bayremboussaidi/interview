@@ -1,0 +1,93 @@
+
+
+1- variable  validation  -error  ( reject  invalid  var )
+
+
+2 - precondition - error ( verify  pre requis  before creating  ressource )
+
+
+3- Postcondition - err  ( check  result  after operation )
+
+
+4 - check block  - warning  ( when ress in offline ,  check  assertion  / or check like site web uploaded  200 ok or not )
+
+
+
+
+
+*************
+
+
+exemple  check valid 
+
+
+variable "aws_region" {
+  type    = string
+  default = "eu-central-1"
+
+  validation {
+    condition = contains(
+      ["eu-central-1", "eu-west-1", "eu-north-1"],
+      var.aws_region
+    )
+
+    error_message = "Choose an approved AWS region."
+  }
+}
+
+// the  inout must  meet the requirement
+
+
+
+
+
+
+
+
+
+
+Precondition — check before proceeding
+
+Scenario: You only want to create an EC2 instance if the environment is production.
+
+variable "environment" {
+  type    = string
+  default = "development"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-0123456789abcdef0"
+  instance_type = "t3.micro"
+
+  lifecycle {
+    precondition {
+      condition     = var.environment == "production"
+      error_message = "The environment must be production."
+    }
+  }
+}
+
+
+
+
+
+
+
+
+check bloc   ( check  wether condition is  true , personnalised  check )
+
+check "website_health" {
+  data "http" "website" {
+    url = "https://example.com"
+  }
+
+  assert {
+    condition     = data.http.website.status_code == 200
+    error_message = "The website is not healthy."
+  }
+}
+
+
+
+
+ 

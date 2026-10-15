@@ -1,0 +1,145 @@
+
+## Terraform State
+
+### 🇬🇧 English
+
+* **State:** Terraform stores the current state of your infrastructure.
+* **Default:** Stored locally in `terraform.tfstate`.
+* **State Locking:** Prevents multiple users from changing the State at the same time.
+* **Backend:** Defines **where the State is stored**.
+* **Remote Backend:** Stores the State centrally, e.g. **AWS S3**, Azure Blob, or HCP Terraform.
+* **Team:** Remote State is important so everyone works with the same State.
+
+**Example:**
+
+```text
+Alone:
+Laptop
+ ├── main.tf
+ └── terraform.tfstate
+```
+
+```text
+Team:
+          AWS S3
+     terraform.tfstate
+        ↙       ↘
+      Dev1     Dev2
+```
+
+If Dev1 runs `terraform apply` → **State is locked 🔒** → Dev2 waits → State is unlocked 🔓.
+
+**Remember:**
+`terraform.tfstate` = current infrastructure state
+`backend` = where State is stored
+`remote state` = shared State
+`locking` = prevents concurrent changes
+
+---
+
+### 🇩🇪 Deutsch
+
+* **State:** Terraform speichert den aktuellen Zustand der Infrastruktur.
+* **Standard:** Wird lokal in `terraform.tfstate` gespeichert.
+* **State Locking:** Verhindert, dass mehrere Personen gleichzeitig den State ändern.
+* **Backend:** Definiert, **wo der State gespeichert wird**.
+* **Remote Backend:** Speichert den State zentral, z. B. in **AWS S3**, Azure Blob oder HCP Terraform.
+* **Team:** Remote State ist wichtig, damit alle mit demselben State arbeiten.
+
+**Beispiel:**
+
+```text
+Alleine:
+Laptop
+ ├── main.tf
+ └── terraform.tfstate
+```
+
+```text
+Team:
+          AWS S3
+     terraform.tfstate
+        ↙       ↘
+      Dev1     Dev2
+```
+
+Wenn Dev1 `terraform apply` ausführt → **State wird gesperrt 🔒** → Dev2 wartet → danach wird der State wieder freigegeben 🔓.
+
+**Merken:**
+`terraform.tfstate` = aktueller Infrastrukturzustand
+`backend` = Speicherort des States
+`remote state` = gemeinsamer State
+`locking` = verhindert gleichzeitige Änderungen
+
+
+
+
+
+
+******************************************
+
+
+Merksatz
+
+1 /  Solo → Local State → automatisch
+
+Laptop ├── main.tf └── terraform.tfstate
+
+
+
+2 /  Team → Remote Backend  ( crrate  backend.tf /or   terraform.tf  add inside  the config ) → gemeinsamer State + Locking
+
+Wenn Dev1 terraform apply ausführt → State wird gesperrt 🔒 → Dev2 wartet → danach wird 
+der State wieder freigegeben
+
+
+
+
+- State Locking  :  verhindert  multi  users , gleichzeitig den State zu ändern.
+
+
+
+******************************************
+
+
+
+
+exemple  code  backend 
+
+
+
+
+backend.tf  /  terraform.tf :
+
+
+terraform {
+  backend "s3" {
+    bucket       = "my-terraform-state"
+    key          = "project/terraform.tfstate"
+    region       = "eu-central-1"
+    use_lockfile = true
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RQ :  
+
+.tf → configuration you write
+.tfstate → State that Terraform manages
+
+
+
+

@@ -1,0 +1,42 @@
+
+
+A. Implicit dependency  ( ohne  menschliche  einsatz )
+
+Imagine you need to create an AWS security group and an EC2 instance that uses it.
+
+( Terraform sees aws_security_group.web.id and knows that the security group must be created before the EC2 instance can use its ID. )
+
+
+
+
+B.  explicit dependecy ( lezmek tzid dependson  )
+
+depends_on guarantees resource-operation ordering.
+
+
+Use depends_on when you need to declare a dependency Terraform cannot infer automatically.
+
+
+Use implicit dependencies whenever Terraform can infer the relationship from resource references ( like vpc & security group .. )
+
+
+
+exemple  pratiq  use :
+
+
+resource "aws_iam_role_policy_attachment" "app" {
+  role       = aws_iam_role.app.name
+  policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
+}
+
+resource "aws_instance" "app" {
+  ami           = "ami-xxxxxxxx"
+  instance_type = "t3.micro"
+
+  depends_on = [
+    aws_iam_role_policy_attachment.app
+  ]
+}
+
+
+

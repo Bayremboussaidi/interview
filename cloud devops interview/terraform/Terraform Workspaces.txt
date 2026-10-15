@@ -1,0 +1,93 @@
+
+
+problem ; 
+
+Imagine you have one Terraform codebase:
+
+main.tf
+providers.tf
+
+But you need 3 environments:
+
+DEV
+QA
+PROD
+
+
+
+
+
+dev/
+  main.tf
+  providers.tf
+
+qa/
+  main.tf
+  providers.tf
+
+....
+
+-> duplicate main.tf
+
+
+-------------------------------------
+
+
+
+solution ? 
+
+
+
+             SAME main.tf
+                  │
+       ┌──────────┼──────────┐
+       ↓          ↓          ↓
+      dev         qa        prod
+       │          │          │
+   State-dev   State-qa   State-prod
+
+
+
+Create workspaces:
+
+terraform workspace new dev
+terraform workspace new qa
+terraform workspace new prod
+
+Now:
+
+terraform workspace list
+
+might show:
+
+  default
+  dev
+* prod
+  qa
+
+
+
+
+one by  one 
+
+
+terraform workspace select dev
+terraform apply
+
+
+
+
+
+commands  to remeber  ? 
+
+terraform workspace list  ( list  all  workspaces  )
+
+terraform workspace new **  ( add new workspace  ) 
+
+terraform workspace select xx  ( switch to xx )
+
+
+
+
+
+

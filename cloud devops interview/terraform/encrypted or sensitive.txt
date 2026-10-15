@@ -1,0 +1,48 @@
+
+
+Term	                                Meaning
+
+sensitive = true	                 Redacts=hide the value in normal Terraform output
+encrypt = true in the S3 backend	Enables encryption at rest for the state object
+sensitive + encryption	               Helps protect both displayed values and stored state
+
+
+
+
+sensitive ( haja kima password , yani mayo5rech f output cli , wala haja , ama ken thb tkharjou tektb esm l variabl bedhabt yokhrej
+
+ama encryped mata9rah ken bl key )
+
+
+
+
+
+
+
+
+exmple  code  encryped :
+
+terraform {
+  backend "s3" {
+    bucket       = "my-terraform-state-bucket"
+    key          = "project/terraform.tfstate"
+    region       = "eu-central-1"
+    encrypt      = true
+  }
+}
+
+
+// , you can also configure a KMS key using the backend's kms_key_id setting.
+
+
+la plupart , stored in cloud , with encrypt  tools like kms in  aws
+
+
+Remote state in AWS S3
+Configure S3 server-side encryption, such as SSE-S3 or SSE-KMS, to encrypt state at rest.
+
+
+
+
+
+

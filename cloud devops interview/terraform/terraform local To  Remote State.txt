@@ -1,0 +1,79 @@
+
+Situation: You started locally
+
+You are working alone first:
+
+my-project/
+├── main.tf
+└── terraform.tfstate
+
+Your main.tf:
+
+resource "aws_s3_bucket" "app" {
+  bucket = "bayrem-my-app-123"
+}
+
+
+u run 
+
+terraform init
+terraform apply
+
+Terraform creates the S3 bucket and automatically creates:  terraform.tfstate  , on your computer.
+
+
+
+
+- Now Dev1 and Dev2 need to work on the same project.
+
+so  u should move  your State to a shared S3 backend.
+
+
+
+
+
+
+
+1- create  backend.tf
+
+
+terraform {
+  backend "s3" {
+    bucket       = "company-terraform-state"
+    key          = "prod/terraform.tfstate"    //  this  is where u want  the shared  backend.tf  to  be positionned
+    region       = "eu-central-1"
+    use_lockfile = true
+  }
+}
+
+
+
+NEW
+S3
+└── company-terraform-state
+    └── prod/terraform.tfstate
+
+
+
+
+2- terraform init -migrate-state   ( this take  the old  state  to the   new directory )
+
+
+
+
+
+// terraform state list  ( show ressources  ,  aws-subnet , .. )
+
+
+
+
+
+
+state list = Überblick
+state show = eine Ressource im Detail      (  like :    terraform state show aws_subnet.private  )
+
+
+
+
+
+

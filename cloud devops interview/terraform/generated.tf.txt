@@ -1,0 +1,52 @@
+
+suppose  , you created  manually  s3 , so u only know its id and where it is 
+
+u want that configurations  from that s3  ? 
+
+
+
+your architecture looks like this 
+
+terraform-project/
+├── main.tf
+├── generated.tf
+├── variables.tf
+└── provider.tf
+
+
+
+so , first  add in main.tf  , only this 
+
+import {
+  to = aws_s3_bucket.my_bucket
+  id = "my-existing-bucket-123"
+}
+
+
+
+
+
+then  run :
+
+terraform init
+
+terraform plan -generate-config-out=generated.tf  // here say that the generated must be there 
+
+
+
+*****************************
+
+
+
+the generated then  file will look like this : 
+
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "my-existing-bucket-123"
+
+  # Other settings may be generated here.
+}
+
+
+
+
+so main.tf  ->  terraform plan -generate-config-out=generated.tf   ->generated.tf  ( file contains what s needed )

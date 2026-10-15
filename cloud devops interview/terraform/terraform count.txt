@@ -1,0 +1,72 @@
+
+resource "aws_instance" "vm" {
+  count = 3
+}
+
+Creates:
+
+aws_instance.vm[0]
+aws_instance.vm[1]
+aws_instance.vm[2]
+
+
+
+
+count  VS   for each
+
+
+
+
+
+
+count → creates multiple similar resources using a number/index:
+resource "aws_instance" "vm" { count = 3 } → VM[0], VM[1], VM[2]
+
+for_each → creates multiple resources using a map/set with unique keys:
+for_each = { VM1 = "t3.micro", VM2 = "t3.medium" } → each.key = VM1/VM2, each.value = size.
+
+
+
+EXEMPL for each use ? 
+
+
+
+
+Example:
+
+variable "vms" {
+  default = {
+    VM1 = "t3.micro"
+    VM2 = "t3.small"
+    VM3 = "t3.medium"
+  }
+}
+
+resource "aws_instance" "vm" {
+  for_each = var.vms
+
+  instance_type = each.value
+
+  tags = {
+    Name = each.key
+  }
+}
+
+
+
+***********************************
+
+
+
+
+refering to  somthng in for each ?   aws_instance.vm["VM1"].id
+
+
+With count, removing something in the middle can cause index changes and potentially  -> for each is better
+
+
+
+
+
+
+ 
