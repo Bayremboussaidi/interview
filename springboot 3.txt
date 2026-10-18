@@ -1,0 +1,165 @@
+
+
+
+
+Wichtige Statuscodes:
+
+200 OK
+201 Created
+204 No Content
+400 Bad Request
+401 Unauthorized
+403 Forbidden
+404 Not Found
+500 Internal Server Error
+
+
+
+POST → Neue Ressource erstellen.
+GET → Ressource abrufen.
+PUT → Ressource vollständig ersetzen.
+PATCH → Ressource teilweise aktualisieren.
+DELETE → Ressource löschen.
+
+
+
+
+
+
+Was ist eine Transaktion?  @transaktion
+
+Mehrere DB-Operationen werden als eine Einheit behandelt, nach dem Prinzip „alles oder nichts“.
+ Wenn ein Schritt fehlschlägt, gibt es einen Rollback.
+
+
+
+
+
+
+
+Validierung?
+Mit Annotationen wie @NotNull, @NotBlank, @Email oder @Size auf dem DTO und @Valid im Controller.
+
+
+
+
+
+@PathVariable vs. @RequestParam?
+
+@PathVariable liest aus dem Pfad: /books/42. Damit identifiziert man eine Ressource.
+@RequestParam liest aus dem Query-String: /books?page=2&sort=date. Damit filtert, sortiert oder paginiert man.
+
+
+
+
+
+unterschied  zwischen  microservice  , mono ? 
+
+mono : einzig grosse anwendung  , einfach  zu verstehen  , nicht skalierbar
+
+micro : skalierbar , die meist uber  rest kommunizieren   , wenn fehler auftriit   , bleibt isoliert
+
+
+
+
+
+
+wie  sieht typischer  spring-boot anwendung ? 
+
+controller : nimmt die http  anfrage
+.
+repository : hat zugriffe auf  die datenbank
+
+service : businesslogic
+
+
+
+
+
+
+
+. Was ist der Unterschied zwischen @PathVariable und @RequestParam?
+
+@pathvariable  liest  die werte  aus pfad ,
+
+wahrend @RequestParam liest Werte aus dem Query-String,
+
+
+
+
+
+
+
+
+Was ist der Unterschied zwischen application.properties und application.yml?
+
+sie haben  beides  desselbe role , 
+
+application.properties , ist  key = value  form   ;   wahrend  application.yml  , ist json
+
+
+
+
+
+
+----------------------------------------------------
+
+
+
+
+was  sind die  prinzipen  von  OOP ?
+
+polymorphism  ( obj  kann unterschiedliche formen  annehmen , @override ) 
+
+vererbung ( extends ..)
+
+abstraktion ( konnte  methoden , oder obj  vergeben  , abstract class { abstact method ...}} )
+
+kapselung  ( schutzen   -> private nom      ;    public string get ....     -> private + methid : kontrollieren den zugriff )
+
+
+
+
+
+
+---------------------------------------------------------------
+
+
+
+was  ist  Spring Actuator ? 
+
+Spring Boot Actuator ist ein Modul zur Überwachung und Verwaltung von Spring-Boot-Anwendungen.
+ Es stellt Endpoints wie /actuator/health und /actuator/metrics bereit. Es wird häufig zusammen mit Prometheus, 
+Grafana und Kubernetes für Monitoring und Health Checks verwendet.
+
+
+
+
+
+----------------------------------------------------------------
+
+
+
+
+. Wie sichert man eine REST-API in Spring Boot ab?
+
+
+Für REST-APIs verwendet man meistens JWT: Der Client schickt bei jeder Anfrage einen Token im Authorization-Header,
+
+
+
+-------------------------------------------------------------------
+
+
+Was ist der Unterschied zwischen @Value und @ConfigurationProperties?
+
+
+value  liest  einzig  value , wahrend  configurationproperties  bindet eine ganze  werte von werten
+
+
+
+
+
+
+
+

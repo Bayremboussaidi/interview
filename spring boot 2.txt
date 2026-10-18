@@ -1,0 +1,122 @@
+
+bean ? 
+
+ist objekt , vom spring  dependecy injektion  erstellt ( wie @service , repo .. )
+
+
+
+
+spring ?   spring boot ? 
+
+Spring ist  Java-Framework und bietet Funktionen wie Dependency Injection,
+ Bean-Management und Datenzugriff.
+
+Spring Boot basiert auf Spring und vereinfacht die Entwicklung durch Auto-Konfiguration, 
+Starter-Abhängigkeiten und eingebettete ( embedded ) Server.
+
+
+
+
+
+what  s auto config in  spring boot ? 
+
+- Auto-Configuration in Spring Boot automatically configures your application based on the dependencies you have added and
+ the settings you provide, reducing manual configuration.
+
+
+- Die Auto-Konfiguration richtet die Anwendung automatisch anhand der vorhandenen Abhängigkeiten und Einstellungen ein. 
+Dadurch ist weniger manuelle Konfiguration erforderlich.
+
+
+
+
+
+
+
+
+
+@SpringBootApplication  :
+
+( befindet sich in der hauptklasse  einer spring boot anwendung ,
+
+ combiniert @Configuration, @EnableAutoConfiguration und @ComponentScan  )
+
+und ermöglicht dadurch die Konfiguration, automatische Einrichtung und  erkennung ( detectin ) von spring komponents
+
+
+
+
+
+
+was  ist embedded server ? 
+
+embedded  server ist  ein integriert webserver , der in der  springboot anwendung  erhalten ist , dadurch 
+
+kann die anwendung als  ausfuhrbare ( executable )  jar datei  gestartet , ohne  externen server installieren zu mussen
+
+
+
+
+
+what  s @component ? 
+
+ist 
+
+
+
+
+
+
+
+
+
+
+@RestController ? 
+
+@RestController wird verwendet, um RESTful Webservices und APIs in Spring Boot zu erstellen. 
+Sie kombiniert @Controller und @ResponseBody, sodass die Methoden ihre Ergebnisse direkt im HTTP-Response-Body 
+zurückgeben, zum Beispiel als JSON.
+
+
+
+
+
+
+
+
+
+application.properties ? 
+
+ist die zentrale Konfigurationsdatei in Spring Boot. sie  enthalt einstellungen  wie  server-port , logging
+datenverbindungen ,  beim  start wird  automatisch einliest und anwendet
+
+
+
+
+
+
+
+@service / repository  / controller .. ? 
+
+ kennzeichnet eine Klasse, die die Geschäftslogik enthält. Sie ist eine spezialisierte Form von
+ @Component und wird automatisch von Spring verwaltet.
+
+
+
+service ist  fur business layer  , berechnungen , und validationnen
+
+repository , fur  datenzugriff , meist  jpaRepository
+
+Controller , nimmt  https  requests ( anfragen ) und gibt  json respnses  zuruck
+
+
+
+
+
+
+
+
+
+
+
+
