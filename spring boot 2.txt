@@ -5,6 +5,8 @@ ist objekt , vom spring  dependecy injektion  erstellt ( wie @service , repo .. 
 
 
 
+---------------------------------------------
+
 
 spring ?   spring boot ? 
 
@@ -12,9 +14,12 @@ Spring ist  Java-Framework und bietet Funktionen wie Dependency Injection,
  Bean-Management und Datenzugriff.
 
 Spring Boot basiert auf Spring und vereinfacht die Entwicklung durch Auto-Konfiguration, 
-Starter-Abhängigkeiten und eingebettete ( embedded ) Server.
+Starter-dependencies  und eingebettete ( embedded ) Server.
 
 
+
+
+---------------------------------------------
 
 
 
@@ -30,12 +35,13 @@ Dadurch ist weniger manuelle Konfiguration erforderlich.
 
 
 
-
+---------------------------------------------
 
 
 
 
 @SpringBootApplication  :
+
 
 ( befindet sich in der hauptklasse  einer spring boot anwendung ,
 
@@ -45,7 +51,7 @@ und ermöglicht dadurch die Konfiguration, automatische Einrichtung und  erkennu
 
 
 
-
+---------------------------------------------
 
 
 was  ist embedded server ? 
@@ -55,6 +61,7 @@ embedded  server ist  ein integriert webserver , der in der  springboot anwendun
 kann die anwendung als  ausfuhrbare ( executable )  jar datei  gestartet , ohne  externen server installieren zu mussen
 
 
+---------------------------------------------
 
 
 
@@ -67,7 +74,7 @@ ist
 
 
 
-
+---------------------------------------------
 
 
 
@@ -80,7 +87,7 @@ zurückgeben, zum Beispiel als JSON.
 
 
 
-
+---------------------------------------------
 
 
 
@@ -92,7 +99,7 @@ datenverbindungen ,  beim  start wird  automatisch einliest und anwendet
 
 
 
-
+---------------------------------------------
 
 
 
@@ -110,6 +117,74 @@ repository , fur  datenzugriff , meist  jpaRepository
 Controller , nimmt  https  requests ( anfragen ) und gibt  json respnses  zuruck
 
 
+
+
+
+
+
+---------------------------------------------
+
+
+
+* was  ist unterschied  zwischen springboot  und spring ?
+
+spring boot ersetzt  die manuelle konfiguration von  klassische spring ( xml , dependencies , externer server )
+
+s.b  lost  das mit auto konfig , starter  dependencies , embedded  server
+
+
+
+
+
+
+---------------------------------------------
+
+
+* Wie funktioniert Auto-Configuration intern?
+
+
+
+@EnableAutoConfiguration lädt viele Auto-Configuration-Klassen, die durch Conditions geschützt sind
+
+
+
+
+
+
+
+---------------------------------------------
+
+
+
+
+* Wie läuft der Startup einer Spring-Boot-App ab?
+
+
+
+main -> ( ruft )  springboot application.run  ->  die config  wird geladen ( properties , envir variables ..)
+
+-> der app  context  wird  erstellt ( beans , dependency  injektion  , auto configuration ..)
+
+-> der embedded  server  startet  und  wartet  auf  die anfrage ( requests  ) 
+
+
+
+
+
+---------------------------------------------
+
+
+* Wie verwaltet man Secrets (z. B. das DB-Passwort)?
+
+
+nie in code , oder  git commits , sondern
+
+in  environment  variables  , kubernetes  secrets , oder  secret  manager  ( wie  aws secret manager )
+
+
+
+
+-----------------------------------------------
 
 
 

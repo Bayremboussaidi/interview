@@ -141,7 +141,7 @@ Grafana und Kubernetes für Monitoring und Health Checks verwendet.
 
 
 
-. Wie sichert man eine REST-API in Spring Boot ab?
+security . Wie sichert man eine REST-API in Spring Boot ab?
 
 
 Für REST-APIs verwendet man meistens JWT: Der Client schickt bei jeder Anfrage einen Token im Authorization-Header,
@@ -156,6 +156,41 @@ Was ist der Unterschied zwischen @Value und @ConfigurationProperties?
 
 value  liest  einzig  value , wahrend  configurationproperties  bindet eine ganze  werte von werten
 
+
+
+
+-----------------------------------------------------------------
+
+
+interface  oder  abstract class ? 
+
+
+- eine klasse kann mehrere  interface implemetieren , wahrend nur  eine abstrakt klass erben konnte  ( class - class , qq soit abtract ou nn )
+
+
+- interface immer zeigt , was muss eine  klasse  konnen 
+
+- abstrakt klass zeigt ,  was haben  verwandte klasse  gemeinsam
+
+
+
+
+----------------------------------------------------------------------
+
+
+Was sind Streams und Lambdas?
+
+
+- lambda  sind kurzer  anonyme funktionnen , die den code kurzer und lesbar machen 
+
+
+
+exemple : list.stream().filter(...).map(...).toList()
+
+
+
+
+---------------------------------------------------------------------------
 
 
 

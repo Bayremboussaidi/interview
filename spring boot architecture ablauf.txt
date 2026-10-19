@@ -1,0 +1,167 @@
+
+
+
+
+* was  ist unterschied  zwischen springboot  und spring ?
+
+spring boot ersetzt  die manuelle konfiguration von  klassische spring ( xml , dependencies , externer server )
+
+s.b  lost  das mit auto konfig , starter  dependencies , embedded  server
+
+
+
+
+
+
+---------------------------------------------
+
+
+* Wie funktioniert Auto-Configuration intern?
+
+
+@EnableAutoConfiguration lädt viele Auto-Configuration-Klassen,
+
+ (z. B. @ConditionalOnClass, @ConditionalOnMissingBean).
+
+
+
+
+
+
+
+---------------------------------------------
+
+
+
+
+* Wie läuft der Startup einer Spring-Boot-App ab?
+
+
+
+main -> ( ruft )  springboot application.run  ->  die config  wird geladen ( properties , envir variables ..)
+
+-> der app  context  wird  erstellt ( beans , dependency  injektion  , auto configuration ..)
+
+-> der embedded  server  startet  und  wartet  auf  die anfrage ( requests  ) 
+
+
+
+
+
+---------------------------------------------
+
+
+* Wie verwaltet man Secrets (z. B. das DB-Passwort)?
+
+
+nie in code , oder  git commits , sondern
+
+in  environment  variables  , kubernetes  secrets , oder  secret  manager  ( wie  aws secret manager )
+
+
+
+
+-----------------------------------------------
+
+
+
+* was passiert , wenn service  von micro service  fallt aus ?
+
+
+- wenn service  fallt , wartet  man kurz zeit ( timeout ) ,  und versucht  es erneut ( retry )
+
+wenn  es fallt  noch , verwendet  man alternative  ( fallback  : it can be another service .. ) 
+
+
+danach  stoppt  alle anfragen an die  ausgefallen  service  weiterzuleiten 
+
+
+
+
+
+
+
+
+
+
+* Was ist dann   ein Circuit Breaker?
+
+
+-  Wenn ein Service wiederholt fehlschlägt  , „öffnet“ der Circuit Breaker und leitet Requests
+
+ sofort an einen Fallback weiter, statt weiter zu warten
+
+
+
+
+
+
+
+----------------------------------------------------------
+
+
+
+* Wie funktioniert Caching in Spring Boot?
+
+
+- man  aktiviert  es mit  @EnableCaching. + @Cacheable
+
+
+->  beim  nachten  aufruf mit   denselben  parameter  kommt das ergibnis  aus dem cache statt DB 
+
+
+
+
+
+* wenn sollte man es benutzen 
+
+- nur  fur  die daten , die oft  gelesen und  so selten geandert wurden 
+
+
+
+
+-----------------------------------------------------------
+
+
+
+Monitoring vs. Observability?
+
+
+
+- monitoring  ? zeigt dass ein problem  existiert 
+
+observity ?  zeigt , wie  es passiert  ( logs  , metrics , traces  ) 
+
+
+
+
+* Welche Tools nutzt man für Monitoring + observity ?     spring  Actuator + graphana +  promotheus
+
+
+
+Actuator = exposes health and monitoring information.
+Prometheus = collects metrics.
+Grafana = displays metrics in dashboards. 
+
+
+
+----------------------------------------------------------------
+
+
+
+* Wie deployt man Spring Boot in Production? 
+
+
+- Die App wird als JAR mit Embedded Server gebaut, in ein Docker Image gepackt und über eine automatisierte CI/CD-Pipeline
+
+ auf k8s  deployt
+ 
+
+
+
+
+
+
+
+
+

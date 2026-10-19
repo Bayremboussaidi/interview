@@ -1,122 +1,127 @@
+=== 1. SPRING BOOT GRUNDLAGEN ===
 
+Warum verwenden wir Spring Boot? 
+– Spring Boot verkürzt die Entwicklungszeit durch Auto-Configuration, bietet einen Embedded Server (Tomcat, Jetty),
+ Starter Dependencies für ein schnelles Setup und production-ready Features wie Health Checks und Metrics über Actuator.
 
-warum  verwenden wir spring boot ? 
 
--s.b verkurzet die entwicklungszeit , stellt eingebettete  server ( embedded server ) wie tomcat jetty bereit 
-biete starter abhangigkeiten  fur eine schnellere  einrichtung 
 
--enthalt  produktionsreife Funktionen wie Health Checks und Metriken.
 
+Was sind Spring Boot Starter?
+ – Starter sind Gruppen von Dependencies für bestimmte Features, 
+z. B. enthält spring-boot-starter-web alles für Web-Apps (Spring MVC, Tomcat, Jackson), und die Versionen sind automatisch kompatibel.
 
 
 
 
 
- Was sind Spring Boot Starter?
+Was ist Auto-Configuration?
+ – Spring Boot konfiguriert Komponenten automatisch, basierend auf dem Classpath, den vorhandenen Beans und den 
+Properties; wenn ich selbst eine Bean definiere, zieht sich Spring Boot zurück (back off).
 
-- Starter sind Gruppen von Abhängigkeiten für bestimmte Funktionen. Zum Beispiel enthält spring-boot-starter-web
- wichtige Abhängigkeiten für Webanwendungen
 
-( Starters group dependencies for specific features, such as web applications. )
 
 
+Was ist Spring Initializr?
+ – Ein Online-Tool (start.spring.io), mit dem man ein Spring-Boot-Projekt mit Build-Tool (Maven/Gradle),
+ Java-Version und den gewünschten Dependencies generiert.
 
 
 
-Was ist Auto-Konfiguration?
 
--DE: Spring Boot konfiguriert viele Komponenten automatisch, abhängig von den vorhandenen
- Abhängigkeiten und Einstellungen.
 
+Was ist @SpringBootApplication? 
+– Die Haupt-Annotation auf der Startklasse; sie kombiniert @Configuration, @EnableAutoConfiguration und @ComponentScan.
 
 
 
-. Was ist Spring Initializr?
-DE: Spring Initializr ist ein Online-Tool, mit dem wir ein Spring-Boot-Projekt mit den gewünschten Abhängigkeiten erstellen können.
-EN: It generates a Spring Boot project with selected dependencies.
 
 
 
+=== 2. DEPENDENCY INJECTION UND BEANS ===
 
+Was ist Dependency Injection (DI)?
+ – Spring stellt die benötigten Objekte (Dependencies) bereit, statt dass die Klasse sie selbst mit new erstellt;
+ das sorgt für Loose Coupling und bessere Testbarkeit (z. B. mit Mocks).
 
-. Was ist Dependency Injection (DI)?
-Dependency Injection bedeutet, dass Spring die benötigten Objekte bereitstellt, anstatt dass eine Klasse sie selbst erstellt.
- Dadurch wird der Code flexibler und leichter testbar.
 
 
 
+Was ist IoC (Inversion of Control)?
+ – Die Kontrolle über Erstellung und Verwaltung der Objekte liegt nicht bei der Klasse, 
+sondern beim Spring IoC Container; DI ist die Umsetzung von IoC.
 
 
 
-. Was ist IoC?  ( inversion of control )
-DE: IoC bedeutet Inversion of Control. Spring übernimmt die Verwaltung und Erstellung der Objekte.
 
 
+Was ist eine Bean?
+ – Ein Objekt, das vom Spring Container erstellt, verwaltet und injiziert wird, z. B. Controller, Service,
+ Repository.
 
 
 
 
-. Was macht @Autowired?
 
-@Autowired ermöglicht es Spring, eine benötigte Abhängigkeit automatisch einzufügen.
- Häufig verwendet man heute die Constructor Injection.
+Was macht @Autowired?
+ – @Autowired lässt Spring eine Dependency automatisch injizieren; heute empfiehlt man Constructor 
+Injection (bei nur einem Konstruktor ist @Autowired nicht nötig), weil die Felder final sein können und 
+die Klasse leichter testbar ist.
 
 
 
 
 
+Welche Arten von Injection gibt es? 
+– Constructor Injection (empfohlen), Setter Injection und Field Injection (nicht empfohlen).
 
 
 
 
-. Was ist @SpringBootApplication?
-DE: Diese Annotation startet die Spring-Boot-Konfiguration. Sie kombiniert unter anderem 
-(  @Configuration, @EnableAutoConfiguration und @ComponentScan )
 
+Unterschied @Component, @Service, @Repository? 
+– Alle markieren eine Klasse als Bean: @Component ist allgemein,
+ @Service ist für die Business Logic, @Repository für den Datenbankzugriff (übersetzt zusätzlich DB-Exceptions in DataAccessException).
 
 
 
 
-Was ist der Unterschied zwischen @Component, @Service und @Repository?
-DE:
-- @Component: Allgemeine Spring-Komponente.
-- @Service: Klasse für die Geschäftslogik.
-- @Repository: Klasse für den Datenbankzugriff.
 
 
+Unterschied @Bean und @Component? 
+– @Component steht auf der eigenen Klasse und wird per Component 
+Scan gefunden; @Bean steht auf einer Methode in einer @Configuration-Klasse, z. B. für Klassen aus externen Libraries.
 
 
 
 
 
-3. REST API und Webentwicklung
 
-Was ist der Unterschied zwischen @Controller und @RestController?
-DE: @Controller wird oft für Webseiten verwendet. @RestController gibt normalerweise direkt Daten wie JSON zurück.
 
+=== 3. REST API UND WEB ===
 
 
 
+Unterschied @Controller und @RestController? 
+– @Controller gibt standardmäßig eine View (HTML-Seite) zurück;
+ @RestController = @Controller + @ResponseBody und gibt Daten direkt als JSON zurück.
 
 
 
-. Was ist @RequestMapping?
-DE: Mit @RequestMapping legen wir fest, welche URL und welche HTTP-Anfragen
- eine Methode oder Klasse verarbeitet.
 
 
 
+Was ist @RequestMapping? 
+– Legt fest, welche URL und welche HTTP-Methode eine Klasse oder Methode verarbeitet; 
+auf Klassenebene definiert es den Basis-Pfad (z. B. /api/users); Kurzformen sind @GetMapping, @PostMapping, @PutMapping, @PatchMapping, @DeleteMapping.
 
 
 
 
 
-HTTP-Methode	Verwendung
-GET	Daten lesen
-POST	Neue Daten erstellen
-PUT	Eine Ressource vollständig aktualisieren
-PATCH	Teile einer Ressource aktualisieren
-DELETE	Daten löschen
+HTTP-Methoden? 
+– GET = Daten lesen, POST = neue Daten erstellen, PUT = Ressource komplett aktualisieren, 
+PATCH = Ressource teilweise aktualisieren, DELETE = Daten löschen.
 
 
 
@@ -124,74 +129,220 @@ DELETE	Daten löschen
 
 
 
-. Was ist Spring Data JPA?
-DE: Spring Data JPA vereinfacht den Datenbankzugriff.
- Wir können Daten speichern und lesen, ohne alle SQL-Abfragen selbst schreiben zu müssen.
-EN: It simplifies database operations through repository interfaces.
+Unterschied @PathVariable und @RequestParam? 
+– @PathVariable liest Werte aus dem Pfad (/users/5) zur Identifikation einer Ressource; 
+@RequestParam liest Werte aus dem Query-String (?page=2&sort=name) für Filter, Sortierung, Pagination.
 
 
 
 
 
 
+Was ist @RequestBody? 
+– Wandelt den JSON-Body eines Requests automatisch in ein Java-Objekt (DTO) um, intern mit Jackson.
 
-. Was ist ein Repository?
+( um- wandeln  = konvertieren  )
 
-ist eine interface , bietet  methoden wie save , findbyid , ...
 
 
 
 
+Was ist ResponseEntity? 
+– Gibt volle Kontrolle über die HTTP-Response: Body, Status Code (z. B. 201 Created, 404 Not Found) und Header.
 
 
-Was bedeutet @Entity?
 
- @Entity markiert eine Java-Klasse, die als Entität in der Datenbank gespeichert
 
 
 
+Wichtige Status Codes? 
+– 200 OK, 201 Created, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error.
 
 
 
-. Was macht @Transactional?
 
-@Transactional führt Datenbankoperationen innerhalb einer Transaktion aus. 
-Wenn ein Fehler auftritt, können Änderungen zurückgerollt werden.
 
+Warum DTOs? 
+– Damit man Entities nicht direkt nach außen gibt;
+ So schützt man sensible Daten wie Passwörter und hält die API und die Datenbank getrennt.
 
+(exp : private string s   ;    public string get ... )
 
 
 
-5. Konfiguration und Produktion
 
-22. Was ist application.properties?
-In dieser Datei konfigurieren wir zum Beispiel den Serverport, die Datenbankverbindung und die Log-Einstellungen.
 
 
 
+Wie validiert man Request-Daten? 
+– Mit Annotationen wie @NotNull, @NotBlank, @Email, @Size auf dem DTO und @Valid vor @RequestBody im Controller; 
+bei Fehlern gibt man 400 Bad Request zurück.
 
 
 
 
-Was sind Spring Profiles?
 
-- Profiles ermöglichen unterschiedliche Konfigurationen für verschiedene Umgebungen,
- zum Beispiel Entwicklung, Test und Produktion.
 
 
 
+Wie macht man Exception Handling? – Zentral mit @RestControllerAdvice und @ExceptionHandler, 
+so bekommen alle Endpoints einheitliche JSON-Fehlermeldungen mit dem richtigen Status Code.
 
 
-Was ist Spring Boot Actuator?
 
-DE: Actuator bietet Informationen über den Zustand und die Leistung der Anwendung,
- zum Beispiel über Health Checks und Metriken.
 
 
 
 
+=== 4. DATENBANK ===
 
+Was ist Spring Data JPA? 
+– Vereinfacht den Datenbankzugriff über Repository Interfaces: CRUD-Methoden gibt es automatisch,
+ und Queries kann man über den Methodennamen erzeugen (z. B. findByEmail), ohne SQL zu schreiben; 
+für komplexe Fälle gibt es @Query.
 
-Wie funktioniert Sicherheit in Spring Boot?
-DE: Wir verwenden Spring Security, um Benutzer zu authentifizieren und Zugriffe zu kontrollieren.
- Für REST APIs können wir beispielsweise JWT verwenden.
+
+
+
+
+
+
+
+Was ist ein Repository? – Ein Interface, das z. B. von JpaRepository erbt 
+und automatisch Methoden wie save(), findById(), findAll() und deleteById() bereitstellt;
+ Spring erzeugt die Implementierung zur Laufzeit.
+
+
+
+
+
+
+
+Was bedeutet @Entity? 
+– @Entity markiert eine Java-Klasse, die einer Datenbanktabelle entspricht;
+ jedes Objekt ist eine Zeile, und der Primary Key wird mit @Id markiert.
+
+
+
+
+
+
+
+Was macht @Transactional? 
+– Führt mehrere DB-Operationen in einer Transaction aus (alles oder nichts): Commit bei Erfolg,
+ Rollback bei einem Fehler (standardmäßig bei RuntimeExceptions); man setzt es meist auf Service-Methoden.
+
+
+
+
+
+
+=== 5. KONFIGURATION UND PRODUCTION ===
+
+
+Was ist application.properties?
+ – Die zentrale Konfigurationsdatei, z. B. für Server Port, Datenbankverbindung und Logging; 
+alternativ gibt es application.yml mit hierarchischer YAML-Syntax.
+
+
+
+
+
+
+Wie ändert man den Port? 
+– Mit server.port=8081 in application.properties, über eine Umgebungsvariable oder ein Command-Line-Argument; 
+Standard ist 8080.
+
+
+
+
+
+Was sind Spring Profiles? 
+– Profiles erlauben verschiedene Konfigurationen pro Umgebung (dev, test, prod), z. B. application-dev.properties, 
+aktiviert mit spring.profiles.active=dev.
+
+
+
+
+
+Was ist Spring Boot Actuator? 
+– Bietet Endpoints zum Monitoring der laufenden App, z. B. /actuator/health und /actuator/metrics; 
+Kubernetes nutzt /health für Liveness- und Readiness-Probes.
+
+
+
+
+
+
+
+Unterschied JAR und WAR? – Ein JAR ist eigenständig mit Embedded Server und wird mit java -jar gestartet (ideal für Docker);
+ ein WAR wird auf einen externen Server deployt.
+
+
+
+
+
+=== 6. SECURITY ===
+
+Wie funktioniert Security in Spring Boot? 
+– Mit Spring Security: Jeder Request läuft durch die Security Filter Chain, die Authentication (wer bist du?) 
+und Authorization (was darfst du?) prüft; für REST APIs nutzt man meist JWT, stateless ohne Session.
+
+
+
+
+
+
+Authentication vs. Authorization? – Authentication = Identität prüfen (Login, Token); Authorization = Rechte prüfen (Roles); 
+Authentication kommt immer zuerst.
+
+
+
+
+401 vs. 403? – 401 Unauthorized = nicht eingeloggt oder Token ungültig; 
+403 Forbidden = eingeloggt, aber keine Berechtigung.
+
+
+
+
+Wie funktioniert JWT?
+ – User loggt sich ein, der Server erstellt einen signierten Token mit User, Roles und Ablaufzeit, 
+der Client schickt ihn bei jedem Request im Header "Authorization: Bearer <token>", und ein Filter validiert Signatur 
+und Ablaufzeit.
+
+
+
+
+
+Aufbau eines JWT? 
+– Header, Payload (Claims) und Signature; der Payload ist nur Base64-kodiert, nicht verschlüsselt, 
+also keine sensiblen Daten hinein.
+
+
+
+
+
+
+Session vs. Token? 
+– Session = stateful, der Server speichert den Zustand, Session-ID im Cookie; Token = stateless,
+ alles steht im Token, besser skalierbar und ideal für REST APIs und Microservices.
+
+
+
+
+Was ist CSRF? 
+– Ein Angriff, bei dem eine fremde Website den Browser eines eingeloggten Users ausnutzt, weil Cookies automatisch mitgeschickt werden; bei stateless REST APIs mit JWT im Header deaktiviert man den CSRF-Schutz.
+
+
+
+
+
+Wie konfiguriert man Spring Security? – Mit einer @Configuration-Klasse und einer SecurityFilterChain-Bean: welche Endpoints permitAll sind, welche authenticated sein müssen, welche eine Role brauchen (hasRole("ADMIN")), dazu CORS, CSRF und die JWT-Validierung.
+
+Warum BCrypt? – Passwörter werden nie im Klartext gespeichert, sondern mit einem PasswordEncoder gehasht; BCrypt ist absichtlich langsam (gegen Brute Force) und fügt automatisch einen Salt hinzu.
+
+Was ist OAuth2? – Ein Standardprotokoll für Authorization: Der Authorization Server (z. B. Keycloak, Google) stellt Tokens aus, und der Resource Server (mein Backend) validiert sie.
+
+Wie haben Sie Keycloak benutzt? – Keycloak war der Identity Provider und stellte JWTs mit den Roles (Admin, Agentur, Kunde) aus; Angular schickte den Token mit, und das Spring-Boot-Backend als Resource Server validierte ihn mit dem Public Key von Keycloak und schützte die Endpoints nach Roles.
+
+Was ist CORS? – Der Browser blockiert Requests an eine andere Domain (z. B. Angular auf Port 4200 → API auf 8080); in Spring erlaubt man bestimmte Origins mit @CrossOrigin oder global in der Security-Konfiguration.

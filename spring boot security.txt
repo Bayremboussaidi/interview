@@ -1,0 +1,73 @@
+
+was ist  spring boot  security ? 
+
+- Spring Security ist das Standard-Framework für Authentication und Authorization in Spring.
+ Es halt jeden Request in einer Filter Chain  und prüft, wer der User ist und was er darf. 
+Außerdem schützt es vor Angriffen wie   "CSRF"
+
+
+
+
+
+-----------------------------------------------
+
+
+
+
+Authentication vs. Authorization?
+
+
+1 authentication : wer  bist  du ? pruft der password , und benutzername
+
+2 Authorization : was  darfst  du tun ?  das wurde entscheidet nach roles 
+
+Authentication  kommt immer zuerst 1
+
+
+
+
+
+
+
+401 Unauthorized heißt: nicht eingeloggt oder Token ungültig
+
+403 Forbidden heißt: eingeloggt, aber keine Berechtigung.
+
+
+
+
+--------------------------------------------------
+
+
+
+Wie funktioniert JWT?
+
+1 loggt sich der user ein
+
+2 erzeugt der server  einen  signierten token mit user , roles  und ablaufzeit
+
+3 schickt  der user jeder request  token , bei jedem  request  im header 
+
+4 validiert  ein filter  der signature und die ablaufzeit
+
+
+
+
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
