@@ -1,0 +1,350 @@
+36. Was ist der Unterschied zwischen Windows und Linux?
+Windows ist kommerziell, proprietär und im Büro weit verbreitet. Linux ist Open Source, flexibel und läuft oft auf Servern.
+
+37. Haben Sie Erfahrung mit Windows 10 oder Windows 11?
+Ja, ich nutze Windows täglich und kenne Einstellungen, Task-Manager, Geräte-Manager und Updates.
+
+38. Wie würden Sie einen langsamen Computer analysieren?
+Ich prüfe im Task-Manager CPU, RAM und Datenträger, dann Autostart, freien Speicherplatz, Updates und Malware. Zum Schluss mache ich einen Neustart.
+
+39. Was machen Sie, wenn Windows nicht startet?
+Neustart, Peripherie abziehen, Starthilfe oder abgesicherter Modus, Festplatte prüfen. Im Notfall Neuinstallation.
+
+40. Was ist der Task-Manager?
+Ein Tool, das laufende Prozesse und die Auslastung zeigt und Programme beenden kann.
+
+41. Wie können Sie überprüfen, welche Programme viel CPU oder RAM verbrauchen?
+Task-Manager mit Strg+Umschalt+Esc öffnen und im Reiter „Prozesse“ nach CPU oder Arbeitsspeicher sortieren.
+
+42. Was ist der Unterschied zwischen RAM und Festplatte?
+RAM ist der schnelle, flüchtige Arbeitsspeicher. Die Festplatte speichert Daten dauerhaft.
+
+43. Was ist eine SSD?
+Eine Solid State Drive: Flash-Speicher ohne bewegliche Teile, schneller und robuster als eine HDD.
+
+44. Was ist ein Treiber?
+Software, mit der das Betriebssystem Hardware ansteuern kann.
+
+45. Wie installiert man einen Gerätetreiber?
+Treiber vom Hersteller oder über Windows Update laden und installieren, oder im Geräte-Manager aktualisieren. Danach Neustart.
+
+46. Was ist der Geräte-Manager?
+Er zeigt alle Hardwarekomponenten und ihren Treiberstatus. Fehler erkennt man am gelben Ausrufezeichen.
+
+47. Wie würden Sie ein Softwareproblem diagnostizieren?
+Problem eingrenzen: Symptome, Fehlermeldung und letzte Änderungen prüfen, Ereignisanzeige lesen, Neustart, Update oder Rollback, erneut testen.
+
+48. Was ist der Unterschied zwischen einem lokalen Benutzerkonto und einem Microsoft-Konto?
+Ein lokales Konto gilt nur auf diesem PC. Ein Microsoft-Konto ist online und synchronisiert Einstellungen.
+
+49. Was ist ein Betriebssystem?
+Software, die die Hardware verwaltet und die Basis für Anwendungen bietet.
+
+50. Was bedeutet Software-Update?
+Eine Aktualisierung von Software: Fehler beheben, neue Funktionen, Sicherheitslücken schließen.
+
+51. Warum sind Sicherheitsupdates wichtig?
+Sie schließen bekannte Sicherheitslücken und schützen vor Angriffen.
+
+52. Was würden Sie tun, wenn ein Programm ständig abstürzt?
+Neustart, Fehlermeldung lesen, Updates installieren, Programm reparieren oder neu installieren, Ereignisanzeige prüfen, sonst eskalieren.
+
+4. Netzwerk
+
+53. Was versteht man unter einem Netzwerk?
+Einen Verbund von Geräten, die Daten austauschen.
+
+54. Was ist eine IP-Adresse?
+Die eindeutige Adresse eines Geräts im Netzwerk, z. B. 192.168.1.10.
+
+55. Was ist der Unterschied zwischen einer öffentlichen und privaten IP-Adresse?
+Öffentlich: im Internet erreichbar. Privat: nur im internen Netz (z. B. 192.168.x.x, 10.x.x.x).
+
+56. Was ist DHCP?
+Ein Dienst, der automatisch IP-Adresse, Subnetzmaske, Gateway und DNS vergibt. ( A service that automatically assigns an IP address, subnet mask, gateway, and DNS. )
+
+
+
+
+57. Was ist DNS?
+Ein Dienst, der Domainnamen in IP-Adressen übersetzt.
+
+
+
+
+58. Was ist ein Default Gateway?
+Die Router-Adresse, über die Geräte in andere Netze oder ins Internet gelangen.
+
+
+
+59. Was ist der Unterschied zwischen TCP und UDP?
+TCP ist verbindungsorientiert und zuverlässig (Web, E-Mail). UDP ist schneller, aber ohne Garantie (Streaming, VoIP).
+
+
+
+60. Was ist ein Router?
+Es verbindet verschiedene Netzwerke und leitet Pakete auf der Grundlage der IP-Adresse weiter.
+
+
+
+61. Was ist ein Switch?
+Er verbindet Geräte im LAN und leitet Daten anhand der MAC-Adresse gezielt weiter.
+
+
+
+62. Was ist der Unterschied zwischen WLAN und LAN?
+LAN ist kabelgebunden, stabil und schnell. WLAN ist drahtlos, flexibel, aber störanfälliger.
+
+
+
+63. Was ist eine MAC-Adresse?
+Die eindeutige Hardware-Adresse einer Netzwerkkarte.
+
+64. Was bedeutet DHCP-Lease?
+Der Zeitraum, für den ein Gerät vom DHCP-Server eine IP-Adresse erhält. Danach wird sie verlängert.
+
+65. Wie überprüfen Sie, ob ein Computer eine Netzwerkverbindung hat?
+Kabel oder WLAN prüfen, mit ipconfig die IP kontrollieren, dann Gateway und eine externe Adresse anpingen.
+
+66. Was macht der Befehl ping?
+Er sendet Testpakete an ein Ziel und prüft Erreichbarkeit und Antwortzeit.
+
+67. Was macht ipconfig?
+Es zeigt die IP-Konfiguration. Mit /all, /release, /renew und /flushdns lässt sich mehr prüfen und zurücksetzen.
+
+68. Was macht tracert?
+Es zeigt den Weg der Pakete über alle Router zum Ziel und hilft, Engpässe zu finden.
+
+69. Was würden Sie tun, wenn ein Mitarbeiter keine Internetverbindung hat?
+Kabel oder WLAN prüfen, ipconfig, Gateway und externe Adresse anpingen, DNS prüfen, Adapter oder Router neu starten, sonst eskalieren.
+
+70. Was könnte die Ursache sein, wenn eine Webseite nicht erreichbar ist, andere aber funktionieren?
+Wahrscheinlich ein DNS-Problem, Browser-Cache, Proxy oder Firewall, oder die Seite selbst ist down. Prüfen mit nslookup und flushdns.
+
+5. Hardware
+
+71. Welche Computerkomponenten kennen Sie?
+CPU, RAM, Mainboard, SSD/HDD, Netzteil, Grafikkarte, Netzwerkkarte, Lüfter.
+
+72. Was ist der Unterschied zwischen RAM und ROM?
+RAM ist flüchtig und beschreibbar. ROM ist nichtflüchtig und enthält Firmware.
+
+73. Was ist der Unterschied zwischen HDD und SSD?
+HDD ist mechanisch, günstig und langsamer. SSD ist schneller, leiser und robuster.
+
+74. Wie würden Sie einen neuen Laptop für einen Mitarbeiter vorbereiten?
+Hardware prüfen, Windows-Image und Updates, Treiber, Software, Konten, Verschlüsselung, Test, Dokumentation, Beschriftung.
+
+75. Was sollte vor der Übergabe eines Computers überprüft werden?
+Funktionstest (Start, Akku, Display, Tastatur, Ports, WLAN), Zubehör vollständig, Updates, Daten gelöscht, dokumentiert.
+
+76. Wie schließen Sie einen zweiten Monitor an?
+Per HDMI, DisplayPort oder USB-C anschließen und mit Windows+P den Anzeigemodus wählen.
+
+77. Was machen Sie, wenn ein Monitor kein Bild anzeigt?
+Strom, Kabel und Eingangsquelle prüfen, anderen Anschluss oder Monitor testen, Grafiktreiber prüfen.
+
+78. Was machen Sie, wenn Tastatur oder Maus nicht funktionieren?
+Kabel, USB-Port oder Batterien prüfen, anderes Gerät testen, Treiber prüfen, Neustart.
+
+79. Wie überprüfen Sie, ob ein Laptop richtig funktioniert?
+Hardware-Check: Start, Display, Tastatur, Touchpad, Akku, Kamera, Ports, WLAN, Temperatur.
+
+80. Was versteht man unter Peripheriegeräten?
+Externe Geräte wie Maus, Tastatur, Monitor, Drucker, Headset.
+
+81. Wie würden Sie Hardware dokumentieren?
+In einer Inventarliste: Seriennummer, Modell, Ausstattung, Zustand, Nutzer, Datum.
+
+82. Was ist ein BIOS beziehungsweise UEFI?
+Firmware auf dem Mainboard, die Hardware und Betriebssystem startet. UEFI ist der moderne Nachfolger, u. a. mit Secure Boot.
+
+83. Was ist ein Netzteil?
+Es wandelt Netzspannung in die Spannung um, die die Komponenten brauchen.
+
+84. Wie gehen Sie mit defekter Hardware um?
+Fehler eingrenzen, dokumentieren, kennzeichnen, Reparatur, Garantie oder Austausch, Datenträger sicher löschen.
+
+85. Warum ist es wichtig, Geräte vor der Ausgabe zu testen?
+So werden Fehler früh erkannt, und der Außendienst hat vor Ort keine Probleme.
+
+6. Support-Szenarien
+
+86. Ein Mitarbeiter kann sich nicht bei Windows anmelden. Was tun Sie?
+Fehlermeldung lesen, Passwort und Tastaturlayout prüfen, Konto gesperrt?, Netzwerk prüfen, Passwort zurücksetzen, ggf. eskalieren.
+
+87. Ein Mitarbeiter hat sein Passwort vergessen. Wie gehen Sie vor?
+Identität prüfen, Passwort nach Prozess zurücksetzen, temporäres Passwort vergeben, dokumentieren.
+
+88. Ein Laptop ist plötzlich sehr langsam. Wie analysieren Sie das Problem?
+Task-Manager, Autostart, Speicherplatz, Updates, Malware, Temperatur und Hardware prüfen.
+
+89. Ein Mitarbeiter kann keine E-Mails versenden. Was überprüfen Sie?
+Internetverbindung, Outlook-Status, Postfach voll?, Empfängeradresse, Anhangsgröße, Konto und Passwort.
+
+90. Ein Drucker funktioniert nicht. Wie gehen Sie vor?
+Strom, Kabel oder Netzwerk, Papier und Toner, Druckwarteschlange, Treiber, Neustart von Drucker und Spooler.
+
+91. Ein Mitarbeiter kann sich nicht mit dem WLAN verbinden. Was tun Sie?
+WLAN an?, Flugmodus aus?, richtiges Netz, Passwort, andere Geräte betroffen?, Adapter neu starten, Router prüfen.
+
+92. Ein Monitor bleibt schwarz. Was überprüfen Sie?
+Strom, Kabel, Eingangsquelle, anderer Anschluss oder Monitor, läuft der PC?, Grafiktreiber.
+
+93. Ein Mitarbeiter meldet, dass ein Programm nicht funktioniert. Wie gehen Sie vor?
+Fehlermeldung erfragen, Problem reproduzieren, Neustart, Update, Reparatur oder Neuinstallation, Rechte prüfen.
+
+94. Ein Computer lässt sich nicht einschalten. Was überprüfen Sie zuerst?
+Stromkabel, Steckdose, Netzteil, Akku, Peripherie abziehen, Power-Taste lange halten, LEDs beobachten.
+
+95. Ein Mitarbeiter hat einen Virusverdacht. Was tun Sie?
+Gerät vom Netz trennen, Virenscan, IT-Security informieren, Passwörter ändern, dokumentieren.
+
+96. Mehrere Mitarbeiter melden gleichzeitig dasselbe IT-Problem. Wie reagieren Sie?
+Vermutlich ein zentrales Problem (Netzwerk, Server). Meldungen bündeln, Priorität hoch, Ursache suchen, Nutzer und Vorgesetzte informieren.
+
+97. Sie können ein Problem nicht selbst lösen. Was machen Sie?
+Bisherige Schritte dokumentieren, an Kollegen oder 2nd-Level eskalieren, den Nutzer informieren.
+
+98. Wie entscheiden Sie, welches Support-Ticket zuerst bearbeitet wird?
+Nach Dringlichkeit und Auswirkung: Anzahl Betroffener, Geschäftskritikalität, Fristen.
+
+99. Wie dokumentieren Sie eine Support-Anfrage?
+Ticket mit Name, Datum, Gerät, Problem, Fehlermeldung, Maßnahmen, Lösung und Status.
+
+100. Was machen Sie, wenn ein Mitarbeiter mit Ihrer Lösung nicht zufrieden ist?
+Ruhig zuhören, Problem neu prüfen, Alternativen anbieten, ggf. eskalieren und Feedback einholen.
+
+7. Microsoft 365 und Firmen-IT
+
+101. Haben Sie Erfahrung mit Microsoft Office?
+Ja, ich nutze Word, Excel, PowerPoint und Outlook regelmäßig.
+
+102. Was ist Microsoft 365?
+Ein Cloud-Dienst von Microsoft mit Office-Apps, Outlook, Teams, OneDrive und SharePoint.
+
+103. Was ist Microsoft Outlook?
+Ein Programm für E-Mail, Kalender und Kontakte.
+
+104. Was würden Sie tun, wenn Outlook nicht funktioniert?
+Outlook neu starten, Internet und Online-Status prüfen, abgesicherter Modus, Add-ins prüfen, Passwort kontrollieren, Office reparieren.
+
+105. Was ist Microsoft Teams?
+Eine Plattform für Chat, Meetings, Telefonie und Zusammenarbeit.
+
+106. Was ist Active Directory?
+Ein Verzeichnisdienst, der Benutzer, Computer, Gruppen und Rechte zentral verwaltet.
+
+107. Was versteht man unter Benutzerverwaltung?
+Konten anlegen, ändern, sperren und löschen, Passwörter und Gruppen verwalten, Rechte vergeben.
+
+108. Was ist eine Benutzergruppe?
+Eine Gruppe von Benutzern, der man gemeinsam Rechte zuweist.
+
+109. Was ist Microsoft Entra ID?
+Der Cloud-Identitätsdienst von Microsoft (früher Azure AD) für Anmeldung, SSO, MFA und Cloud-Zugriff.
+
+110. Was ist der Unterschied zwischen lokalen und zentral verwalteten Benutzerkonten?
+Lokale Konten gelten nur auf einem Gerät. Zentrale Konten liegen im AD oder in Entra ID und gelten überall mit einheitlichen Richtlinien.
+
+111. Was versteht man unter Zugriffsrechten?
+Sie legen fest, wer auf Dateien, Ordner und Systeme zugreifen oder sie ändern darf.
+
+112. Warum sollte nicht jeder Mitarbeiter Administratorrechte haben?
+Das ist ein Sicherheitsrisiko: Malware installiert sich leichter, und es drohen versehentliche Änderungen. Es gilt das Prinzip der geringsten Berechtigung.
+
+113. Was ist eine VPN-Verbindung?
+Eine verschlüsselte Verbindung über das Internet ins Firmennetz.
+
+114. Warum benötigen Mitarbeiter manchmal einen VPN-Zugang?
+Für den Zugriff auf interne Ressourcen aus dem Homeoffice, auf Dienstreise oder im Außendienst.
+
+115. Was ist eine Remote-Desktop-Verbindung?
+Fernzugriff auf den Desktop eines anderen Computers (RDP).
+
+8. IT-Sicherheit
+
+116. Was versteht man unter IT-Sicherheit?
+Den Schutz von Daten und Systemen vor unbefugtem Zugriff, Verlust und Manipulation.
+
+117. Was ist Phishing?
+Ein Betrugsversuch per gefälschter E-Mail, um Zugangsdaten zu stehlen.
+
+118. Wie erkennt man eine verdächtige E-Mail?
+Unbekannter Absender, Zeitdruck, Rechtschreibfehler, seltsame Links, unerwartete Anhänge.
+
+119. Was ist Malware?
+Schadsoftware wie Viren, Trojaner, Würmer, Spyware und Ransomware.
+
+120. Was ist Ransomware?
+Malware, die Daten verschlüsselt und Lösegeld verlangt.
+
+121. Warum sind regelmäßige Backups wichtig?
+Damit Daten nach Verlust, Defekt oder Ransomware wiederhergestellt werden können.
+
+122. Was macht eine Firewall?
+Sie filtert den Netzwerkverkehr nach Regeln und blockiert unerlaubte Verbindungen.
+
+123. Warum sollte man starke Passwörter verwenden?
+Sie sind schwer zu erraten und schützen vor Brute-Force-Angriffen.
+
+124. Was ist Zwei-Faktor-Authentifizierung?
+Ein zweiter Nachweis zusätzlich zum Passwort, z. B. per App oder Token.
+
+125. Was würden Sie tun, wenn ein Mitarbeiter auf einen verdächtigen Link geklickt hat?
+Nicht weiterklicken, Gerät vom Netz trennen, IT-Security informieren, Passwörter ändern, Virenscan, dokumentieren.
+
+126. Wie gehen Sie mit vertraulichen Unternehmensdaten um?
+Nur Berechtigte erhalten Zugriff, keine Weitergabe an Dritte, Geräte sperren, Daten verschlüsselt speichern, Firmenrichtlinien befolgen.
+
+127. Was bedeutet das Prinzip der geringsten Berechtigung?
+Jeder Nutzer bekommt nur die Rechte, die er für seine Aufgabe unbedingt braucht.
+
+9. Technische Fragen zur Erfahrung
+
+135. Was ist Docker?
+Eine Plattform, die Anwendungen mit allen Abhängigkeiten in Containern isoliert und portabel ausführt.
+
+137. Wie gehen Sie bei der Fehlersuche in einer Anwendung vor?
+Fehler reproduzieren, Logs und Fehlermeldung lesen, Ursache eingrenzen, Lösung testen, beheben, erneut testen, dokumentieren.
+
+11. Bosch und die Position
+
+155. Was verstehen Sie unter IT-Prozessoptimierung?
+Abläufe in der IT analysieren und verbessern, damit sie schneller, einfacher und weniger fehleranfällig werden.
+
+156. Wie könnten Sie einen bestehenden IT-Prozess verbessern?
+Ist-Zustand analysieren, Schwachstellen finden, Verbesserung vorschlagen (z. B. Checkliste oder Automatisierung), umsetzen und Ergebnis prüfen.
+
+157. Was verstehen Sie unter wiederkehrenden Aufgaben?
+Regelmäßige, gleichartige Tätigkeiten, z. B. Geräte vorbereiten, Updates, Dokumentation. Sie lassen sich standardisieren.
+
+
+158. Warum ist die Vorbereitung von Hardware für den Außendienst wichtig?
+Techniker haben vor Ort keine IT-Hilfe. Geräte müssen sofort und zuverlässig funktionieren, sonst entstehen Ausfallzeiten.
+
+
+159. Was könnte ein Techniker im Außendienst an IT-Equipment benötigen?
+Laptop, Netzteil, Maus, Adapter, Kabel, Zugang (VPN), benötigte Software, ggf. Handy oder Tablet.
+
+160. Wie würden Sie sicherstellen, dass alle Geräte vollständig vorbereitet sind?
+Mit einer Checkliste: Hardware, Software, Updates, Konten, Zubehör, Funktionstest, Dokumentation.
+
+161. Warum ist eine gute Dokumentation wichtig?
+Sie macht Abläufe nachvollziehbar, spart Zeit bei Wiederholungen und hilft Kollegen bei der Übernahme.
+
+162. Was bedeutet für Sie ein guter interner IT-Service?
+Schnelle, freundliche und verständliche Hilfe, klare Kommunikation, zuverlässige Lösungen und Transparenz.
+
+163. Wie würden Sie die Zusammenarbeit zwischen IT und technischem Außendienst verbessern?
+Regelmäßiges Feedback, klare Ansprechpartner, Standardausstattung, einfache Anforderungsprozesse und gute Dokumentation.
+
+
+
+164. Welche Ideen hätten Sie, um wiederkehrende Aufgaben zu automatisieren?
+Mit Skripten (PowerShell oder Python), z. B. für Systemchecks, Software-Installation oder Inventarlisten. Nur nennen, wenn Sie ein konkretes Beispiel erklären können.
+
+
+
+165. Wie würden Sie feststellen, ob eine IT-Prozessoptimierung erfolgreich war?
+Vorher-nachher-Vergleich: Zeitaufwand, Fehlerquote, Anzahl Tickets, Zufriedenheit der Nutzer.
