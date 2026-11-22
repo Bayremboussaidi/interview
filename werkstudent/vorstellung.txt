@@ -1,0 +1,49 @@
+
+Guten Tag, vielen Dank für die Einladung. Mein Name ist Bayrem Boussaidi, und ich freue mich, 
+Sie heute kennenzulernen.
+
+
+Ich komme aus Tunesien und habe dort Software Engineering und Informationssysteme an der TEK-UP University 
+in Tunis studiert. 2025 wurde ich für ein Austauschprogramm angenommen und bin dadurch an die Hochschule Schmalkalden
+ gekommen. Dort habe ich angefangen, Deutsch zu lernen. 
+
+
+
+Inzwischen habe ich das telc-Zertifikat B2 und bereite mich auf die C1-Prüfung vor.
+ Seit 2026 studiere ich Angewandte Informatik im Master an der Fachhochschule Erfurt, weil ich meine Kenntnisse 
+vertiefen möchte. Mein Schwerpunkt liegt auf Backend-Entwicklung sowie auf Cloud und DevOps.
+
+
+
+Praktische Erfahrung habe ich bei zwei Unternehmen in Tunis gesammelt. Bei Global Enr habe ich eine HR-Management-Plattform 
+entwickelt, die viele Aufgaben der Personalabteilung automatisiert. Es ist eine interne, private Anwendung, die nur für
+ Mitarbeitende mit einem Benutzerkonto zugänglich ist. Die Plattform erstellt zum Beispiel Arbeitsverträge als PDF, 
+importiert Anwesenheitslisten automatisch und zeigt wichtige Kennzahlen in Dashboards, zum Beispiel nach Abteilung, 
+Alter, Geschlecht und Status. Außerdem ermöglicht die Plattform die Reservierung von Tickets. Dabei können Mitarbeitende 
+Tickets direkt in der Anwendung anfragen. So sind E-Mails und Rückfragen nicht mehr nötig, und alles bleibt an einem Ort. 
+Die Anwendung habe ich mit Angular und Node.js entwickelt. Sie war mit JWT gesichert, und jeder Benutzer hatte nur die Rechte
+ seiner Rolle. Außerdem lief sie in Docker, damit die Installation überall gleich funktioniert. Dadurch wurde die Arbeit der
+ Personalabteilung um etwa 40 % reduziert.
+
+
+Bei MyLoc habe ich eine Autovermietungsplattform entwickelt. Die Plattform hat vier Rollen: Administrator, Agentur, Kunde 
+und Follower. Ein Kunde schickt eine Buchungsanfrage, die Agentur bekommt eine Benachrichtigung und eine E-Mail und kann die 
+Anfrage annehmen oder ablehnen. Nach der Freigabe bekommt der Kunde einen Zahlungslink für Stripe und danach eine Bestätigung
+ als PDF mit QR-Code per E-Mail. Außerdem gibt es einen Chat in Echtzeit zwischen den Agenturen und dem Administrator, damit 
+Rückfragen schnell geklärt werden können. Zusätzlich habe ich einen KI-Chatbot mit FastAPI und OpenAI integriert. Das Backend 
+habe ich mit Java und Spring Boot als Microservices entwickelt, das Frontend mit Angular. Die Anwendung war mit JWT und Keycloak
+ gesichert und lief mit Docker, Kubernetes und GitLab CI. Ich habe die Anwendung nicht nur entwickelt, sondern auch die
+ Rückmeldungen der Firma aufgenommen und sie danach regelmäßig aktualisiert.
+
+
+Durch diese Arbeit bin ich es gewohnt, in agilen Teams zu arbeiten, zum Beispiel mit Jira und Git, Aufgaben zu priorisieren,
+ Anfragen von verschiedenen Nutzern zu bearbeiten und mich schnell in interne Systeme einzuarbeiten. Die Links zu den Projekten
+ finden Sie übrigens in meinem Lebenslauf.
+
+
+Ich bewerbe mich auf diese Stelle, weil ich neben dem Studium praktische Erfahrung in Deutschland sammeln und meine 
+Deutschkenntnisse im Arbeitsalltag verbessern möchte. Die Aufgaben im IT-Support und bei der Optimierung von Prozessen finde 
+ich sehr interessant, weil ich dort Anwendern helfen und viel lernen kann. Ich arbeite strukturiert und zuverlässig, auch bei 
+wiederkehrenden Aufgaben, und ich arbeite gern im Team.
+
+Vielen Dank, und ich beantworte gerne Ihre Fragen

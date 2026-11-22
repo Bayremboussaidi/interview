@@ -1,0 +1,568 @@
+Part 1 – Windows, Betriebssysteme und Netzwerk
+3. Windows und Betriebssysteme
+36. Was ist der Unterschied zwischen Windows und Linux?
+
+Deutsch: Windows ist ein Betriebssystem von Microsoft und wird oft in Unternehmen und Büros verwendet. Linux ist kostenlos, Open Source und wird besonders häufig auf Servern eingesetzt.
+
+English: Windows is an operating system from Microsoft and is often used in companies and offices. Linux is free, open source and is especially common on servers.
+
+
+
+
+37. Haben Sie Erfahrung mit Windows 10 oder Windows 11?
+
+Deutsch: Ja, ich benutze Windows täglich. Ich kenne die wichtigsten Einstellungen und Tools, zum Beispiel den Task-Manager, den Geräte-Manager und Windows Update.
+
+English: Yes, I use Windows every day. I know the main settings and tools, such as Task Manager, Device Manager and Windows Update.
+
+
+
+38. Wie würden Sie einen langsamen Computer analysieren?
+
+Deutsch: Zuerst öffne ich den Task-Manager und prüfe die Auslastung von CPU und RAM. Danach kontrolliere ich die gestarteten Programme, den freien Speicherplatz und die Updates.
+
+English: First, I open Task Manager and check CPU and RAM usage. Then I check startup programs, free disk space and updates.
+
+
+
+
+39. Was machen Sie, wenn Windows nicht startet?
+
+Deutsch: Zuerst prüfe ich die Stromversorgung und starte den Computer neu. Wenn das nicht hilft, versuche ich die Windows-Starthilfe oder den abgesicherten Modus. Wenn nötig, hole ich Unterstützung.
+
+English: First, I check the power supply and restart the computer. If that doesn't help, I try Windows Startup Repair or Safe Mode. If necessary, I ask for support.
+
+40. Was ist der Task-Manager?
+
+Deutsch: Der Task-Manager ist ein Windows-Tool. Damit kann ich sehen, welche Programme laufen und wie viel CPU oder RAM sie benutzen. Ich kann dort auch Programme beenden.
+
+English: Task Manager is a Windows tool. I can see which programs are running and how much CPU or RAM they use. I can also close programs.
+
+41. Wie können Sie überprüfen, welche Programme viel CPU oder RAM verbrauchen?
+
+Deutsch: Ich öffne den Task-Manager mit Strg + Umschalt + Esc. Unter „Prozesse“ kann ich sehen, welche Programme viel CPU oder Arbeitsspeicher verwenden.
+
+English: I open Task Manager using Ctrl + Shift + Esc. Under Processes, I can see which programs use a lot of CPU or memory.
+
+42. Was ist der Unterschied zwischen RAM und Festplatte?
+
+Deutsch: RAM ist der kurzfristige Arbeitsspeicher eines Computers. Er wird für Programme verwendet, die gerade laufen. Die Festplatte speichert Daten dauerhaft.
+
+English: RAM is the computer's short-term memory. It is used by programs that are currently running. The hard drive stores data permanently.
+
+43. Was ist eine SSD?
+
+Deutsch: Eine SSD ist ein schneller Speicher für Daten. Sie hat keine beweglichen Teile und ist normalerweise schneller als eine klassische Festplatte.
+
+English: An SSD is a fast storage device. It has no moving parts and is usually faster than a traditional hard drive.
+
+44. Was ist ein Treiber?
+
+Deutsch: Ein Treiber ist eine Software, die dem Betriebssystem hilft, mit einer Hardware zu kommunizieren, zum Beispiel mit einem Drucker oder einer Grafikkarte.
+
+English: A driver is software that helps the operating system communicate with hardware, such as a printer or graphics card.
+
+45. Wie installiert man einen Gerätetreiber?
+
+Deutsch: Ich lade den passenden Treiber von der offiziellen Herstellerseite herunter. Alternativ kann ich Windows Update oder den Geräte-Manager verwenden. Danach teste ich das Gerät.
+
+English: I download the correct driver from the official manufacturer's website. Alternatively, I can use Windows Update or Device Manager. Then I test the device.
+
+46. Was ist der Geräte-Manager?
+
+Deutsch: Der Geräte-Manager zeigt die Hardware eines Computers und die dazugehörigen Treiber. Dort kann ich zum Beispiel sehen, ob ein Gerät ein Problem hat.
+
+English: Device Manager shows a computer's hardware and its drivers. I can use it to check whether a device has a problem.
+
+47. Wie würden Sie ein Softwareproblem diagnostizieren?
+
+Deutsch: Zuerst versuche ich, das Problem zu verstehen und zu wiederholen. Dann prüfe ich die Fehlermeldung und die letzten Änderungen. Danach teste ich mögliche Lösungen und dokumentiere das Ergebnis.
+
+English: First, I try to understand and reproduce the problem. Then I check the error message and recent changes. After that, I test possible solutions and document the result.
+
+48. Was ist der Unterschied zwischen einem lokalen Benutzerkonto und einem Microsoft-Konto?
+
+Deutsch: Ein lokales Konto funktioniert nur auf einem bestimmten Computer. Ein Microsoft-Konto ist mit einem Online-Konto verbunden und kann Einstellungen zwischen Geräten synchronisieren.
+
+English: A local account works only on a specific computer. A Microsoft account is connected to an online account and can synchronize settings between devices.
+
+49. Was ist ein Betriebssystem?
+
+Deutsch: Ein Betriebssystem ist die wichtigste Software eines Computers. Es verwaltet die Hardware und ermöglicht es, andere Programme zu benutzen.
+
+English: An operating system is the most important software on a computer. It manages the hardware and allows us to use other programs.
+
+50. Was bedeutet Software-Update?
+
+Deutsch: Ein Software-Update ist eine Aktualisierung eines Programms oder Betriebssystems. Es kann Fehler beheben, neue Funktionen hinzufügen und die Sicherheit verbessern.
+
+English: A software update is an update to a program or operating system. It can fix errors, add new features and improve security.
+
+51. Warum sind Sicherheitsupdates wichtig?
+
+Deutsch: Sicherheitsupdates schließen bekannte Sicherheitslücken. Dadurch werden Computer und Unternehmensdaten besser vor Angriffen geschützt.
+
+English: Security updates fix known security vulnerabilities. This helps protect computers and company data against attacks.
+
+52. Was würden Sie tun, wenn ein Programm ständig abstürzt?
+
+Deutsch: Zuerst starte ich das Programm und den Computer neu. Danach prüfe ich, ob Updates verfügbar sind. Wenn das Problem bleibt, repariere oder installiere ich das Programm neu.
+
+English: First, I restart the program and the computer. Then I check for available updates. If the problem continues, I repair or reinstall the program.
+
+4. Netzwerk
+53. Was versteht man unter einem Netzwerk?
+
+Deutsch: Ein Netzwerk verbindet mehrere Geräte miteinander. Dadurch können sie Daten austauschen und gemeinsame Ressourcen nutzen.
+
+English: A network connects several devices. This allows them to exchange data and use shared resources.
+
+54. Was ist eine IP-Adresse?
+
+Deutsch: Eine IP-Adresse ist die Adresse eines Geräts in einem Netzwerk. Sie hilft dabei, Geräte zu finden und Daten an das richtige Ziel zu senden.
+
+English: An IP address is the address of a device in a network. It helps identify devices and send data to the correct destination.
+
+55. Was ist der Unterschied zwischen einer öffentlichen und privaten IP-Adresse?
+
+Deutsch: Eine öffentliche IP-Adresse wird für die Verbindung mit dem Internet verwendet. Eine private IP-Adresse wird innerhalb eines lokalen Netzwerks verwendet, zum Beispiel zu Hause oder im Büro.
+
+English: A public IP address is used for internet connections. A private IP address is used inside a local network, for example at home or in an office.
+
+56. Was ist DHCP?
+
+Deutsch: DHCP ist ein Dienst, der Geräten automatisch eine IP-Adresse und andere Netzwerkeinstellungen gibt. Dadurch muss man diese Daten nicht manuell eingeben.
+
+English: DHCP is a service that automatically gives devices an IP address and other network settings. This means you don't have to enter these details manually.
+
+57. Was ist DNS?
+
+Deutsch: DNS übersetzt Domainnamen in IP-Adressen. Zum Beispiel wird eine Webadresse wie google.com in eine IP-Adresse umgewandelt.
+
+English: DNS translates domain names into IP addresses. For example, a web address like google.com is converted into an IP address.
+
+58. Was ist ein Default Gateway?
+
+Deutsch: Das Default Gateway ist normalerweise die Adresse des Routers. Es ermöglicht einem Computer, andere Netzwerke und das Internet zu erreichen.
+
+English: The default gateway is usually the router's address. It allows a computer to reach other networks and the internet.
+
+59. Was ist der Unterschied zwischen TCP und UDP?
+
+Deutsch: TCP stellt sicher, dass Daten zuverlässig ankommen. UDP ist schneller, garantiert aber nicht, dass alle Daten ankommen. TCP wird zum Beispiel für Webseiten verwendet, UDP häufig für Streaming und Telefonie.
+
+English: TCP makes sure that data arrives reliably. UDP is faster but does not guarantee that all data arrives. TCP is used for websites, while UDP is often used for streaming and calls.
+
+60. Was ist ein Router?
+
+Deutsch: Ein Router verbindet verschiedene Netzwerke miteinander. Zum Beispiel verbindet er das Netzwerk zu Hause oder im Büro mit dem Internet.
+
+English: A router connects different networks. For example, it connects a home or office network to the internet.
+
+61. Was ist ein Switch?
+
+Deutsch: Ein Switch verbindet mehrere Geräte innerhalb eines lokalen Netzwerks. Zum Beispiel können mehrere Computer über einen Switch miteinander kommunizieren.
+
+English: A switch connects several devices within a local network. For example, several computers can communicate with each other through a switch.
+
+62. Was ist der Unterschied zwischen WLAN und LAN?
+
+Deutsch: Bei LAN sind die Geräte mit einem Netzwerkkabel verbunden. WLAN funktioniert ohne Kabel über Funk. LAN ist normalerweise stabiler, während WLAN mehr Flexibilität bietet.
+
+English: With LAN, devices are connected using a network cable. WLAN works wirelessly. LAN is usually more stable, while WLAN offers more flexibility.
+
+63. Was ist eine MAC-Adresse?
+
+Deutsch: Eine MAC-Adresse ist eine eindeutige Adresse einer Netzwerkschnittstelle. Sie wird verwendet, um ein Gerät innerhalb eines lokalen Netzwerks zu identifizieren.
+
+English: A MAC address is a unique address of a network interface. It is used to identify a device within a local network.
+
+64. Was bedeutet DHCP-Lease?
+
+Deutsch: Ein DHCP-Lease ist die Zeit, für die ein Gerät eine IP-Adresse vom DHCP-Server bekommt. Danach wird die Adresse normalerweise automatisch verlängert.
+
+English: A DHCP lease is the period for which a device receives an IP address from the DHCP server. After that, the address is usually renewed automatically.
+
+65. Wie überprüfen Sie, ob ein Computer eine Netzwerkverbindung hat?
+
+Deutsch: Zuerst prüfe ich, ob das Netzwerkkabel angeschlossen oder WLAN aktiviert ist. Danach öffne ich die Eingabeaufforderung und verwende den Befehl ipconfig. Mit ping kann ich die Verbindung testen.
+
+English: First, I check whether the network cable is connected or Wi-Fi is enabled. Then I open the command prompt and use ipconfig. I can test the connection using ping.
+
+66. Was macht der Befehl ping?
+
+Deutsch: Mit ping kann ich testen, ob ein anderes Gerät oder ein Server erreichbar ist. Außerdem sehe ich, wie lange die Antwort dauert.
+
+English: With ping, I can test whether another device or server is reachable. I can also see how long the response takes.
+
+67. Was macht ipconfig?
+
+Deutsch: Der Befehl ipconfig zeigt die Netzwerkeinstellungen eines Computers. Ich kann damit zum Beispiel die IP-Adresse, das Gateway und die DNS-Einstellungen prüfen.
+
+English: The ipconfig command shows a computer's network settings. I can use it to check the IP address, gateway and DNS settings.
+
+68. Was macht tracert?
+
+Deutsch: Mit tracert kann ich sehen, über welche Router die Daten zu einem bestimmten Ziel laufen. Das hilft mir bei der Suche nach Netzwerkproblemen.
+
+English: With tracert, I can see which routers data passes through to reach a specific destination. This helps me find network problems.
+
+69. Was würden Sie tun, wenn ein Mitarbeiter keine Internetverbindung hat?
+
+Deutsch: Zuerst prüfe ich das WLAN oder das Netzwerkkabel. Danach kontrolliere ich die IP-Adresse mit ipconfig und teste die Verbindung mit ping. Wenn das Problem weiterhin besteht, prüfe ich DNS und den Router.
+
+English: First, I check Wi-Fi or the network cable. Then I check the IP address using ipconfig and test the connection with ping. If the problem continues, I check DNS and the router.
+
+70. Was könnte die Ursache sein, wenn eine Webseite nicht erreichbar ist, andere aber funktionieren?
+
+Deutsch: Es könnte ein DNS-Problem sein. Auch der Browser-Cache, ein Proxy oder eine Firewall können die Ursache sein. Zuerst würde ich die Webseite mit einem anderen Browser testen.
+
+English: It could be a DNS problem. The browser cache, a proxy or a firewall could also be the cause. First, I would test the website with another browser.
+
+Part 2 – Hardware und Support-Szenarien
+5. Hardware
+71. Welche Computerkomponenten kennen Sie?
+
+Deutsch: Die wichtigsten Komponenten sind CPU, RAM, Mainboard, SSD oder HDD, Netzteil und Grafikkarte. Außerdem gibt es Lüfter und Netzwerkkarten.
+
+English: The main components are the CPU, RAM, motherboard, SSD or HDD, power supply and graphics card. There are also fans and network cards.
+
+72. Was ist der Unterschied zwischen RAM und ROM?
+
+Deutsch: RAM ist ein kurzfristiger Speicher. Die Daten gehen verloren, wenn der Computer ausgeschaltet wird. ROM speichert wichtige Informationen dauerhaft, zum Beispiel für den Start des Computers.
+
+English: RAM is short-term memory. The data is lost when the computer is switched off. ROM stores important information permanently, for example information needed to start the computer.
+
+73. Was ist der Unterschied zwischen HDD und SSD?
+
+Deutsch: Eine HDD speichert Daten auf einer mechanischen Festplatte. Eine SSD verwendet Flash-Speicher und ist normalerweise schneller, leiser und robuster.
+
+English: An HDD stores data on a mechanical disk. An SSD uses flash memory and is usually faster, quieter and more durable.
+
+74. Wie würden Sie einen neuen Laptop für einen Mitarbeiter vorbereiten?
+
+Deutsch: Zuerst prüfe ich die Hardware. Danach installiere ich Windows, Updates und die benötigten Programme. Anschließend richte ich das Benutzerkonto ein und teste alle wichtigen Funktionen.
+
+English: First, I check the hardware. Then I install Windows, updates and the required programs. After that, I set up the user account and test all important functions.
+
+75. Was sollte vor der Übergabe eines Computers überprüft werden?
+
+Deutsch: Ich prüfe, ob der Computer richtig startet und alle Geräte funktionieren. Außerdem kontrolliere ich WLAN, Updates, Akku und Zubehör. Zum Schluss dokumentiere ich die Übergabe.
+
+English: I check whether the computer starts correctly and all devices work. I also check Wi-Fi, updates, battery and accessories. Finally, I document the handover.
+
+76. Wie schließen Sie einen zweiten Monitor an?
+
+Deutsch: Ich verbinde den Monitor mit HDMI, DisplayPort oder USB-C. Danach drücke ich Windows + P und wähle, ob ich den Bildschirm erweitern oder duplizieren möchte.
+
+English: I connect the monitor using HDMI, DisplayPort or USB-C. Then I press Windows + P and choose whether to extend or duplicate the screen.
+
+77. Was machen Sie, wenn ein Monitor kein Bild anzeigt?
+
+Deutsch: Zuerst prüfe ich die Stromversorgung und das Kabel. Danach kontrolliere ich den richtigen Eingang am Monitor. Wenn das nicht hilft, teste ich einen anderen Anschluss oder Monitor.
+
+English: First, I check the power supply and cable. Then I check the correct input on the monitor. If that doesn't help, I test another port or monitor.
+
+78. Was machen Sie, wenn Tastatur oder Maus nicht funktionieren?
+
+Deutsch: Zuerst prüfe ich die Verbindung, die Batterien und den USB-Anschluss. Danach teste ich die Tastatur oder Maus an einem anderen Computer. Wenn nötig, prüfe ich die Treiber.
+
+English: First, I check the connection, batteries and USB port. Then I test the keyboard or mouse on another computer. If necessary, I check the drivers.
+
+79. Wie überprüfen Sie, ob ein Laptop richtig funktioniert?
+
+Deutsch: Ich teste die wichtigsten Funktionen: Bildschirm, Tastatur, Touchpad, Akku, Kamera, WLAN und Anschlüsse. Außerdem achte ich darauf, ob der Laptop zu heiß wird.
+
+English: I test the main functions: screen, keyboard, touchpad, battery, camera, Wi-Fi and ports. I also check whether the laptop gets too hot.
+
+80. Was versteht man unter Peripheriegeräten?
+
+Deutsch: Das sind zusätzliche Geräte, die man an einen Computer anschließt. Beispiele sind Maus, Tastatur, Monitor, Drucker und Headset.
+
+English: These are additional devices connected to a computer. Examples include a mouse, keyboard, monitor, printer and headset.
+
+81. Wie würden Sie Hardware dokumentieren?
+
+Deutsch: Ich würde eine Inventarliste erstellen. Darin stehen zum Beispiel das Modell, die Seriennummer, der Zustand, der Benutzer und das Datum.
+
+English: I would create an inventory list. It would contain details such as the model, serial number, condition, user and date.
+
+82. Was ist ein BIOS beziehungsweise UEFI?
+
+Deutsch: BIOS und UEFI sind Programme auf dem Mainboard. Sie starten den Computer und prüfen die Hardware. UEFI ist die modernere Version von BIOS.
+
+English: BIOS and UEFI are programs on the motherboard. They start the computer and check the hardware. UEFI is the more modern version of BIOS.
+
+83. Was ist ein Netzteil?
+
+Deutsch: Das Netzteil versorgt den Computer mit Strom. Es wandelt den Strom aus der Steckdose in die passende Spannung für die einzelnen Komponenten um.
+
+English: The power supply provides electricity to the computer. It converts electricity from the wall socket into the correct voltage for the different components.
+
+84. Wie gehen Sie mit defekter Hardware um?
+
+Deutsch: Zuerst versuche ich, den Fehler zu finden. Danach dokumentiere ich das Problem und informiere die zuständige Person. Je nach Situation wird das Gerät repariert oder ersetzt.
+
+English: First, I try to find the problem. Then I document it and inform the responsible person. Depending on the situation, the device is repaired or replaced.
+
+85. Warum ist es wichtig, Geräte vor der Ausgabe zu testen?
+
+Deutsch: Damit können wir Fehler früh erkennen. So stellen wir sicher, dass die Mitarbeiter ihre Geräte direkt benutzen können und später keine Probleme haben.
+
+English: This allows us to find problems early. This ensures that employees can use their devices immediately without having problems later.
+
+6. Support-Szenarien
+86. Ein Mitarbeiter kann sich nicht bei Windows anmelden. Was tun Sie?
+
+Deutsch: Zuerst prüfe ich die Fehlermeldung und kontrolliere das Passwort und die Tastatur. Danach prüfe ich, ob das Konto gesperrt ist oder ein Netzwerkproblem besteht.
+
+English: First, I check the error message, password and keyboard. Then I check whether the account is locked or there is a network problem.
+
+87. Ein Mitarbeiter hat sein Passwort vergessen. Wie gehen Sie vor?
+
+Deutsch: Zuerst prüfe ich die Identität des Mitarbeiters. Danach setze ich das Passwort nach den internen Regeln zurück und dokumentiere den Vorgang.
+
+English: First, I verify the employee's identity. Then I reset the password according to internal rules and document the process.
+
+88. Ein Laptop ist plötzlich sehr langsam. Wie analysieren Sie das Problem?
+
+Deutsch: Ich öffne zuerst den Task-Manager und prüfe CPU und RAM. Danach kontrolliere ich den Speicherplatz, die gestarteten Programme und mögliche Updates.
+
+English: First, I open Task Manager and check CPU and RAM usage. Then I check disk space, startup programs and possible updates.
+
+89. Ein Mitarbeiter kann keine E-Mails versenden. Was überprüfen Sie?
+
+Deutsch: Zuerst prüfe ich die Internetverbindung und den Status von Outlook. Danach kontrolliere ich die Empfängeradresse, den Anhang und den verfügbaren Speicherplatz im Postfach.
+
+English: First, I check the internet connection and Outlook status. Then I check the recipient address, attachment and available mailbox storage.
+
+90. Ein Drucker funktioniert nicht. Wie gehen Sie vor?
+
+Deutsch: Ich prüfe zuerst die Stromversorgung, das Papier und den Toner. Danach kontrolliere ich die Verbindung zum Computer oder Netzwerk und die Druckwarteschlange.
+
+English: First, I check the power supply, paper and toner. Then I check the connection to the computer or network and the print queue.
+
+91. Ein Mitarbeiter kann sich nicht mit dem WLAN verbinden. Was tun Sie?
+
+Deutsch: Ich prüfe, ob WLAN aktiviert ist und ob der Mitarbeiter das richtige Netzwerk ausgewählt hat. Danach kontrolliere ich das Passwort und teste, ob andere Geräte eine Verbindung haben.
+
+English: I check whether Wi-Fi is enabled and whether the employee selected the correct network. Then I check the password and test whether other devices can connect.
+
+92. Ein Monitor bleibt schwarz. Was überprüfen Sie?
+
+Deutsch: Zuerst prüfe ich das Stromkabel und die Verbindung zum Computer. Danach kontrolliere ich den Eingang am Monitor und teste ein anderes Kabel oder einen anderen Anschluss.
+
+English: First, I check the power cable and the connection to the computer. Then I check the monitor input and test another cable or port.
+
+93. Ein Mitarbeiter meldet, dass ein Programm nicht funktioniert. Wie gehen Sie vor?
+
+Deutsch: Zuerst frage ich nach dem genauen Problem und der Fehlermeldung. Danach versuche ich, den Fehler selbst zu reproduzieren. Anschließend prüfe ich Updates und mögliche Lösungen.
+
+English: First, I ask about the exact problem and error message. Then I try to reproduce the error myself. After that, I check for updates and possible solutions.
+
+94. Ein Computer lässt sich nicht einschalten. Was überprüfen Sie zuerst?
+
+Deutsch: Zuerst prüfe ich das Stromkabel und die Steckdose. Bei einem Laptop kontrolliere ich auch den Akku. Danach entferne ich externe Geräte und versuche einen Neustart.
+
+English: First, I check the power cable and socket. For a laptop, I also check the battery. Then I disconnect external devices and try restarting.
+
+95. Ein Mitarbeiter hat einen Virusverdacht. Was tun Sie?
+
+Deutsch: Ich nehme den Computer vom Netzwerk, damit sich die Schadsoftware nicht weiter verbreitet. Danach informiere ich die IT-Security und folge den internen Sicherheitsregeln.
+
+English: I disconnect the computer from the network to prevent the malware from spreading. Then I inform IT Security and follow the internal security rules.
+
+96. Mehrere Mitarbeiter melden gleichzeitig dasselbe IT-Problem. Wie reagieren Sie?
+
+Deutsch: Ich vermute, dass es ein gemeinsames Problem gibt, zum Beispiel mit dem Netzwerk oder einem Server. Ich sammle die Informationen und informiere das zuständige IT-Team.
+
+English: I suspect there is a common problem, for example with the network or a server. I collect the information and inform the responsible IT team.
+
+97. Sie können ein Problem nicht selbst lösen. Was machen Sie?
+
+Deutsch: Ich dokumentiere, was ich bereits geprüft und versucht habe. Danach gebe ich das Problem an einen erfahrenen Kollegen oder den Second-Level-Support weiter. Den Mitarbeiter informiere ich über den aktuellen Stand.
+
+English: I document what I have already checked and tried. Then I pass the problem to an experienced colleague or second-level support. I inform the employee about the current status.
+
+98. Wie entscheiden Sie, welches Support-Ticket zuerst bearbeitet wird?
+
+Deutsch: Ich achte auf die Dringlichkeit und darauf, wie viele Mitarbeiter betroffen sind. Ein Problem, das viele Mitarbeiter betrifft oder wichtige Arbeitsprozesse blockiert, hat eine höhere Priorität.
+
+English: I consider the urgency and how many employees are affected. A problem affecting many employees or blocking important work processes has a higher priority.
+
+99. Wie dokumentieren Sie eine Support-Anfrage?
+
+Deutsch: Ich schreibe den Namen des Mitarbeiters, das betroffene Gerät und eine Beschreibung des Problems auf. Außerdem dokumentiere ich die durchgeführten Schritte und die Lösung.
+
+English: I record the employee's name, the affected device and a description of the problem. I also document the steps taken and the solution.
+
+100. Was machen Sie, wenn ein Mitarbeiter mit Ihrer Lösung nicht zufrieden ist?
+
+Deutsch: Ich höre dem Mitarbeiter zuerst aufmerksam zu. Danach prüfe ich das Problem noch einmal und suche nach einer anderen Lösung. Wenn nötig, frage ich einen erfahrenen Kollegen um Hilfe.
+
+English: First, I listen carefully to the employee. Then I check the problem again and look for another solution. If necessary, I ask an experienced colleague for help.
+
+Part 3 – Microsoft 365, Firmen-IT und IT-Sicherheit
+7. Microsoft 365 und Firmen-IT
+101. Haben Sie Erfahrung mit Microsoft Office?
+
+Deutsch: Ja, ich benutze Microsoft Office regelmäßig. Ich kenne Word, Excel, PowerPoint und Outlook und verwende sie für verschiedene Aufgaben.
+
+English: Yes, I use Microsoft Office regularly. I know Word, Excel, PowerPoint and Outlook and use them for different tasks.
+
+102. Was ist Microsoft 365?
+
+Deutsch: Microsoft 365 ist eine Plattform von Microsoft. Sie bietet Programme wie Word, Excel und Outlook sowie Cloud-Dienste wie OneDrive, Teams und SharePoint.
+
+English: Microsoft 365 is a platform from Microsoft. It offers programs such as Word, Excel and Outlook, as well as cloud services like OneDrive, Teams and SharePoint.
+
+103. Was ist Microsoft Outlook?
+
+Deutsch: Outlook ist ein Programm für E-Mails, Termine und Kontakte. Es wird in vielen Unternehmen für die tägliche Kommunikation verwendet.
+
+English: Outlook is a program for emails, appointments and contacts. It is used in many companies for daily communication.
+
+104. Was würden Sie tun, wenn Outlook nicht funktioniert?
+
+Deutsch: Zuerst starte ich Outlook neu und prüfe die Internetverbindung. Danach kontrolliere ich, ob es Updates gibt oder ob ein Problem mit dem Benutzerkonto besteht.
+
+English: First, I restart Outlook and check the internet connection. Then I check for updates or a possible problem with the user account.
+
+105. Was ist Microsoft Teams?
+
+Deutsch: Microsoft Teams ist ein Programm für die Zusammenarbeit. Man kann damit chatten, telefonieren, Videokonferenzen machen und Dateien teilen.
+
+English: Microsoft Teams is a collaboration tool. You can use it to chat, make calls, have video meetings and share files.
+
+106. Was ist Active Directory?
+
+Deutsch: Active Directory ist ein Microsoft-Dienst zur zentralen Verwaltung von Benutzern, Computern und Gruppen. Administratoren können damit auch Zugriffsrechte verwalten.
+
+English: Active Directory is a Microsoft service for centrally managing users, computers and groups. Administrators can also manage access rights with it.
+
+107. Was versteht man unter Benutzerverwaltung?
+
+Deutsch: Benutzerverwaltung bedeutet, Benutzerkonten zu erstellen, zu ändern oder zu sperren. Dazu gehört auch die Verwaltung von Passwörtern und Zugriffsrechten.
+
+English: User management means creating, changing or blocking user accounts. It also includes managing passwords and access rights.
+
+108. Was ist eine Benutzergruppe?
+
+Deutsch: Eine Benutzergruppe besteht aus mehreren Benutzern. Man kann einer ganzen Gruppe bestimmte Rechte geben, statt jeden Benutzer einzeln zu verwalten.
+
+English: A user group consists of several users. You can give permissions to the whole group instead of managing every user individually.
+
+109. Was ist Microsoft Entra ID?
+
+Deutsch: Microsoft Entra ID ist ein Cloud-Dienst zur Verwaltung von Benutzern und Anmeldungen. Er ermöglicht zum Beispiel Single Sign-on und Multi-Faktor-Authentifizierung.
+
+English: Microsoft Entra ID is a cloud service for managing users and logins. It supports features such as Single Sign-on and Multi-Factor Authentication.
+
+110. Was ist der Unterschied zwischen lokalen und zentral verwalteten Benutzerkonten?
+
+Deutsch: Ein lokales Benutzerkonto funktioniert nur auf einem bestimmten Computer. Ein zentral verwaltetes Konto wird über einen Server oder einen Cloud-Dienst verwaltet und kann für verschiedene Systeme verwendet werden.
+
+English: A local user account works only on a specific computer. A centrally managed account is managed through a server or cloud service and can be used for different systems.
+
+111. Was versteht man unter Zugriffsrechten?
+
+Deutsch: Zugriffsrechte bestimmen, welche Benutzer auf bestimmte Dateien, Ordner oder Systeme zugreifen dürfen. Sie legen auch fest, ob jemand Daten nur lesen oder auch ändern kann.
+
+English: Access rights determine which users can access specific files, folders or systems. They also define whether someone can only read or also change data.
+
+112. Warum sollte nicht jeder Mitarbeiter Administratorrechte haben?
+
+Deutsch: Administratorrechte geben viele Möglichkeiten, aber sie bringen auch Risiken mit sich. Wenn jeder diese Rechte hat, können Fehler oder Sicherheitsprobleme entstehen. Deshalb sollte jeder nur die Rechte bekommen, die er wirklich braucht.
+
+English: Administrator rights provide many possibilities, but they also involve risks. If everyone has these rights, mistakes or security problems can happen. Therefore, everyone should only receive the permissions they really need.
+
+113. Was ist eine VPN-Verbindung?
+
+Deutsch: VPN bedeutet Virtual Private Network. Es ermöglicht eine sichere und verschlüsselte Verbindung zu einem Firmennetzwerk über das Internet.
+
+English: VPN means Virtual Private Network. It allows a secure and encrypted connection to a company network over the internet.
+
+114. Warum benötigen Mitarbeiter manchmal einen VPN-Zugang?
+
+Deutsch: Mitarbeiter brauchen VPN, wenn sie von zu Hause oder unterwegs auf interne Firmensysteme zugreifen müssen. So können sie sicher mit dem Firmennetzwerk arbeiten.
+
+English: Employees need VPN when they have to access internal company systems from home or while travelling. This allows them to work securely with the company network.
+
+115. Was ist eine Remote-Desktop-Verbindung?
+
+Deutsch: Mit einer Remote-Desktop-Verbindung kann ich einen anderen Computer über das Netzwerk bedienen. Ich kann also auf dessen Desktop zugreifen, ohne direkt davor zu sitzen.
+
+English: With a Remote Desktop connection, I can control another computer over the network. I can access its desktop without sitting directly in front of it.
+
+8. IT-Sicherheit
+116. Was versteht man unter IT-Sicherheit?
+
+Deutsch: IT-Sicherheit bedeutet, Computer, Netzwerke und Daten vor Angriffen, Verlust und unbefugtem Zugriff zu schützen.
+
+English: IT security means protecting computers, networks and data against attacks, loss and unauthorized access.
+
+117. Was ist Phishing?
+
+Deutsch: Phishing ist ein Betrugsversuch. Angreifer schicken gefälschte E-Mails oder Nachrichten, um persönliche Daten oder Passwörter zu stehlen.
+
+English: Phishing is a type of fraud. Attackers send fake emails or messages to steal personal information or passwords.
+
+118. Wie erkennt man eine verdächtige E-Mail?
+
+Deutsch: Ich achte auf unbekannte Absender, ungewöhnliche Links, unerwartete Anhänge und Nachrichten, die viel Druck machen. Bei Zweifeln öffne ich keine Links und frage die IT-Abteilung.
+
+English: I look for unknown senders, unusual links, unexpected attachments and messages that create a lot of pressure. If I have doubts, I don't open links and contact the IT department.
+
+119. Was ist Malware?
+
+Deutsch: Malware ist schädliche Software. Dazu gehören zum Beispiel Viren, Trojaner und Programme, die Daten stehlen oder Computer beschädigen können.
+
+English: Malware is harmful software. Examples include viruses, Trojans and programs that can steal data or damage computers.
+
+120. Was ist Ransomware?
+
+Deutsch: Ransomware ist eine Art Schadsoftware. Sie verschlüsselt Dateien und verlangt Geld, damit die Daten wieder freigegeben werden.
+
+English: Ransomware is a type of malware. It encrypts files and demands money to unlock the data.
+
+121. Warum sind regelmäßige Backups wichtig?
+
+Deutsch: Backups sind wichtig, damit man verlorene oder beschädigte Daten wiederherstellen kann. Sie helfen zum Beispiel nach einem Hardware-Defekt oder einem Cyberangriff.
+
+English: Backups are important because they allow us to restore lost or damaged data. They help, for example, after hardware failure or a cyberattack.
+
+122. Was macht eine Firewall?
+
+Deutsch: Eine Firewall kontrolliert den Netzwerkverkehr. Sie entscheidet anhand bestimmter Regeln, welche Verbindungen erlaubt oder blockiert werden.
+
+English: A firewall controls network traffic. It decides which connections are allowed or blocked based on specific rules.
+
+123. Warum sollte man starke Passwörter verwenden?
+
+Deutsch: Starke Passwörter sind schwerer zu erraten oder zu knacken. Sie helfen dabei, Benutzerkonten und Unternehmensdaten zu schützen.
+
+English: Strong passwords are harder to guess or crack. They help protect user accounts and company data.
+
+124. Was ist Zwei-Faktor-Authentifizierung?
+
+Deutsch: Bei der Zwei-Faktor-Authentifizierung braucht man zwei verschiedene Nachweise für die Anmeldung. Zum Beispiel ein Passwort und einen Code auf dem Smartphone.
+
+English: With two-factor authentication, you need two different forms of verification to log in. For example, a password and a code on your smartphone.
+
+125. Was würden Sie tun, wenn ein Mitarbeiter auf einen verdächtigen Link geklickt hat?
+
+Deutsch: Zuerst informiere ich sofort die IT-Security. Danach folge ich den Sicherheitsregeln des Unternehmens. Je nach Situation muss das Gerät vom Netzwerk getrennt und überprüft werden.
+
+English: First, I immediately inform IT Security. Then I follow the company's security rules. Depending on the situation, the device may need to be disconnected from the network and checked.
+
+126. Wie gehen Sie mit vertraulichen Unternehmensdaten um?
+
+Deutsch: Ich gebe vertrauliche Informationen nicht an unbefugte Personen weiter. Ich achte auf sichere Speicherung und Zugriffsrechte und halte mich an die Datenschutzregeln des Unternehmens.
+
+English: I don't share confidential information with unauthorized people. I pay attention to secure storage and access rights and follow the company's data protection rules.
+
+127. Was bedeutet das Prinzip der geringsten Berechtigung?
+
+Deutsch: Jeder Benutzer bekommt nur die Rechte, die er für seine Arbeit wirklich braucht. Das reduziert Sicherheitsrisiken und schützt wichtige Daten.
+
+English: Every user receives only the permissions they really need for their work. This reduces security risks and protects important data.
