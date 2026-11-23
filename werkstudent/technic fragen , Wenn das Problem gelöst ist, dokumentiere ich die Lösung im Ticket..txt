@@ -1,0 +1,95 @@
+
+* Ein Mitarbeiter kann sich nicht anmelden. Was tun Sie?
+
+
+- Zuerst frage ich nach der genauen fehlermeldung ,
+
+prufe ich den anmelde daten , z.b ,den Benutzernamen oder die E-Mail-Adresse. oder passwort
+
+ausserdem  prufe ich ob der konto gesperrt ist
+
+danach kontrolliere ich  die Netzwerkverbindung  und  VPN-Verbindung.
+
+
+Wenn das Problem gelöst ist, dokumentiere ich die Lösung im Ticket.
+
+
+
+-------------------
+
+
+* Der Drucker druckt nicht. ? 
+
+
+zuerst prufe ich , ob der drucker eingeschaltet  und richtig verbunden ist 
+
+Danach versuche ich, von einem anderen Computer zu drucken, um zu sehen, 
+ob das Problem am Drucker oder am Computer liegt.
+
+
+
+-----------------
+
+
+* Der Laptop ist sehr langsam.
+
+
+„Ich prüfe im Task-Manager CPU, RAM  
+
+, Autostart-Programme, freien Speicherplatz, Updates und mögliche Malware
+
+
+----------------------
+
+
+* Kein Internet. 
+
+
+- Zuerst prüfe ich, ob das Kabel richtig angeschlossen ist oder ob die WLAN-Verbindung funktioniert.
+
+Dann prüfe ich die IP-Adresse. ( ipconfig   , guck ob ip adress gultig ist oder nein 
+
+                                 , gultig : Ist die IP-Adresse im richtigen Subnetz  ) 
+
+
+ 
+-----------------------
+
+
+* Wie priorisieren Sie mehrere Tickets? 
+
+
+- ich prioriese  tickets nach dringlichkeiten  und auswirkungen 
+
+- wie viel mitarbeiter betroffen sind 
+
+
+z.b , wenn ein problem die ganze abteilungsarbeit behindert , 
+bearbeite ich dieses problem  zuerst
+
+die kleinere probleme kommen danach
+
+ausserdem informiere ich die mitarbeiter sowieso uber den aktuellen zustand
+
+
+
+-------------------------------
+
+
+* Wie gehen Sie mit einem verärgerten Nutzer um?  ( argerte  nutzer , frustriert ..  ) angry client
+
+
+
+ich hore ihm zu , dabei bleibe ich ruhig  und freundlich 
+
+
+dann erklare ich ihm was ich tun sollte  , um das problem  zu losen 
+
+wenn moglich ist , gib ich ihm auch zeitangabe  und informiere ihm immer uber der aktuellen stand
+
+
+
+-------------------------
+
+
+

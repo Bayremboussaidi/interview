@@ -1,0 +1,38 @@
+Guten Tag, vielen Dank für die Einladung. Ich freue mich sehr, heute hier zu sein und Sie kennenzulernen.
+
+Mein Name ist Bayrem Boussaidi, ich bin 25 Jahre alt und studiere derzeit Angewandte Informatik im Master
+ an der Fachhochschule Erfurt. Parallel dazu arbeite ich daran, meine Deutschkenntnisse weiter zu verbessern.
+
+Ich komme aus Tunesien. Dort habe ich Softwareentwicklung und Informationssysteme an der TEK-UP University
+ in Tunis studiert.
+
+Ich habe bereits in zwei Unternehmen gearbeitet und dabei an verschiedenen IT-Projekten teilgenommen
+
+Bei Global ENR war mein Hauptprojekt eine interne HR-Management-Plattform. Sie automatisiert verschiedene
+ Aufgaben der Personalabteilung. Zum Beispiel können Mitarbeiter Arbeitsverträge erstellen, Anwesenheitslisten
+ importieren und Anfragen über ein Ticketsystem einreichen. Dadurch wurde die Arbeitsbelastung der
+ Personalabteilung um etwa 40 Prozent reduziert.
+
+Für die Entwicklung habe ich Java und Spring Boot im Backend sowie Angular im Frontend verwendet.
+ Außerdem habe ich die Anwendung mit Docker containerisiert und bereitgestellt.
+
+Zusätzlich habe ich bei MyLoc Agency an einer Plattform für Autovermietungen mitentwickelt. Kunden können 
+dort Buchungsanfragen stellen, die von der jeweiligen Agentur angenommen oder abgelehnt werden können.
+
+Bei einer erfolgreichen Buchung erhält der Kunde automatisch eine Bestätigungs-E-Mail mit einem PDF-Vertrag 
+und einem QR-Code.
+
+Außerdem habe ich einen KI-Chatbot integriert, der Kunden bei ihren Fragen unterstützt.
+
+Bei diesen Projekten war ich nicht nur für die technische Entwicklung zuständig. Ich habe auch regelmäßig
+ mit den Unternehmen kommuniziert, Feedback aufgenommen und die Anwendungen entsprechend angepasst.
+
+Dadurch habe ich gelernt, auf die Bedürfnisse verschiedener Nutzer einzugehen, Probleme systematisch zu
+ lösen und mich schnell in neue Systeme einzuarbeiten.
+
+Besonders interessant finde ich an Ihrer Stelle die Kombination aus IT-Support, technischen Aufgaben und 
+der Optimierung von IT-Prozessen. Ich sehe darin eine gute Möglichkeit, meine bisherigen Kenntnisse
+ einzubringen und gleichzeitig praktische Erfahrungen in weiteren IT-Bereichen zu sammeln.
+
+Das war ein kurzer Überblick über meinen bisherigen Weg und meine Erfahrungen. Vielen Dank für Ihre
+ Aufmerksamkeit. Ich beantworte gerne Ihre Fragen.
