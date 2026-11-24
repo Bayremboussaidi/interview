@@ -1,0 +1,281 @@
+
+
+# Bosch IT Support – 20 wichtige Interviewfragen
+
+## 1. Windows und Computer
+
+**1. Haben Sie Erfahrung mit Windows 10 oder Windows 11?**
+
+**Antwort (DE):**
+Ja, ich benutze Windows täglich. Ich kenne wichtige Tools wie den Task-Manager, den Geräte-Manager und Windows Update.
+
+**Answer (EN):**
+Yes, I use Windows every day. I know important tools such as Task Manager, Device Manager and Windows Update.
+
+***
+
+**2. Wie würden Sie einen langsamen Computer analysieren?**
+
+**Antwort (DE):**
+Zuerst öffne ich den Task-Manager und prüfe die CPU- und RAM-Auslastung. Danach kontrolliere ich die gestarteten Programme, den freien Speicherplatz und mögliche Updates.
+
+**Answer (EN):**
+First, I open Task Manager and check CPU and RAM usage. Then I check startup programs, available disk space and possible updates.
+
+***
+
+**3. Was ist der Unterschied zwischen RAM und Festplatte?**
+
+**Antwort (DE):**
+RAM ist der kurzfristige Arbeitsspeicher. Er wird für Programme verwendet, die gerade laufen. Die Festplatte speichert Daten dauerhaft.
+
+**Answer (EN):**
+RAM is the computer's short-term memory. It is used by programs that are currently running. The hard drive stores data permanently.
+
+***
+
+**4. Was ist ein Treiber (Driver)?**
+
+**Antwort (DE):**
+Ein Treiber ist eine Software, die dem Betriebssystem hilft, mit der Hardware zu kommunizieren, zum Beispiel mit einem Drucker oder einer Grafikkarte.
+
+**Answer (EN):**
+A driver is software that helps the operating system communicate with hardware, for example a printer or a graphics card.
+
+***
+
+**5. Was machen Sie, wenn ein Programm ständig abstürzt?**
+
+**Antwort (DE):**
+Zuerst starte ich das Programm und den Computer neu. Danach prüfe ich, ob Updates verfügbar sind. Wenn das Problem bleibt, versuche ich, das Programm zu reparieren oder neu zu installieren.
+
+**Answer (EN):**
+First, I restart the program and the computer. Then I check for available updates. If the problem continues, I try to repair or reinstall the program.
+
+***
+
+## 2. Netzwerk
+
+**6. Was ist eine IP-Adresse?**
+
+**Antwort (DE):**
+Eine IP-Adresse ist die Adresse eines Geräts im Netzwerk. Sie hilft dabei, Geräte zu identifizieren und Daten an das richtige Ziel zu senden.
+
+**Answer (EN):**
+An IP address is the address of a device on a network. It helps identify devices and send data to the correct destination.
+
+***
+
+**7. Was ist DNS?**
+
+**Antwort (DE):**
+DNS übersetzt Domainnamen in IP-Adressen. Zum Beispiel wird google.com in eine IP-Adresse umgewandelt.
+
+**Answer (EN):**
+DNS translates domain names into IP addresses. For example, google.com is converted into an IP address.
+
+***
+
+**8. Was ist der Unterschied zwischen LAN und WLAN?**
+
+**Antwort (DE):**
+Bei LAN sind die Geräte mit einem Netzwerkkabel verbunden. WLAN funktioniert ohne Kabel. LAN ist normalerweise stabiler, während WLAN flexibler ist.
+
+**Answer (EN):**
+With LAN, devices are connected using a network cable. WLAN works wirelessly. LAN is usually more stable, while WLAN is more flexible.
+
+***
+
+**9. Wie überprüfen Sie, ob ein Computer eine Netzwerkverbindung hat?**
+
+**Antwort (DE):**
+Zuerst prüfe ich das Netzwerkkabel oder die WLAN-Verbindung. Danach öffne ich die Eingabeaufforderung und verwende ipconfig. Mit ping kann ich die Verbindung testen.
+
+**Answer (EN):**
+First, I check the network cable or Wi-Fi connection. Then I open the command prompt and use ipconfig. I can test the connection with ping.
+
+***
+
+**10. Ein Mitarbeiter hat keine Internetverbindung. Was tun Sie?**
+
+**Antwort (DE):**
+Zuerst prüfe ich das WLAN oder das Netzwerkkabel. Danach kontrolliere ich die IP-Adresse mit ipconfig und teste die Verbindung mit ping. Wenn das Problem bleibt, prüfe ich die DNS-Einstellungen.
+
+**Answer (EN):**
+First, I check Wi-Fi or the network cable. Then I check the IP address using ipconfig and test the connection with ping. If the problem continues, I check the DNS settings.
+
+***
+
+## 3. Hardware und Support
+
+**11. Wie würden Sie einen neuen Laptop für einen Mitarbeiter vorbereiten?**
+
+**Antwort (DE):**
+Zuerst prüfe ich die Hardware. Danach installiere ich Windows, Updates und die benötigten Programme. Anschließend richte ich das Benutzerkonto ein und teste die wichtigsten Funktionen.
+
+**Answer (EN):**
+First, I check the hardware. Then I install Windows, updates and the required programs. After that, I set up the user account and test the most important functions.
+
+***
+
+**12. Was machen Sie, wenn ein Monitor kein Bild zeigt?**
+
+**Antwort (DE):**
+Zuerst prüfe ich das Stromkabel und die Verbindung zum Computer. Danach kontrolliere ich den richtigen Eingang am Monitor. Wenn das nicht hilft, teste ich ein anderes Kabel oder einen anderen Anschluss.
+
+**Answer (EN):**
+First, I check the power cable and the connection to the computer. Then I check the correct input on the monitor. If that doesn't help, I test another cable or port.
+
+***
+
+**13. Ein Drucker funktioniert nicht. Wie gehen Sie vor?**
+
+**Antwort (DE):**
+Zuerst prüfe ich die Stromversorgung, das Papier und den Toner. Danach kontrolliere ich die Verbindung zum Computer oder Netzwerk und die Druckwarteschlange. Wenn das Problem gelöst ist, dokumentiere ich die Lösung im Ticket.
+
+**Answer (EN):**
+First, I check the power supply, paper and toner. Then I check the connection to the computer or network and the print queue. Once the problem is solved, I document the solution in the ticket.
+
+***
+
+**14. Ein Mitarbeiter kann sich nicht bei Windows anmelden. Was tun Sie?**
+
+**Antwort (DE):**
+Zuerst prüfe ich die Fehlermeldung und kontrolliere, ob das Benutzerkonto gesperrt ist. Danach prüfe ich die Netzwerkverbindung. Wenn nötig, setze ich das Passwort nach den internen Regeln zurück. Wenn das Problem gelöst ist, dokumentiere ich die Lösung im Ticket.
+
+**Answer (EN):**
+First, I check the error message and whether the user account is locked. Then I check the network connection. If necessary, I reset the password according to internal rules. Once the problem is solved, I document the solution in the ticket.
+
+***
+
+**15. Sie können ein Problem nicht selbst lösen. Was machen Sie?**
+
+**Antwort (DE):**
+Ich dokumentiere, was ich bereits geprüft und versucht habe. Danach leite ich das Problem an einen erfahrenen Kollegen oder den Second-Level-Support weiter. Außerdem informiere ich den Mitarbeiter über den aktuellen Stand.
+
+**Answer (EN):**
+I document what I have already checked and tried. Then I forward the problem to an experienced colleague or second-level support. I also inform the employee about the current status.
+
+***
+
+**16. Wie entscheiden Sie, welches Support-Ticket zuerst bearbeitet wird?**
+
+**Antwort (DE):**
+Ich achte auf die Dringlichkeit und darauf, wie viele Mitarbeiter betroffen sind. Ein Problem, das viele Mitarbeiter betrifft oder die Arbeit blockiert, hat eine höhere Priorität.
+
+**Answer (EN):**
+I consider the urgency and how many employees are affected. A problem that affects many employees or blocks their work has a higher priority.
+
+***
+
+## 4. Microsoft 365 und IT-Sicherheit
+
+**17. Was ist Microsoft 365?**
+
+**Antwort (DE):**
+Microsoft 365 ist eine Plattform mit Programmen wie Word, Excel, Outlook und Teams. Sie bietet auch Cloud-Dienste wie OneDrive und SharePoint.
+
+**Answer (EN):**
+Microsoft 365 is a platform with programs such as Word, Excel, Outlook and Teams. It also offers cloud services such as OneDrive and SharePoint.
+
+***
+
+**18. Was ist Active Directory?**
+
+**Antwort (DE):**
+Active Directory ist ein Microsoft-Dienst zur Verwaltung von Benutzern, Computern und Gruppen. Damit können Administratoren auch Zugriffsrechte verwalten.
+
+**Answer (EN):**
+Active Directory is a Microsoft service for managing users, computers and groups. Administrators can also manage access rights with it.
+
+***
+
+**19. Was ist Phishing?**
+
+**Antwort (DE):**
+Phishing ist ein Betrugsversuch. Angreifer schicken gefälschte E-Mails oder Nachrichten, um Passwörter oder persönliche Daten zu stehlen.
+
+**Answer (EN):**
+Phishing is a type of fraud. Attackers send fake emails or messages to steal passwords or personal information.
+
+***
+
+**20. Was würden Sie tun, wenn ein Mitarbeiter auf einen verdächtigen Link geklickt hat?**
+
+**Antwort (DE):**
+Ich informiere sofort die IT-Security. Danach folge ich den Sicherheitsregeln des Unternehmens. Je nach Situation muss das Gerät vom Netzwerk getrennt und überprüft werden.
+
+**Answer (EN):**
+I immediately inform IT Security. Then I follow the company's security rules. Depending on the situation, the device may need to be disconnected from the network and checked.
+
+***
+
+
+
+
+
+
+
+
+
+Was ist Windows 365?
+
+Deutsch:
+Windows 365 ist ein Cloud-Dienst von Microsoft. Mitarbeiter bekommen einen virtuellen Windows-PC in der Cloud. Sie können über das Internet auf ihren Desktop, ihre Programme und ihre Dateien zugreifen.
+
+English:
+Windows 365 is a cloud service from Microsoft. Employees get a virtual Windows PC in the cloud. They can access their desktop, applications and files over the internet.
+
+***
+
+Was ist ein Cloud PC?
+
+Deutsch:
+Ein Cloud PC ist ein virtueller Computer, der nicht lokal auf dem eigenen Gerät läuft, sondern in der Cloud. Man kann von verschiedenen Geräten darauf zugreifen und mit derselben Windows-Umgebung arbeiten.
+
+English:
+A Cloud PC is a virtual computer that does not run locally on your device but in the cloud. You can access it from different devices and work with the same Windows environment.
+
+***
+
+Was ist der Unterschied zwischen Windows 365 und Microsoft 365?
+
+Deutsch:
+Windows 365 bietet einen virtuellen Windows-PC in der Cloud. Microsoft 365 bietet Programme und Dienste wie Word, Excel, Outlook, Teams und OneDrive.
+
+English:
+Windows 365 provides a virtual Windows PC in the cloud. Microsoft 365 provides applications and services such as Word, Excel, Outlook, Teams and OneDrive.
+
+***
+
+Welche Vorteile hat Windows 365 für Unternehmen?
+
+Deutsch:
+Mitarbeiter können von verschiedenen Orten und Geräten auf ihren Arbeits-PC zugreifen. Außerdem kann die IT-Abteilung die Cloud-PCs zentral verwalten. Das ist besonders praktisch für Homeoffice und mobiles Arbeiten.
+
+English:
+Employees can access their work PC from different locations and devices. The IT department can also manage Cloud PCs centrally. This is especially useful for remote and mobile work.
+
+***
+
+Ein Mitarbeiter kann sich nicht bei Windows 365 anmelden. Was würden Sie tun?
+
+Deutsch:
+Zuerst prüfe ich die Internetverbindung und die Anmeldedaten. Danach kontrolliere ich, ob das Benutzerkonto aktiv ist und ob der Mitarbeiter die richtige Lizenz hat. Wenn das Problem weiterhin besteht, dokumentiere ich den Fehler und leite ihn an den zuständigen IT-Support weiter.
+
+English:
+First, I check the internet connection and login details. Then I check whether the user account is active and whether the employee has the correct license. If the problem continues, I document the error and forward it to the responsible IT support team.
+
+***
+
+Was würden Sie tun, wenn ein Cloud PC langsam ist?
+
+Deutsch:
+Zuerst prüfe ich die Internetverbindung. Danach frage ich den Mitarbeiter, ob das Problem nur bei einer bestimmten Anwendung auftritt. Wenn möglich, starte ich den Cloud PC neu und teste die Verbindung erneut. Wenn das Problem bleibt, dokumentiere ich es und eskaliere den Fall.
+
+English:
+First, I check the internet connection. Then I ask the employee whether the problem occurs only with a specific application. If possible, I restart the Cloud PC and test the connection again. If the problem continues, I document it and escalate the case.
+
+
+
+

@@ -1,0 +1,44 @@
+
+
+1/ formatage pc , pc s formatieren  und windows neu installieren :
+
+Ich habe auch Erfahrung damit, PCs zu formatieren und Windows neu zu installieren. 
+Danach habe ich die notwendigen Driver und Programme installiert und Windows eingerichtet.
+
+
+
+
+
+--------------------
+
+
+2/ auto  shell  script
+
+
+
+1 - Ich habe ein PowerShell-Skript geschrieben, das automatisch Geräteinformationen wie Computername,
+
+ Seriennummer, Modell, Betriebssystem, RAM  ausliest
+
+
+
+
+
+
+
+
+2- ixh habe script geschrieben ,  mit dem man die Performance eines PCs analysieren kann.
+
+zusatzliche kann das skript auch  verwendet werden , um mogliche ursachen fur einen langsamen
+
+pc herausZUfinden
+
+
+Das Script prüft zum Beispiel die CPU-Auslastung, den RAM-Verbrauch und die hardDisk 
+
+Außerdem zeigt es, welche Programme viele Ressourcen verbrauchen und welche Programme automatisch
+ beim Start von Windows geöffnet werden.
+
+Es kann auch nach möglichen Systemfehlern suchen. 
+
+
